@@ -1,0 +1,489 @@
+type AggregatePlayer {
+  count: Int!
+}
+
+type AggregateTeam {
+  count: Int!
+}
+
+type BatchPayload {
+  count: Long!
+}
+
+scalar Long
+
+type Mutation {
+  createPlayer(data: PlayerCreateInput!): Player!
+  updatePlayer(data: PlayerUpdateInput!, where: PlayerWhereUniqueInput!): Player
+  updateManyPlayers(
+    data: PlayerUpdateManyMutationInput!
+    where: PlayerWhereInput
+  ): BatchPayload!
+  upsertPlayer(
+    where: PlayerWhereUniqueInput!
+    create: PlayerCreateInput!
+    update: PlayerUpdateInput!
+  ): Player!
+  deletePlayer(where: PlayerWhereUniqueInput!): Player
+  deleteManyPlayers(where: PlayerWhereInput): BatchPayload!
+  createTeam(data: TeamCreateInput!): Team!
+  updateTeam(data: TeamUpdateInput!, where: TeamWhereUniqueInput!): Team
+  updateManyTeams(
+    data: TeamUpdateManyMutationInput!
+    where: TeamWhereInput
+  ): BatchPayload!
+  upsertTeam(
+    where: TeamWhereUniqueInput!
+    create: TeamCreateInput!
+    update: TeamUpdateInput!
+  ): Team!
+  deleteTeam(where: TeamWhereUniqueInput!): Team
+  deleteManyTeams(where: TeamWhereInput): BatchPayload!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+interface Node {
+  id: ID!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type Player {
+  id: ID!
+  bnet: String!
+  discord: String!
+  role: Role!
+}
+
+type PlayerConnection {
+  pageInfo: PageInfo!
+  edges: [PlayerEdge]!
+  aggregate: AggregatePlayer!
+}
+
+input PlayerCreateInput {
+  id: ID
+  bnet: String!
+  discord: String!
+  role: Role!
+}
+
+input PlayerCreateManyInput {
+  create: [PlayerCreateInput!]
+  connect: [PlayerWhereUniqueInput!]
+}
+
+input PlayerCreateOneInput {
+  create: PlayerCreateInput
+  connect: PlayerWhereUniqueInput
+}
+
+type PlayerEdge {
+  node: Player!
+  cursor: String!
+}
+
+enum PlayerOrderByInput {
+  id_ASC
+  id_DESC
+  bnet_ASC
+  bnet_DESC
+  discord_ASC
+  discord_DESC
+  role_ASC
+  role_DESC
+}
+
+type PlayerPreviousValues {
+  id: ID!
+  bnet: String!
+  discord: String!
+  role: Role!
+}
+
+input PlayerScalarWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  bnet: String
+  bnet_not: String
+  bnet_in: [String!]
+  bnet_not_in: [String!]
+  bnet_lt: String
+  bnet_lte: String
+  bnet_gt: String
+  bnet_gte: String
+  bnet_contains: String
+  bnet_not_contains: String
+  bnet_starts_with: String
+  bnet_not_starts_with: String
+  bnet_ends_with: String
+  bnet_not_ends_with: String
+  discord: String
+  discord_not: String
+  discord_in: [String!]
+  discord_not_in: [String!]
+  discord_lt: String
+  discord_lte: String
+  discord_gt: String
+  discord_gte: String
+  discord_contains: String
+  discord_not_contains: String
+  discord_starts_with: String
+  discord_not_starts_with: String
+  discord_ends_with: String
+  discord_not_ends_with: String
+  role: Role
+  role_not: Role
+  role_in: [Role!]
+  role_not_in: [Role!]
+  AND: [PlayerScalarWhereInput!]
+  OR: [PlayerScalarWhereInput!]
+  NOT: [PlayerScalarWhereInput!]
+}
+
+type PlayerSubscriptionPayload {
+  mutation: MutationType!
+  node: Player
+  updatedFields: [String!]
+  previousValues: PlayerPreviousValues
+}
+
+input PlayerSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: PlayerWhereInput
+  AND: [PlayerSubscriptionWhereInput!]
+  OR: [PlayerSubscriptionWhereInput!]
+  NOT: [PlayerSubscriptionWhereInput!]
+}
+
+input PlayerUpdateDataInput {
+  bnet: String
+  discord: String
+  role: Role
+}
+
+input PlayerUpdateInput {
+  bnet: String
+  discord: String
+  role: Role
+}
+
+input PlayerUpdateManyDataInput {
+  bnet: String
+  discord: String
+  role: Role
+}
+
+input PlayerUpdateManyInput {
+  create: [PlayerCreateInput!]
+  update: [PlayerUpdateWithWhereUniqueNestedInput!]
+  upsert: [PlayerUpsertWithWhereUniqueNestedInput!]
+  delete: [PlayerWhereUniqueInput!]
+  connect: [PlayerWhereUniqueInput!]
+  set: [PlayerWhereUniqueInput!]
+  disconnect: [PlayerWhereUniqueInput!]
+  deleteMany: [PlayerScalarWhereInput!]
+  updateMany: [PlayerUpdateManyWithWhereNestedInput!]
+}
+
+input PlayerUpdateManyMutationInput {
+  bnet: String
+  discord: String
+  role: Role
+}
+
+input PlayerUpdateManyWithWhereNestedInput {
+  where: PlayerScalarWhereInput!
+  data: PlayerUpdateManyDataInput!
+}
+
+input PlayerUpdateOneInput {
+  create: PlayerCreateInput
+  update: PlayerUpdateDataInput
+  upsert: PlayerUpsertNestedInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: PlayerWhereUniqueInput
+}
+
+input PlayerUpdateOneRequiredInput {
+  create: PlayerCreateInput
+  update: PlayerUpdateDataInput
+  upsert: PlayerUpsertNestedInput
+  connect: PlayerWhereUniqueInput
+}
+
+input PlayerUpdateWithWhereUniqueNestedInput {
+  where: PlayerWhereUniqueInput!
+  data: PlayerUpdateDataInput!
+}
+
+input PlayerUpsertNestedInput {
+  update: PlayerUpdateDataInput!
+  create: PlayerCreateInput!
+}
+
+input PlayerUpsertWithWhereUniqueNestedInput {
+  where: PlayerWhereUniqueInput!
+  update: PlayerUpdateDataInput!
+  create: PlayerCreateInput!
+}
+
+input PlayerWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  bnet: String
+  bnet_not: String
+  bnet_in: [String!]
+  bnet_not_in: [String!]
+  bnet_lt: String
+  bnet_lte: String
+  bnet_gt: String
+  bnet_gte: String
+  bnet_contains: String
+  bnet_not_contains: String
+  bnet_starts_with: String
+  bnet_not_starts_with: String
+  bnet_ends_with: String
+  bnet_not_ends_with: String
+  discord: String
+  discord_not: String
+  discord_in: [String!]
+  discord_not_in: [String!]
+  discord_lt: String
+  discord_lte: String
+  discord_gt: String
+  discord_gte: String
+  discord_contains: String
+  discord_not_contains: String
+  discord_starts_with: String
+  discord_not_starts_with: String
+  discord_ends_with: String
+  discord_not_ends_with: String
+  role: Role
+  role_not: Role
+  role_in: [Role!]
+  role_not_in: [Role!]
+  AND: [PlayerWhereInput!]
+  OR: [PlayerWhereInput!]
+  NOT: [PlayerWhereInput!]
+}
+
+input PlayerWhereUniqueInput {
+  id: ID
+}
+
+type Query {
+  player(where: PlayerWhereUniqueInput!): Player
+  players(
+    where: PlayerWhereInput
+    orderBy: PlayerOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [Player]!
+  playersConnection(
+    where: PlayerWhereInput
+    orderBy: PlayerOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): PlayerConnection!
+  team(where: TeamWhereUniqueInput!): Team
+  teams(
+    where: TeamWhereInput
+    orderBy: TeamOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [Team]!
+  teamsConnection(
+    where: TeamWhereInput
+    orderBy: TeamOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): TeamConnection!
+  node(id: ID!): Node
+}
+
+enum Role {
+  MAIN_TANK
+  OFF_TANK
+  HITSCAN_DPS
+  PROJECTILE_DPS
+  MAIN_SUPPORT
+  FLEX_SUPPORT
+  SUB
+  MANAGER
+  PLAYER
+}
+
+type Subscription {
+  player(where: PlayerSubscriptionWhereInput): PlayerSubscriptionPayload
+  team(where: TeamSubscriptionWhereInput): TeamSubscriptionPayload
+}
+
+type Team {
+  id: ID!
+  manager: Player!
+  assistant_manager: Player
+  name: String!
+  players(
+    where: PlayerWhereInput
+    orderBy: PlayerOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [Player!]
+}
+
+type TeamConnection {
+  pageInfo: PageInfo!
+  edges: [TeamEdge]!
+  aggregate: AggregateTeam!
+}
+
+input TeamCreateInput {
+  id: ID
+  manager: PlayerCreateOneInput!
+  assistant_manager: PlayerCreateOneInput
+  name: String!
+  players: PlayerCreateManyInput
+}
+
+type TeamEdge {
+  node: Team!
+  cursor: String!
+}
+
+enum TeamOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+}
+
+type TeamPreviousValues {
+  id: ID!
+  name: String!
+}
+
+type TeamSubscriptionPayload {
+  mutation: MutationType!
+  node: Team
+  updatedFields: [String!]
+  previousValues: TeamPreviousValues
+}
+
+input TeamSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: TeamWhereInput
+  AND: [TeamSubscriptionWhereInput!]
+  OR: [TeamSubscriptionWhereInput!]
+  NOT: [TeamSubscriptionWhereInput!]
+}
+
+input TeamUpdateInput {
+  manager: PlayerUpdateOneRequiredInput
+  assistant_manager: PlayerUpdateOneInput
+  name: String
+  players: PlayerUpdateManyInput
+}
+
+input TeamUpdateManyMutationInput {
+  name: String
+}
+
+input TeamWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  manager: PlayerWhereInput
+  assistant_manager: PlayerWhereInput
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  players_every: PlayerWhereInput
+  players_some: PlayerWhereInput
+  players_none: PlayerWhereInput
+  AND: [TeamWhereInput!]
+  OR: [TeamWhereInput!]
+  NOT: [TeamWhereInput!]
+}
+
+input TeamWhereUniqueInput {
+  id: ID
+}

@@ -1,0 +1,26 @@
+enum Role {
+  MAIN_TANK
+  OFF_TANK
+  HITSCAN_DPS
+  PROJECTILE_DPS
+  MAIN_SUPPORT
+  FLEX_SUPPORT
+  SUB
+  MANAGER
+  PLAYER
+}
+
+type Player {
+  id: ID! @id
+  bnet: String!
+  discord: String!
+  role: Role!
+}
+
+type Team {
+  id: ID! @id
+  manager: Player! @relation(name: "TeamManager")
+  assistant_manager: Player @relation(name: "TeamAssistantManager")
+  name: String!
+  players: [Player]! @relation(name: "TeamPlayer")
+}

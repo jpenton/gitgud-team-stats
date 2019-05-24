@@ -1,0 +1,9 @@
+# import * from '../generated/graphql-schema/schema.graphql'
+
+type Query {
+  player(id: ID!): Player
+}
+
+type Mutation {
+  createPlayer(bnet: String!, discord: String!, role: Role!): Player!
+}
