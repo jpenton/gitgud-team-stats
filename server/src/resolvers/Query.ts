@@ -7,6 +7,14 @@ const Query: IResolverObject<any, IContext> = {
       id,
     });
   },
+  team: (_, { id }, { prisma }) => {
+    return prisma.team({
+      id,
+    });
+  },
+  teams: (_, __, { prisma }) => {
+    return prisma.teams();
+  },
 };
 
 export default Query;

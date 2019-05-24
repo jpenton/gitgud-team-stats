@@ -2,6 +2,8 @@
 
 type Query {
   player(id: ID!): Player
+  team(id: ID!): Team
+  teams: [Team]!
 }
 
 type Mutation {
