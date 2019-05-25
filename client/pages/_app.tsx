@@ -13,10 +13,13 @@ class MyApp extends App<{ apollo: ApolloClient<any> }> {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    // this exposes the query to the user
-    pageProps.query = ctx.query;
-
-    return { pageProps };
+    return {
+      pageProps: {
+        ...pageProps,
+        query: ctx.query,
+        pathname: ctx.pathname,
+      },
+    };
   }
 
   render() {

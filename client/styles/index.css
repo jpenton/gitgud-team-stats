@@ -4,10 +4,34 @@
 
 @import 'tailwindcss/utilities';
 
+body {
+  @apply bg-cool-grey-050;
+}
+
 a {
-  @apply text-blue-600;
+  @apply text-light-blue-vivid-600;
 }
 
 a:hover {
-  @apply text-blue-500;
+  @apply text-light-blue-vivid-500;
+}
+
+.header {
+  @apply bg-cool-grey-900 align-baseline py-3;
+}
+
+.header .nav-brand {
+  @apply text-cool-grey-050 text-lg pr-8;
+}
+
+.header .nav-link {
+  @apply text-cool-grey-300;
+}
+
+.header .nav-link:hover {
+  @apply text-cool-grey-200;
+}
+
+.header .nav-link.active {
+  @apply text-cool-grey-100;
 }

@@ -2,6 +2,9 @@ import * as React from 'react';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
 import Link from 'next/link';
+import Container from '../components/Container';
+import Header from '../components/Header';
+import { PageProps } from '../types';
 
 const GET_TEAMS_QUERY = gql`
   query GET_TEAMS_QUERY {
@@ -12,17 +15,17 @@ const GET_TEAMS_QUERY = gql`
   }
 `;
 
-class Teams extends React.Component {
+class Teams extends React.Component<PageProps> {
   render() {
     return (
       <>
-        <h1>Teams</h1>
+        <Header pathname={this.props.pathname} />
         <Query<{ teams: { id: string; name: string }[] }>
           query={GET_TEAMS_QUERY}
         >
           {({ data }) =>
             data ? (
-              <>
+              <Container addMargin>
                 {data.teams.map(team => (
                   <Link
                     key={team.id}
@@ -33,10 +36,10 @@ class Teams extends React.Component {
                       },
                     }}
                   >
-                    <a style={{ display: 'block' }}>{team.name}</a>
+                    <a className="block">{team.name}</a>
                   </Link>
                 ))}
-              </>
+              </Container>
             ) : null
           }
         </Query>

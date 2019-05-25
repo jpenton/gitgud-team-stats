@@ -5,7 +5,3 @@ type Query {
   team(id: ID!): Team
   teams: [Team]!
 }
-
-type Mutation {
-  createPlayer(bnet: String!, discord: String!, role: Role!): Player!
-}

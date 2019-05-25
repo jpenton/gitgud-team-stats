@@ -1,16 +1,10 @@
 import * as React from 'react';
-import Link from 'next/link';
-import { NextFC } from 'next';
+import { NextSFC } from 'next';
+import Header from '../components/Header';
+import { PageProps } from '../types';
 
-const IndexPage: NextFC = () => {
-  return (
-    <>
-      <h1>Index</h1>
-      <Link href="/teams">
-        <a>Teams</a>
-      </Link>
-    </>
-  );
-};
+const IndexPage: NextSFC<PageProps> = ({ pathname }) => (
+  <Header pathname={pathname} />
+);
 
 export default IndexPage;
