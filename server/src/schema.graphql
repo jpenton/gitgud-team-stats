@@ -1,5 +1,14 @@
 # import * from '../generated/graphql-schema/schema.graphql'
 
+type Team {
+  id: ID!
+  manager: Player!
+  assistant_manager: Player
+  name: String!
+  players: [Player]!
+  rank: Int
+}
+
 type Query {
   player(id: ID!): Player
   team(id: ID!): Team
