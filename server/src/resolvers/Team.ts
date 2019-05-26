@@ -18,13 +18,17 @@ const Team: IResolverObject<any, IContext> = {
       })
       .players();
 
+    const pages = await Promise.all(
+      players.map(i =>
+        axios.get(
+          'https://playoverwatch.com/en-us/career/pc/' +
+            encodeURIComponent(i.bnet.replace('#', '-')),
+        ),
+      ),
+    );
     const ranks = [];
-    for (let i = 0; i < players.length; i++) {
-      const url =
-        'https://playoverwatch.com/en-us/career/pc/' +
-        encodeURIComponent(players[i].bnet.replace('#', '-'));
-      const { data } = await axios.get(url);
-      const $ = cheerio.load(data);
+    for (let i = 0; i < pages.length; i++) {
+      const $ = cheerio.load(pages[i].data);
       const rank = $(
         'div.masthead-player-progression:nth-child(3) > div:nth-child(3) > div:nth-child(2)',
       ).text();
