@@ -4,6 +4,7 @@ import withApolloClient from '../lib/withApolloClient';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-boost';
 import '../styles/index.css';
+import getConfig from 'next/config';
 
 class MyApp extends App<{ apollo: ApolloClient<any> }> {
   static async getInitialProps({ Component, ctx }: NextAppContext) {
@@ -34,4 +35,10 @@ class MyApp extends App<{ apollo: ApolloClient<any> }> {
   }
 }
 
-export default withApolloClient(MyApp);
+const isProd = (): boolean => {
+  const config = getConfig();
+
+  return config.publicRuntimeConfig.NODE_ENV === 'production';
+};
+
+export default withApolloClient(isProd)(MyApp);
