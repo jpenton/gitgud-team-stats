@@ -20,29 +20,43 @@ class Teams extends React.Component<PageProps> {
     return (
       <>
         <Header pathname={this.props.pathname} />
-        <Query<{ teams: { id: string; name: string }[] }>
-          query={GET_TEAMS_QUERY}
-        >
-          {({ data }) =>
-            data ? (
-              <Container addMargin>
-                {data.teams.map(team => (
-                  <Link
-                    key={team.id}
-                    href={{
-                      pathname: '/team',
-                      query: {
-                        id: team.id,
-                      },
-                    }}
-                  >
-                    <a className="block">{team.name}</a>
-                  </Link>
-                ))}
-              </Container>
-            ) : null
-          }
-        </Query>
+        <Container addMargin>
+          <h2>Teams</h2>
+          <Query<{ teams: { id: string; name: string }[] }>
+            query={GET_TEAMS_QUERY}
+          >
+            {({ data }) =>
+              data ? (
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.teams.map(team => (
+                      <Link
+                        key={team.id}
+                        href={{
+                          pathname: '/team',
+                          query: {
+                            id: team.id,
+                          },
+                        }}
+                      >
+                        <a>
+                          <tr key={team.id}>
+                            <td>{team.name}</td>
+                          </tr>
+                        </a>
+                      </Link>
+                    ))}
+                  </tbody>
+                </table>
+              ) : null
+            }
+          </Query>
+        </Container>
       </>
     );
   }

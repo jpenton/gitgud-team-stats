@@ -10,6 +10,7 @@ const Container: React.SFC<IProps> = ({ children, addMargin = false }) => (
     <div
       className={classnames('container', {
         'mt-4': addMargin,
+        'mb-4': addMargin,
       })}
     >
       {children}
