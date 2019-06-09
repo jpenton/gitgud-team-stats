@@ -1,5 +1,12 @@
 version: '3'
 services:
+  backend:
+    build: ./server
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      GITGUD_PRISMA_ENDPOINT: ${GITGUD_PRISMA_ENDPOINT}
   next:
     build: ./client
     restart: always
