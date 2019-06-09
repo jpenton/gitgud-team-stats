@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.4.1",
     "@babel/preset-typescript": "^7.3.3",
     "@types/cheerio": "^0.22.11",
+    "@types/ms": "^0.7.30",
     "nodemon": "^1.19.0",
     "ts-node": "^8.1.0",
     "typescript": "^3.3.3"
@@ -26,8 +27,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",
+    "google-spreadsheet": "^2.0.7",
     "graphql-yoga": "^1.17.4",
+    "ms": "^2.1.2",
     "prisma-client-lib": "^1.33.0",
+    "puppeteer": "^1.17.0",
     "xlsx": "^0.14.3"
   }
 }

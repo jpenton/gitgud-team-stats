@@ -63,6 +63,7 @@ type Player {
   bnet: String!
   discord: String!
   role: Role!
+  team: Team
 }
 
 type PlayerConnection {
@@ -76,16 +77,19 @@ input PlayerCreateInput {
   bnet: String!
   discord: String!
   role: Role!
+  team: TeamCreateOneWithoutPlayersInput
 }
 
-input PlayerCreateManyInput {
-  create: [PlayerCreateInput!]
+input PlayerCreateManyWithoutTeamInput {
+  create: [PlayerCreateWithoutTeamInput!]
   connect: [PlayerWhereUniqueInput!]
 }
 
-input PlayerCreateOneInput {
-  create: PlayerCreateInput
-  connect: PlayerWhereUniqueInput
+input PlayerCreateWithoutTeamInput {
+  id: ID
+  bnet: String!
+  discord: String!
+  role: Role!
 }
 
 type PlayerEdge {
@@ -181,16 +185,11 @@ input PlayerSubscriptionWhereInput {
   NOT: [PlayerSubscriptionWhereInput!]
 }
 
-input PlayerUpdateDataInput {
-  bnet: String
-  discord: String
-  role: Role
-}
-
 input PlayerUpdateInput {
   bnet: String
   discord: String
   role: Role
+  team: TeamUpdateOneWithoutPlayersInput
 }
 
 input PlayerUpdateManyDataInput {
@@ -199,22 +198,22 @@ input PlayerUpdateManyDataInput {
   role: Role
 }
 
-input PlayerUpdateManyInput {
-  create: [PlayerCreateInput!]
-  update: [PlayerUpdateWithWhereUniqueNestedInput!]
-  upsert: [PlayerUpsertWithWhereUniqueNestedInput!]
-  delete: [PlayerWhereUniqueInput!]
-  connect: [PlayerWhereUniqueInput!]
-  set: [PlayerWhereUniqueInput!]
-  disconnect: [PlayerWhereUniqueInput!]
-  deleteMany: [PlayerScalarWhereInput!]
-  updateMany: [PlayerUpdateManyWithWhereNestedInput!]
-}
-
 input PlayerUpdateManyMutationInput {
   bnet: String
   discord: String
   role: Role
+}
+
+input PlayerUpdateManyWithoutTeamInput {
+  create: [PlayerCreateWithoutTeamInput!]
+  delete: [PlayerWhereUniqueInput!]
+  connect: [PlayerWhereUniqueInput!]
+  set: [PlayerWhereUniqueInput!]
+  disconnect: [PlayerWhereUniqueInput!]
+  update: [PlayerUpdateWithWhereUniqueWithoutTeamInput!]
+  upsert: [PlayerUpsertWithWhereUniqueWithoutTeamInput!]
+  deleteMany: [PlayerScalarWhereInput!]
+  updateMany: [PlayerUpdateManyWithWhereNestedInput!]
 }
 
 input PlayerUpdateManyWithWhereNestedInput {
@@ -222,36 +221,21 @@ input PlayerUpdateManyWithWhereNestedInput {
   data: PlayerUpdateManyDataInput!
 }
 
-input PlayerUpdateOneInput {
-  create: PlayerCreateInput
-  update: PlayerUpdateDataInput
-  upsert: PlayerUpsertNestedInput
-  delete: Boolean
-  disconnect: Boolean
-  connect: PlayerWhereUniqueInput
+input PlayerUpdateWithoutTeamDataInput {
+  bnet: String
+  discord: String
+  role: Role
 }
 
-input PlayerUpdateOneRequiredInput {
-  create: PlayerCreateInput
-  update: PlayerUpdateDataInput
-  upsert: PlayerUpsertNestedInput
-  connect: PlayerWhereUniqueInput
-}
-
-input PlayerUpdateWithWhereUniqueNestedInput {
+input PlayerUpdateWithWhereUniqueWithoutTeamInput {
   where: PlayerWhereUniqueInput!
-  data: PlayerUpdateDataInput!
+  data: PlayerUpdateWithoutTeamDataInput!
 }
 
-input PlayerUpsertNestedInput {
-  update: PlayerUpdateDataInput!
-  create: PlayerCreateInput!
-}
-
-input PlayerUpsertWithWhereUniqueNestedInput {
+input PlayerUpsertWithWhereUniqueWithoutTeamInput {
   where: PlayerWhereUniqueInput!
-  update: PlayerUpdateDataInput!
-  create: PlayerCreateInput!
+  update: PlayerUpdateWithoutTeamDataInput!
+  create: PlayerCreateWithoutTeamInput!
 }
 
 input PlayerWhereInput {
@@ -301,6 +285,7 @@ input PlayerWhereInput {
   role_not: Role
   role_in: [Role!]
   role_not_in: [Role!]
+  team: TeamWhereInput
   AND: [PlayerWhereInput!]
   OR: [PlayerWhereInput!]
   NOT: [PlayerWhereInput!]
@@ -308,6 +293,8 @@ input PlayerWhereInput {
 
 input PlayerWhereUniqueInput {
   id: ID
+  bnet: String
+  discord: String
 }
 
 type Query {
@@ -360,7 +347,6 @@ enum Role {
   MAIN_SUPPORT
   FLEX_SUPPORT
   SUB
-  MANAGER
   PLAYER
 }
 
@@ -371,8 +357,6 @@ type Subscription {
 
 type Team {
   id: ID!
-  manager: Player!
-  assistant_manager: Player
   name: String!
   players(
     where: PlayerWhereInput
@@ -393,10 +377,18 @@ type TeamConnection {
 
 input TeamCreateInput {
   id: ID
-  manager: PlayerCreateOneInput!
-  assistant_manager: PlayerCreateOneInput
   name: String!
-  players: PlayerCreateManyInput
+  players: PlayerCreateManyWithoutTeamInput
+}
+
+input TeamCreateOneWithoutPlayersInput {
+  create: TeamCreateWithoutPlayersInput
+  connect: TeamWhereUniqueInput
+}
+
+input TeamCreateWithoutPlayersInput {
+  id: ID
+  name: String!
 }
 
 type TeamEdge {
@@ -435,14 +427,30 @@ input TeamSubscriptionWhereInput {
 }
 
 input TeamUpdateInput {
-  manager: PlayerUpdateOneRequiredInput
-  assistant_manager: PlayerUpdateOneInput
   name: String
-  players: PlayerUpdateManyInput
+  players: PlayerUpdateManyWithoutTeamInput
 }
 
 input TeamUpdateManyMutationInput {
   name: String
+}
+
+input TeamUpdateOneWithoutPlayersInput {
+  create: TeamCreateWithoutPlayersInput
+  update: TeamUpdateWithoutPlayersDataInput
+  upsert: TeamUpsertWithoutPlayersInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: TeamWhereUniqueInput
+}
+
+input TeamUpdateWithoutPlayersDataInput {
+  name: String
+}
+
+input TeamUpsertWithoutPlayersInput {
+  update: TeamUpdateWithoutPlayersDataInput!
+  create: TeamCreateWithoutPlayersInput!
 }
 
 input TeamWhereInput {
@@ -460,8 +468,6 @@ input TeamWhereInput {
   id_not_starts_with: ID
   id_ends_with: ID
   id_not_ends_with: ID
-  manager: PlayerWhereInput
-  assistant_manager: PlayerWhereInput
   name: String
   name_not: String
   name_in: [String!]
@@ -486,4 +492,5 @@ input TeamWhereInput {
 
 input TeamWhereUniqueInput {
   id: ID
+  name: String
 }

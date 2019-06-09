@@ -6,21 +6,19 @@ enum Role {
   MAIN_SUPPORT
   FLEX_SUPPORT
   SUB
-  MANAGER
   PLAYER
 }
 
 type Player {
   id: ID! @id
-  bnet: String!
-  discord: String!
+  bnet: String! @unique
+  discord: String! @unique
   role: Role!
+  team: Team @relation(name: "TeamPlayer")
 }
 
 type Team {
   id: ID! @id
-  manager: Player! @relation(name: "TeamManager")
-  assistant_manager: Player @relation(name: "TeamAssistantManager")
-  name: String!
-  players: [Player]! @relation(name: "TeamPlayer")
+  name: String! @unique
+  players: [Player!] @relation(name: "TeamPlayer")
 }
