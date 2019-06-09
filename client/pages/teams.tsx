@@ -28,28 +28,25 @@ class Teams extends React.Component<PageProps> {
             {({ data }) =>
               data ? (
                 <table>
-                  <thead>
+                  <tbody>
                     <tr>
                       <th>Name</th>
                     </tr>
-                  </thead>
-                  <tbody>
                     {data.teams.map(team => (
-                      <Link
-                        key={team.id}
-                        href={{
-                          pathname: '/team',
-                          query: {
-                            id: team.id,
-                          },
-                        }}
-                      >
-                        <a>
-                          <tr key={team.id}>
-                            <td>{team.name}</td>
-                          </tr>
-                        </a>
-                      </Link>
+                      <tr key={team.id}>
+                        <td>
+                          <Link
+                            href={{
+                              pathname: '/team',
+                              query: {
+                                id: team.id,
+                              },
+                            }}
+                          >
+                            <a>{team.name}</a>
+                          </Link>
+                        </td>
+                      </tr>
                     ))}
                   </tbody>
                 </table>

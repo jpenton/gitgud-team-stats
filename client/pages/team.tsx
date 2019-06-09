@@ -68,7 +68,32 @@ class Team extends React.Component<IProps> {
                             <tr key={player.id}>
                               <td>{player.discord}</td>
                               <td>{player.role}</td>
-                              <td>{player.bnet}</td>
+                              <td>
+                                <div className="flex justify-between">
+                                  <span>{player.bnet}</span>
+                                  <div className="ml-4">
+                                    <a
+                                      className="mr-2"
+                                      href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
+                                        '#',
+                                        '-',
+                                      )}`}
+                                      target="_blank"
+                                    >
+                                      OW
+                                    </a>
+                                    <a
+                                      href={`https://www.overbuff.com/players/pc/${player.bnet.replace(
+                                        '#',
+                                        '-',
+                                      )}`}
+                                      target="_blank"
+                                    >
+                                      OB
+                                    </a>
+                                  </div>
+                                </div>
+                              </td>
                             </tr>
                           ))
                         : null}

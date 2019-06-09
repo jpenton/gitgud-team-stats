@@ -21,4 +21,5 @@ type Team {
   id: ID! @id
   name: String! @unique
   players: [Player!] @relation(name: "TeamPlayer")
+  updatedAt: DateTime! @updatedAt
 }

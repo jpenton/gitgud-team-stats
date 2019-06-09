@@ -26,7 +26,7 @@ table {
 
 tbody tr th,
 tbody tr th:hover {
-  @apply pl-6 pt-3 pb-2 uppercase text-cool-grey-400 text-sm text-left bg-cool-grey-050 rounded-lg;
+  @apply pl-6 pt-3 pb-2 uppercase text-cool-grey-400 text-sm text-left bg-cool-grey-050;
 }
 
 tbody tr td:last-child,
@@ -34,23 +34,19 @@ tbody tr th:last-child {
   @apply pr-6;
 }
 
-tbody tr,
-tbody a {
+tbody tr {
   @apply border-b-2 border-cool-grey-050;
 }
 
-tbody tr:not(:first-child):hover,
-tbody a:hover {
+tbody tr:not(:first-child):hover {
   @apply bg-cool-grey-050;
 }
 
-tbody tr:hover:last-child,
-tbody a:hover:last-child {
+tbody tr:hover:last-child {
   @apply rounded-b-lg;
 }
 
-tbody tr:last-child,
-tbody a:last-child {
+tbody tr:last-child {
   @apply border-none;
 }
 
