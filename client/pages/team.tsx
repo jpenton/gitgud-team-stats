@@ -13,6 +13,8 @@ const GET_TEAM_QUERY = gql`
       players {
         id
         bnet
+        role
+        discord
       }
     }
   }
@@ -21,11 +23,14 @@ interface GetTeamQueryData {
   team: {
     id: string;
     name: string;
-    players: {
-      id: string;
-      name: string;
-      bnet: string;
-    }[];
+    players:
+      | {
+          id: string;
+          discord: string;
+          bnet: string;
+          role: string;
+        }[]
+      | null;
   };
 }
 
@@ -45,28 +50,35 @@ class Team extends React.Component<IProps> {
     return (
       <>
         <Header pathname={pathname} />
-        <Query<GetTeamQueryData> query={GET_TEAM_QUERY} variables={{ id }}>
-          {({ data }) =>
-            data && data.team ? (
-              <Container addMargin>
-                <h3>{data.team.name}</h3>
-                {data.team.players.map(player => (
-                  <div key={player.id}>
-                    <a
-                      href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
-                        '#',
-                        '-',
-                      )}`}
-                      target="_blank"
-                    >
-                      {player.bnet}
-                    </a>
-                  </div>
-                ))}
-              </Container>
-            ) : null
-          }
-        </Query>
+        <Container addMargin>
+          <Query<GetTeamQueryData> query={GET_TEAM_QUERY} variables={{ id }}>
+            {({ data }) =>
+              data && data.team ? (
+                <>
+                  <h2>{data.team.name}</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Discord</th>
+                        <th>Role</th>
+                        <th>BNet</th>
+                      </tr>
+                      {data.team.players
+                        ? data.team.players.map(player => (
+                            <tr key={player.id}>
+                              <td>{player.discord}</td>
+                              <td>{player.role}</td>
+                              <td>{player.bnet}</td>
+                            </tr>
+                          ))
+                        : null}
+                    </tbody>
+                  </table>
+                </>
+              ) : null
+            }
+          </Query>
+        </Container>
       </>
     );
   }

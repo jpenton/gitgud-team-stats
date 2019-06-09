@@ -21,27 +21,25 @@ h2 {
 }
 
 table {
-  @apply shadow-lg bg-white flex flex-col rounded-lg;
+  @apply shadow-lg bg-white rounded-lg w-full border-collapse overflow-hidden;
 }
 
-thead {
-  @apply bg-cool-grey-050 rounded-lg rounded-b-none;
+tbody tr th,
+tbody tr th:hover {
+  @apply pl-6 pt-3 pb-2 uppercase text-cool-grey-400 text-sm text-left bg-cool-grey-050 rounded-lg;
 }
 
-thead tr {
-  @apply flex;
-}
-
-thead tr th {
-  @apply pl-6 pt-4 pb-3 uppercase text-cool-grey-400 text-sm;
+tbody tr td:last-child,
+tbody tr th:last-child {
+  @apply pr-6;
 }
 
 tbody tr,
 tbody a {
-  @apply border-b-2 flex border-cool-grey-050;
+  @apply border-b-2 border-cool-grey-050;
 }
 
-tbody tr:hover,
+tbody tr:not(:first-child):hover,
 tbody a:hover {
   @apply bg-cool-grey-050;
 }
