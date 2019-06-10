@@ -173,11 +173,6 @@ const parseTeams = async (prisma: Prisma) => {
         slug: teams[i].slug,
       });
     } else {
-      const teamPlayers = await prisma
-        .team({
-          id: team.id,
-        })
-        .players();
       await prisma.updateTeam({
         data: {
           players: {
