@@ -41,9 +41,9 @@ const parseTeams = async (prisma: Prisma) => {
           name: name.replace(/\w+\s\d+\s-\s/g, ''), // Remove "Team # - "
           players: players
             .filter(i => i.length >= 3 && i[1] !== 'Manager')
-            .map(([discord, role, bnet]) => ({
+            .map(([discord, role, bnet], index) => ({
               discord,
-              role,
+              role: role === 'PLAYER' && index > 5 ? 'SUB' : role,
               bnet,
             })),
         });
