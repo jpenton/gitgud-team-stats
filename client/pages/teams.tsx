@@ -12,9 +12,22 @@ const GET_TEAMS_QUERY = gql`
     teams {
       id
       name
+      players {
+        id
+      }
     }
   }
 `;
+
+interface ITeam {
+  id: string;
+  name: string;
+  players:
+    | {
+        id: string;
+      }[]
+    | null;
+}
 
 class Teams extends React.Component<PageProps> {
   render() {
@@ -26,9 +39,7 @@ class Teams extends React.Component<PageProps> {
         <Header pathname={this.props.pathname} />
         <Container addMargin>
           <h2>Teams</h2>
-          <Query<{ teams: { id: string; name: string }[] }>
-            query={GET_TEAMS_QUERY}
-          >
+          <Query<{ teams: ITeam[] }> query={GET_TEAMS_QUERY}>
             {({ data }) =>
               data ? (
                 <table>
@@ -36,22 +47,24 @@ class Teams extends React.Component<PageProps> {
                     <tr>
                       <th>Name</th>
                     </tr>
-                    {data.teams.map(team => (
-                      <tr key={team.id}>
-                        <td>
-                          <Link
-                            href={{
-                              pathname: '/team',
-                              query: {
-                                id: team.id,
-                              },
-                            }}
-                          >
-                            <a>{team.name}</a>
-                          </Link>
-                        </td>
-                      </tr>
-                    ))}
+                    {data.teams
+                      .filter(team => team.players)
+                      .map(team => (
+                        <tr key={team.id}>
+                          <td>
+                            <Link
+                              href={{
+                                pathname: '/team',
+                                query: {
+                                  id: team.id,
+                                },
+                              }}
+                            >
+                              <a>{team.name}</a>
+                            </Link>
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               ) : null
