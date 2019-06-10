@@ -43,7 +43,7 @@ const parseTeams = async (prisma: Prisma) => {
             .filter(i => i.length >= 3 && i[1] !== 'Manager')
             .map(([discord, role, bnet], index) => ({
               discord,
-              role: role === 'PLAYER' && index > 5 ? 'SUB' : role,
+              role: role.startsWith('Player') && index > 5 ? 'Sub' : role,
               bnet,
             })),
         });
