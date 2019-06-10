@@ -33,7 +33,7 @@ class MyApp extends App<{ apollo: ApolloClient<any> }> {
             <link
               rel="stylesheet"
               type="text/css"
-              href="https://gitgud.nyc3.cdn.digitaloceanspaces.com/css/inter.css"
+              href="https://rsms.me/inter/inter.css"
             />
           </Head>
           <Component {...pageProps} />
