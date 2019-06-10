@@ -45,6 +45,10 @@ class Teams extends React.Component<PageProps> {
       0,
     );
 
+    if (total === 0) {
+      return null;
+    }
+
     return Math.floor(total / filteredPlayers.length);
   };
 
