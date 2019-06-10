@@ -149,6 +149,17 @@ const parseTeams = async (prisma: Prisma) => {
           },
         });
       }
+
+      await prisma.updatePlayer({
+        where: {
+          id: player.id,
+        },
+        data: {
+          team: {
+            disconnect: true,
+          },
+        },
+      });
     }
 
     if (!team) {
@@ -167,16 +178,6 @@ const parseTeams = async (prisma: Prisma) => {
           id: team.id,
         })
         .players();
-      await prisma.updateTeam({
-        data: {
-          players: {
-            disconnect: teamPlayers.map(({ id }) => ({ id })),
-          },
-        },
-        where: {
-          slug: teams[i].slug,
-        },
-      });
       await prisma.updateTeam({
         data: {
           players: {
