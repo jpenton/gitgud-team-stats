@@ -7,8 +7,8 @@ import { PageProps } from '../types';
 import Head from 'next/head';
 
 const GET_TEAM_QUERY = gql`
-  query GET_TEAM_QUERY($id: ID!) {
-    team(id: $id) {
+  query GET_TEAM_QUERY($slug: String!) {
+    team(slug: $slug) {
       id
       name
       players {
@@ -37,7 +37,7 @@ interface GetTeamQueryData {
 
 interface IProps extends PageProps {
   query: {
-    id: string;
+    slug: string;
   };
 }
 
@@ -56,14 +56,14 @@ class Team extends React.Component<IProps> {
   render() {
     const {
       pathname,
-      query: { id },
+      query: { slug },
     } = this.props;
 
     return (
       <>
         <Header pathname={pathname} />
         <Container addMargin>
-          <Query<GetTeamQueryData> query={GET_TEAM_QUERY} variables={{ id }}>
+          <Query<GetTeamQueryData> query={GET_TEAM_QUERY} variables={{ slug }}>
             {({ data }) =>
               data && data.team ? (
                 <>

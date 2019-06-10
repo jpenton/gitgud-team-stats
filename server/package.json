@@ -20,9 +20,10 @@
     "@babel/preset-typescript": "^7.3.3",
     "@types/cheerio": "^0.22.11",
     "@types/ms": "^0.7.30",
+    "@types/slug": "^0.9.1",
     "nodemon": "^1.19.0",
     "ts-node": "^8.1.0",
-    "typescript": "^3.3.3"
+    "typescript": "^3.5.1"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -31,6 +32,7 @@
     "graphql-yoga": "^1.17.4",
     "ms": "^2.1.2",
     "prisma-client-lib": "^1.33.0",
+    "slug": "^1.1.0",
     "xlsx": "^0.14.3"
   }
 }

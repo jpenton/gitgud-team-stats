@@ -165,6 +165,8 @@ export type TeamOrderByInput =
   | 'id_DESC'
   | 'name_ASC'
   | 'name_DESC'
+  | 'slug_ASC'
+  | 'slug_DESC'
   | 'updatedAt_ASC'
   | 'updatedAt_DESC';
 
@@ -266,6 +268,7 @@ export interface TeamCreateInput {
   id?: Maybe<ID_Input>;
   name: String;
   players?: Maybe<PlayerCreateManyWithoutTeamInput>;
+  slug: String;
 }
 
 export interface PlayerUpdateManyMutationInput {
@@ -359,6 +362,7 @@ export interface PlayerScalarWhereInput {
 export interface TeamCreateWithoutPlayersInput {
   id?: Maybe<ID_Input>;
   name: String;
+  slug: String;
 }
 
 export interface PlayerUpsertWithWhereUniqueWithoutTeamInput {
@@ -370,6 +374,7 @@ export interface PlayerUpsertWithWhereUniqueWithoutTeamInput {
 export interface TeamUpdateInput {
   name?: Maybe<String>;
   players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
+  slug?: Maybe<String>;
 }
 
 export interface PlayerUpdateWithWhereUniqueWithoutTeamInput {
@@ -388,6 +393,7 @@ export interface TeamUpdateOneWithoutPlayersInput {
 
 export interface TeamUpdateManyMutationInput {
   name?: Maybe<String>;
+  slug?: Maybe<String>;
 }
 
 export interface PlayerCreateManyWithoutTeamInput {
@@ -434,6 +440,20 @@ export interface TeamWhereInput {
   players_every?: Maybe<PlayerWhereInput>;
   players_some?: Maybe<PlayerWhereInput>;
   players_none?: Maybe<PlayerWhereInput>;
+  slug?: Maybe<String>;
+  slug_not?: Maybe<String>;
+  slug_in?: Maybe<String[] | String>;
+  slug_not_in?: Maybe<String[] | String>;
+  slug_lt?: Maybe<String>;
+  slug_lte?: Maybe<String>;
+  slug_gt?: Maybe<String>;
+  slug_gte?: Maybe<String>;
+  slug_contains?: Maybe<String>;
+  slug_not_contains?: Maybe<String>;
+  slug_starts_with?: Maybe<String>;
+  slug_not_starts_with?: Maybe<String>;
+  slug_ends_with?: Maybe<String>;
+  slug_not_ends_with?: Maybe<String>;
   updatedAt?: Maybe<DateTimeInput>;
   updatedAt_not?: Maybe<DateTimeInput>;
   updatedAt_in?: Maybe<DateTimeInput[] | DateTimeInput>;
@@ -449,6 +469,7 @@ export interface TeamWhereInput {
 
 export interface TeamUpdateWithoutPlayersDataInput {
   name?: Maybe<String>;
+  slug?: Maybe<String>;
 }
 
 export interface PlayerUpdateManyWithWhereNestedInput {
@@ -476,6 +497,7 @@ export interface PlayerUpdateWithoutTeamDataInput {
 export type TeamWhereUniqueInput = AtLeastOne<{
   id: Maybe<ID_Input>;
   name?: Maybe<String>;
+  slug?: Maybe<String>;
 }>;
 
 export interface NodeNode {
@@ -485,6 +507,7 @@ export interface NodeNode {
 export interface TeamPreviousValues {
   id: ID_Output;
   name: String;
+  slug: String;
   updatedAt: DateTimeOutput;
 }
 
@@ -493,6 +516,7 @@ export interface TeamPreviousValuesPromise
     Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
+  slug: () => Promise<String>;
   updatedAt: () => Promise<DateTimeOutput>;
 }
 
@@ -501,6 +525,7 @@ export interface TeamPreviousValuesSubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
+  slug: () => Promise<AsyncIterator<String>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
 }
 
@@ -726,6 +751,7 @@ export interface AggregateTeamSubscription
 export interface Team {
   id: ID_Output;
   name: String;
+  slug: String;
   updatedAt: DateTimeOutput;
 }
 
@@ -741,6 +767,7 @@ export interface TeamPromise extends Promise<Team>, Fragmentable {
     first?: Int;
     last?: Int;
   }) => T;
+  slug: () => Promise<String>;
   updatedAt: () => Promise<DateTimeOutput>;
 }
 
@@ -758,6 +785,7 @@ export interface TeamSubscription
     first?: Int;
     last?: Int;
   }) => T;
+  slug: () => Promise<AsyncIterator<String>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
 }
 
@@ -775,6 +803,7 @@ export interface TeamNullablePromise
     first?: Int;
     last?: Int;
   }) => T;
+  slug: () => Promise<String>;
   updatedAt: () => Promise<DateTimeOutput>;
 }
 

@@ -7,9 +7,10 @@ const Query: IResolverObject<any, IContext> = {
       id,
     });
   },
-  team: (_, { id }, { prisma }) => {
+  team: (_, { id, slug }, { prisma }) => {
     return prisma.team({
       id,
+      slug,
     });
   },
   teams: (_, __, { prisma }) => {

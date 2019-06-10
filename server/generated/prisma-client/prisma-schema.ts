@@ -377,6 +377,7 @@ export const typeDefs = /* GraphQL */ `
       first: Int
       last: Int
     ): [Player!]
+    slug: String!
     updatedAt: DateTime!
   }
 
@@ -390,6 +391,7 @@ export const typeDefs = /* GraphQL */ `
     id: ID
     name: String!
     players: PlayerCreateManyWithoutTeamInput
+    slug: String!
   }
 
   input TeamCreateOneWithoutPlayersInput {
@@ -400,6 +402,7 @@ export const typeDefs = /* GraphQL */ `
   input TeamCreateWithoutPlayersInput {
     id: ID
     name: String!
+    slug: String!
   }
 
   type TeamEdge {
@@ -412,6 +415,8 @@ export const typeDefs = /* GraphQL */ `
     id_DESC
     name_ASC
     name_DESC
+    slug_ASC
+    slug_DESC
     updatedAt_ASC
     updatedAt_DESC
   }
@@ -419,6 +424,7 @@ export const typeDefs = /* GraphQL */ `
   type TeamPreviousValues {
     id: ID!
     name: String!
+    slug: String!
     updatedAt: DateTime!
   }
 
@@ -443,10 +449,12 @@ export const typeDefs = /* GraphQL */ `
   input TeamUpdateInput {
     name: String
     players: PlayerUpdateManyWithoutTeamInput
+    slug: String
   }
 
   input TeamUpdateManyMutationInput {
     name: String
+    slug: String
   }
 
   input TeamUpdateOneWithoutPlayersInput {
@@ -460,6 +468,7 @@ export const typeDefs = /* GraphQL */ `
 
   input TeamUpdateWithoutPlayersDataInput {
     name: String
+    slug: String
   }
 
   input TeamUpsertWithoutPlayersInput {
@@ -499,6 +508,20 @@ export const typeDefs = /* GraphQL */ `
     players_every: PlayerWhereInput
     players_some: PlayerWhereInput
     players_none: PlayerWhereInput
+    slug: String
+    slug_not: String
+    slug_in: [String!]
+    slug_not_in: [String!]
+    slug_lt: String
+    slug_lte: String
+    slug_gt: String
+    slug_gte: String
+    slug_contains: String
+    slug_not_contains: String
+    slug_starts_with: String
+    slug_not_starts_with: String
+    slug_ends_with: String
+    slug_not_ends_with: String
     updatedAt: DateTime
     updatedAt_not: DateTime
     updatedAt_in: [DateTime!]
@@ -515,5 +538,6 @@ export const typeDefs = /* GraphQL */ `
   input TeamWhereUniqueInput {
     id: ID
     name: String
+    slug: String
   }
 `;

@@ -15,6 +15,7 @@ const GET_TEAMS_QUERY = gql`
       players {
         id
       }
+      slug
     }
   }
 `;
@@ -27,6 +28,7 @@ interface ITeam {
         id: string;
       }[]
     | null;
+  slug: string;
 }
 
 class Teams extends React.Component<PageProps> {
@@ -56,7 +58,7 @@ class Teams extends React.Component<PageProps> {
                               href={{
                                 pathname: '/team',
                                 query: {
-                                  id: team.id,
+                                  slug: team.slug,
                                 },
                               }}
                             >

@@ -369,6 +369,7 @@ type Team {
     first: Int
     last: Int
   ): [Player!]
+  slug: String!
   updatedAt: DateTime!
 }
 
@@ -382,6 +383,7 @@ input TeamCreateInput {
   id: ID
   name: String!
   players: PlayerCreateManyWithoutTeamInput
+  slug: String!
 }
 
 input TeamCreateOneWithoutPlayersInput {
@@ -392,6 +394,7 @@ input TeamCreateOneWithoutPlayersInput {
 input TeamCreateWithoutPlayersInput {
   id: ID
   name: String!
+  slug: String!
 }
 
 type TeamEdge {
@@ -404,6 +407,8 @@ enum TeamOrderByInput {
   id_DESC
   name_ASC
   name_DESC
+  slug_ASC
+  slug_DESC
   updatedAt_ASC
   updatedAt_DESC
 }
@@ -411,6 +416,7 @@ enum TeamOrderByInput {
 type TeamPreviousValues {
   id: ID!
   name: String!
+  slug: String!
   updatedAt: DateTime!
 }
 
@@ -435,10 +441,12 @@ input TeamSubscriptionWhereInput {
 input TeamUpdateInput {
   name: String
   players: PlayerUpdateManyWithoutTeamInput
+  slug: String
 }
 
 input TeamUpdateManyMutationInput {
   name: String
+  slug: String
 }
 
 input TeamUpdateOneWithoutPlayersInput {
@@ -452,6 +460,7 @@ input TeamUpdateOneWithoutPlayersInput {
 
 input TeamUpdateWithoutPlayersDataInput {
   name: String
+  slug: String
 }
 
 input TeamUpsertWithoutPlayersInput {
@@ -491,6 +500,20 @@ input TeamWhereInput {
   players_every: PlayerWhereInput
   players_some: PlayerWhereInput
   players_none: PlayerWhereInput
+  slug: String
+  slug_not: String
+  slug_in: [String!]
+  slug_not_in: [String!]
+  slug_lt: String
+  slug_lte: String
+  slug_gt: String
+  slug_gte: String
+  slug_contains: String
+  slug_not_contains: String
+  slug_starts_with: String
+  slug_not_starts_with: String
+  slug_ends_with: String
+  slug_not_ends_with: String
   updatedAt: DateTime
   updatedAt_not: DateTime
   updatedAt_in: [DateTime!]
@@ -507,4 +530,5 @@ input TeamWhereInput {
 input TeamWhereUniqueInput {
   id: ID
   name: String
+  slug: String
 }

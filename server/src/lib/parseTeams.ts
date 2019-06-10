@@ -1,7 +1,17 @@
 import axios from 'axios';
 import xlsx from 'xlsx';
 import sheetToRows from './sheetToRows';
-import { Role, Prisma } from '../../generated/prisma-client';
+import {
+  Role,
+  Prisma,
+  Team,
+  Player,
+  TeamCreateInput,
+  PlayerCreateInput,
+  PlayerCreateWithoutTeamInput,
+  PlayerCreateManyWithoutTeamInput,
+} from '../../generated/prisma-client';
+import slug from 'slug';
 
 const parseTeams = async (prisma: Prisma) => {
   const { data } = await axios.get(
@@ -22,7 +32,13 @@ const parseTeams = async (prisma: Prisma) => {
     role: string;
     bnet: string;
   }
-  const teams: ITeam[] = [];
+  const teams: Array<
+    Omit<TeamCreateInput, 'players'> & {
+      players: Array<
+        Omit<PlayerCreateWithoutTeamInput, 'role'> & { role: string }
+      >;
+    }
+  > = [];
   let tempRows: string[][] = [];
 
   for (let i = 0; i < rows.length + 1; i++) {
@@ -37,8 +53,9 @@ const parseTeams = async (prisma: Prisma) => {
       const [[name], _, ...players] = tempRows;
 
       if (!players.find(i => i.includes('Yes'))) {
+        const filteredName = name.replace(/\w+\s\d+\s-\s/g, '');
         teams.push({
-          name: name.replace(/\w+\s\d+\s-\s/g, ''), // Remove "Team # - "
+          name: filteredName, // Remove "Team # - "
           players: players
             .filter(i => i.length >= 3 && i[1] !== 'Manager')
             .map(([discord, role, bnet], index) => ({
@@ -46,6 +63,7 @@ const parseTeams = async (prisma: Prisma) => {
               role: role.startsWith('Player') && index > 5 ? 'Sub' : role,
               bnet,
             })),
+          slug: slug(filteredName.toLowerCase()),
         });
       }
       tempRows = [];
@@ -56,7 +74,7 @@ const parseTeams = async (prisma: Prisma) => {
 
   for (let i = 0; i < teams.length; i++) {
     const team = await prisma.team({
-      name: teams[i].name,
+      slug: slug(teams[i].name.toLowerCase()),
     });
     const players = teams[i].players.map(i => {
       let role: Role | undefined;
@@ -119,6 +137,7 @@ const parseTeams = async (prisma: Prisma) => {
             bnet: i.bnet,
           })),
         },
+        slug: slug(teams[i].name.toLowerCase()),
       });
     } else {
       await prisma.updateTeam({

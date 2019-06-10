@@ -4,10 +4,11 @@ type Team {
   id: ID!
   name: String!
   players: [Player!]
+  slug: String!
 }
 
 type Query {
   player(id: ID!): Player
-  team(id: ID!): Team
+  team(id: ID, slug: String): Team
   teams: [Team!]
 }
