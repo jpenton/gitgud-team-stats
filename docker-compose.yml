@@ -11,7 +11,7 @@ services:
     build: ./client
     restart: always
     ports:
-      - 3000:3000
+      - ${GITGUD_NEXT_PORT}:3000
   prisma:
     image: prismagraphql/prisma:1.32
     restart: always
