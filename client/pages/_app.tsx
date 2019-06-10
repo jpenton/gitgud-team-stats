@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-boost';
 import '../styles/index.css';
 import getConfig from 'next/config';
+import Head from 'next/head';
 
 class MyApp extends App<{ apollo: ApolloClient<any> }> {
   static async getInitialProps({ Component, ctx }: NextAppContext) {
@@ -28,6 +29,13 @@ class MyApp extends App<{ apollo: ApolloClient<any> }> {
     return (
       <Container>
         <ApolloProvider client={apollo}>
+          <Head>
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://gitgud.nyc3.cdn.digitaloceanspaces.com/css/inter.css"
+            />
+          </Head>
           <Component {...pageProps} />
         </ApolloProvider>
       </Container>
