@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Container from '../components/Container';
 import Header from '../components/Header';
 import { PageProps } from '../types';
+import Head from 'next/head';
 
 const GET_TEAMS_QUERY = gql`
   query GET_TEAMS_QUERY {
@@ -19,6 +20,9 @@ class Teams extends React.Component<PageProps> {
   render() {
     return (
       <>
+        <Head>
+          <title>Teams | GitGud Stats</title>
+        </Head>
         <Header pathname={this.props.pathname} />
         <Container addMargin>
           <h2>Teams</h2>

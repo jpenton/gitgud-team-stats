@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 import Container from '../components/Container';
 import Header from '../components/Header';
 import { PageProps } from '../types';
+import Head from 'next/head';
 
 const GET_TEAM_QUERY = gql`
   query GET_TEAM_QUERY($id: ID!) {
@@ -55,6 +56,9 @@ class Team extends React.Component<IProps> {
             {({ data }) =>
               data && data.team ? (
                 <>
+                  <Head>
+                    <title>{`${data.team.name} | GitGud Stats`}</title>
+                  </Head>
                   <h2>{data.team.name}</h2>
                   <table>
                     <tbody>
@@ -86,7 +90,7 @@ class Team extends React.Component<IProps> {
                                       href={`https://www.overbuff.com/players/pc/${player.bnet.replace(
                                         '#',
                                         '-',
-                                      )}`}
+                                      )}?mode=competitive`}
                                       target="_blank"
                                     >
                                       OB

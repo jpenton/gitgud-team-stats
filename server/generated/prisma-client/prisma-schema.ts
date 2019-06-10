@@ -15,6 +15,8 @@ export const typeDefs = /* GraphQL */ `
     count: Long!
   }
 
+  scalar DateTime
+
   scalar Long
 
   type Mutation {
@@ -375,6 +377,7 @@ export const typeDefs = /* GraphQL */ `
       first: Int
       last: Int
     ): [Player!]
+    updatedAt: DateTime!
   }
 
   type TeamConnection {
@@ -409,11 +412,14 @@ export const typeDefs = /* GraphQL */ `
     id_DESC
     name_ASC
     name_DESC
+    updatedAt_ASC
+    updatedAt_DESC
   }
 
   type TeamPreviousValues {
     id: ID!
     name: String!
+    updatedAt: DateTime!
   }
 
   type TeamSubscriptionPayload {
@@ -493,6 +499,14 @@ export const typeDefs = /* GraphQL */ `
     players_every: PlayerWhereInput
     players_some: PlayerWhereInput
     players_none: PlayerWhereInput
+    updatedAt: DateTime
+    updatedAt_not: DateTime
+    updatedAt_in: [DateTime!]
+    updatedAt_not_in: [DateTime!]
+    updatedAt_lt: DateTime
+    updatedAt_lte: DateTime
+    updatedAt_gt: DateTime
+    updatedAt_gte: DateTime
     AND: [TeamWhereInput!]
     OR: [TeamWhereInput!]
     NOT: [TeamWhereInput!]
