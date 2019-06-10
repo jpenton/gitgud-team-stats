@@ -41,6 +41,17 @@ interface IProps extends PageProps {
   };
 }
 
+const roleToText: Record<string, string> = {
+  MAIN_TANK: 'Main Tank',
+  OFF_TANK: 'Off Tank',
+  FLEX_SUPPORT: 'Flex Support',
+  MAIN_SUPPORT: 'Main Support',
+  HITSCAN_DPS: 'Hitscan DPS',
+  PROJECTILE_DPS: 'Projectile DPS',
+  SUB: 'Sub',
+  PLAYER: 'Player',
+};
+
 class Team extends React.Component<IProps> {
   render() {
     const {
@@ -71,7 +82,7 @@ class Team extends React.Component<IProps> {
                         ? data.team.players.map(player => (
                             <tr key={player.id}>
                               <td>{player.discord}</td>
-                              <td>{player.role}</td>
+                              <td>{roleToText[player.role]}</td>
                               <td>
                                 <div className="flex justify-between">
                                   <span>{player.bnet}</span>
