@@ -38,7 +38,7 @@ const parseTeams = async (prisma: Prisma) => {
 
       if (!players.find(i => i.includes('Yes'))) {
         teams.push({
-          name,
+          name: name.replace(/\w+\s\d\s-\s/g, ''), // Remove "Team # - "
           players: players
             .filter(i => i.length >= 3 && i[1] !== 'Manager')
             .map(([discord, role, bnet]) => ({
