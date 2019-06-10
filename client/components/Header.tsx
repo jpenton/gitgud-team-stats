@@ -2,6 +2,20 @@ import * as React from 'react';
 import Link from 'next/link';
 import classnames from 'classnames';
 import Container from './Container';
+import Router from 'next/router';
+import nprogress from 'nprogress';
+
+Router.onRouteChangeStart = () => {
+  nprogress.start();
+};
+
+Router.onRouteChangeComplete = () => {
+  nprogress.done();
+};
+
+Router.onRouteChangeError = () => {
+  nprogress.done();
+};
 
 interface IProps {
   pathname: string;
