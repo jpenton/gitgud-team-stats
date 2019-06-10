@@ -14,6 +14,7 @@ type Player {
   bnet: String! @unique
   discord: String! @unique
   role: Role!
+  sr: Int
   team: Team @relation(name: "TeamPlayer")
 }
 

@@ -16,6 +16,7 @@ const GET_TEAM_QUERY = gql`
         bnet
         role
         discord
+        sr
       }
     }
   }
@@ -30,6 +31,7 @@ interface GetTeamQueryData {
           discord: string;
           bnet: string;
           role: string;
+          sr: number | null;
         }[]
       | null;
   };
@@ -77,15 +79,17 @@ class Team extends React.Component<IProps> {
                         <th>Discord</th>
                         <th>Role</th>
                         <th>BNet</th>
+                        <th>SR</th>
                       </tr>
                       {data.team.players
                         ? data.team.players.map(player => (
                             <tr key={player.id}>
                               <td>{player.discord}</td>
                               <td>{roleToText[player.role]}</td>
+                              <td>{player.bnet}</td>
                               <td>
                                 <div className="flex justify-between">
-                                  <span>{player.bnet}</span>
+                                  <span>{player.sr}</span>
                                   <div className="ml-4">
                                     <a
                                       className="mr-2"

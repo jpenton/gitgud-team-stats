@@ -73,6 +73,7 @@ export const typeDefs = /* GraphQL */ `
     bnet: String!
     discord: String!
     role: Role!
+    sr: Int
     team: Team
   }
 
@@ -87,6 +88,7 @@ export const typeDefs = /* GraphQL */ `
     bnet: String!
     discord: String!
     role: Role!
+    sr: Int
     team: TeamCreateOneWithoutPlayersInput
   }
 
@@ -100,6 +102,7 @@ export const typeDefs = /* GraphQL */ `
     bnet: String!
     discord: String!
     role: Role!
+    sr: Int
   }
 
   type PlayerEdge {
@@ -116,6 +119,8 @@ export const typeDefs = /* GraphQL */ `
     discord_DESC
     role_ASC
     role_DESC
+    sr_ASC
+    sr_DESC
   }
 
   type PlayerPreviousValues {
@@ -123,6 +128,7 @@ export const typeDefs = /* GraphQL */ `
     bnet: String!
     discord: String!
     role: Role!
+    sr: Int
   }
 
   input PlayerScalarWhereInput {
@@ -172,6 +178,14 @@ export const typeDefs = /* GraphQL */ `
     role_not: Role
     role_in: [Role!]
     role_not_in: [Role!]
+    sr: Int
+    sr_not: Int
+    sr_in: [Int!]
+    sr_not_in: [Int!]
+    sr_lt: Int
+    sr_lte: Int
+    sr_gt: Int
+    sr_gte: Int
     AND: [PlayerScalarWhereInput!]
     OR: [PlayerScalarWhereInput!]
     NOT: [PlayerScalarWhereInput!]
@@ -199,6 +213,7 @@ export const typeDefs = /* GraphQL */ `
     bnet: String
     discord: String
     role: Role
+    sr: Int
     team: TeamUpdateOneWithoutPlayersInput
   }
 
@@ -206,12 +221,14 @@ export const typeDefs = /* GraphQL */ `
     bnet: String
     discord: String
     role: Role
+    sr: Int
   }
 
   input PlayerUpdateManyMutationInput {
     bnet: String
     discord: String
     role: Role
+    sr: Int
   }
 
   input PlayerUpdateManyWithoutTeamInput {
@@ -235,6 +252,7 @@ export const typeDefs = /* GraphQL */ `
     bnet: String
     discord: String
     role: Role
+    sr: Int
   }
 
   input PlayerUpdateWithWhereUniqueWithoutTeamInput {
@@ -295,6 +313,14 @@ export const typeDefs = /* GraphQL */ `
     role_not: Role
     role_in: [Role!]
     role_not_in: [Role!]
+    sr: Int
+    sr_not: Int
+    sr_in: [Int!]
+    sr_not_in: [Int!]
+    sr_lt: Int
+    sr_lte: Int
+    sr_gt: Int
+    sr_gte: Int
     team: TeamWhereInput
     AND: [PlayerWhereInput!]
     OR: [PlayerWhereInput!]

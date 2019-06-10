@@ -14,6 +14,7 @@ const GET_TEAMS_QUERY = gql`
       name
       players {
         id
+        sr
       }
       slug
     }
@@ -26,12 +27,27 @@ interface ITeam {
   players:
     | {
         id: string;
+        sr: number | null;
       }[]
     | null;
   slug: string;
 }
 
 class Teams extends React.Component<PageProps> {
+  calculateAverageSR = (players: ITeam['players']): number | null => {
+    if (!players) {
+      return null;
+    }
+
+    const filteredPlayers = players.filter(i => i.sr !== null);
+    const total = filteredPlayers.reduce(
+      (prev, curr) => prev + (curr.sr as number),
+      0,
+    );
+
+    return Math.floor(total / filteredPlayers.length);
+  };
+
   render() {
     return (
       <>
@@ -48,6 +64,7 @@ class Teams extends React.Component<PageProps> {
                   <tbody>
                     <tr>
                       <th>Name</th>
+                      <th>Average SR</th>
                     </tr>
                     {data.teams
                       .filter(team => team.players)
@@ -64,6 +81,11 @@ class Teams extends React.Component<PageProps> {
                             >
                               <a>{team.name}</a>
                             </Link>
+                          </td>
+                          <td>
+                            {team.players
+                              ? this.calculateAverageSR(team.players)
+                              : null}
                           </td>
                         </tr>
                       ))}

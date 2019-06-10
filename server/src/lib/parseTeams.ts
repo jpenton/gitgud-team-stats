@@ -12,6 +12,7 @@ import {
   PlayerCreateManyWithoutTeamInput,
 } from '../../generated/prisma-client';
 import slug from 'slug';
+import cheerio from 'cheerio';
 
 const parseTeams = async (prisma: Prisma) => {
   const { data } = await axios.get(
@@ -74,7 +75,7 @@ const parseTeams = async (prisma: Prisma) => {
 
   for (let i = 0; i < teams.length; i++) {
     const team = await prisma.team({
-      slug: slug(teams[i].name.toLowerCase()),
+      slug: teams[i].slug,
     });
     const players = teams[i].players.map(i => {
       let role: Role | undefined;
@@ -120,12 +121,33 @@ const parseTeams = async (prisma: Prisma) => {
     });
 
     for (let j = 0; j < players.length; j++) {
-      const player = await prisma.player({
+      let player = await prisma.player({
         bnet: players[j].bnet,
       });
 
       if (!player) {
-        await prisma.createPlayer(players[j]);
+        player = await prisma.createPlayer(players[j]);
+      }
+
+      const { data } = await axios.get(
+        'https://playoverwatch.com/en-us/career/pc/' +
+          encodeURIComponent(players[j].bnet.replace('#', '-')),
+      );
+      const $ = cheerio.load(data);
+      const rank = $(
+        'div.masthead-player-progression:nth-child(3) > div:nth-child(3) > div:nth-child(2)',
+      ).text();
+      const nRank = parseInt(rank, 10);
+
+      if (!Number.isNaN(nRank)) {
+        await prisma.updatePlayer({
+          where: {
+            id: player.id,
+          },
+          data: {
+            sr: nRank,
+          },
+        });
       }
     }
 
@@ -137,9 +159,24 @@ const parseTeams = async (prisma: Prisma) => {
             bnet: i.bnet,
           })),
         },
-        slug: slug(teams[i].name.toLowerCase()),
+        slug: teams[i].slug,
       });
     } else {
+      const teamPlayers = await prisma
+        .team({
+          id: team.id,
+        })
+        .players();
+      await prisma.updateTeam({
+        data: {
+          players: {
+            disconnect: teamPlayers.map(({ id }) => ({ id })),
+          },
+        },
+        where: {
+          slug: teams[i].slug,
+        },
+      });
       await prisma.updateTeam({
         data: {
           players: {
@@ -149,7 +186,7 @@ const parseTeams = async (prisma: Prisma) => {
           },
         },
         where: {
-          name: teams[i].name,
+          slug: teams[i].slug,
         },
       });
     }

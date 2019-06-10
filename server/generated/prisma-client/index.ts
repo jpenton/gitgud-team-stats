@@ -148,7 +148,9 @@ export type PlayerOrderByInput =
   | 'discord_ASC'
   | 'discord_DESC'
   | 'role_ASC'
-  | 'role_DESC';
+  | 'role_DESC'
+  | 'sr_ASC'
+  | 'sr_DESC';
 
 export type Role =
   | 'MAIN_TANK'
@@ -176,6 +178,7 @@ export interface PlayerUpdateInput {
   bnet?: Maybe<String>;
   discord?: Maybe<String>;
   role?: Maybe<Role>;
+  sr?: Maybe<Int>;
   team?: Maybe<TeamUpdateOneWithoutPlayersInput>;
 }
 
@@ -184,64 +187,6 @@ export type PlayerWhereUniqueInput = AtLeastOne<{
   bnet?: Maybe<String>;
   discord?: Maybe<String>;
 }>;
-
-export interface TeamUpsertWithoutPlayersInput {
-  update: TeamUpdateWithoutPlayersDataInput;
-  create: TeamCreateWithoutPlayersInput;
-}
-
-export interface PlayerWhereInput {
-  id?: Maybe<ID_Input>;
-  id_not?: Maybe<ID_Input>;
-  id_in?: Maybe<ID_Input[] | ID_Input>;
-  id_not_in?: Maybe<ID_Input[] | ID_Input>;
-  id_lt?: Maybe<ID_Input>;
-  id_lte?: Maybe<ID_Input>;
-  id_gt?: Maybe<ID_Input>;
-  id_gte?: Maybe<ID_Input>;
-  id_contains?: Maybe<ID_Input>;
-  id_not_contains?: Maybe<ID_Input>;
-  id_starts_with?: Maybe<ID_Input>;
-  id_not_starts_with?: Maybe<ID_Input>;
-  id_ends_with?: Maybe<ID_Input>;
-  id_not_ends_with?: Maybe<ID_Input>;
-  bnet?: Maybe<String>;
-  bnet_not?: Maybe<String>;
-  bnet_in?: Maybe<String[] | String>;
-  bnet_not_in?: Maybe<String[] | String>;
-  bnet_lt?: Maybe<String>;
-  bnet_lte?: Maybe<String>;
-  bnet_gt?: Maybe<String>;
-  bnet_gte?: Maybe<String>;
-  bnet_contains?: Maybe<String>;
-  bnet_not_contains?: Maybe<String>;
-  bnet_starts_with?: Maybe<String>;
-  bnet_not_starts_with?: Maybe<String>;
-  bnet_ends_with?: Maybe<String>;
-  bnet_not_ends_with?: Maybe<String>;
-  discord?: Maybe<String>;
-  discord_not?: Maybe<String>;
-  discord_in?: Maybe<String[] | String>;
-  discord_not_in?: Maybe<String[] | String>;
-  discord_lt?: Maybe<String>;
-  discord_lte?: Maybe<String>;
-  discord_gt?: Maybe<String>;
-  discord_gte?: Maybe<String>;
-  discord_contains?: Maybe<String>;
-  discord_not_contains?: Maybe<String>;
-  discord_starts_with?: Maybe<String>;
-  discord_not_starts_with?: Maybe<String>;
-  discord_ends_with?: Maybe<String>;
-  discord_not_ends_with?: Maybe<String>;
-  role?: Maybe<Role>;
-  role_not?: Maybe<Role>;
-  role_in?: Maybe<Role[] | Role>;
-  role_not_in?: Maybe<Role[] | Role>;
-  team?: Maybe<TeamWhereInput>;
-  AND?: Maybe<PlayerWhereInput[] | PlayerWhereInput>;
-  OR?: Maybe<PlayerWhereInput[] | PlayerWhereInput>;
-  NOT?: Maybe<PlayerWhereInput[] | PlayerWhereInput>;
-}
 
 export interface PlayerUpdateManyWithoutTeamInput {
   create?: Maybe<PlayerCreateWithoutTeamInput[] | PlayerCreateWithoutTeamInput>;
@@ -271,21 +216,31 @@ export interface TeamCreateInput {
   slug: String;
 }
 
-export interface PlayerUpdateManyMutationInput {
-  bnet?: Maybe<String>;
-  discord?: Maybe<String>;
-  role?: Maybe<Role>;
+export interface TeamUpdateInput {
+  name?: Maybe<String>;
+  players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
+  slug?: Maybe<String>;
 }
 
-export interface PlayerSubscriptionWhereInput {
+export interface TeamUpsertWithoutPlayersInput {
+  update: TeamUpdateWithoutPlayersDataInput;
+  create: TeamCreateWithoutPlayersInput;
+}
+
+export interface TeamSubscriptionWhereInput {
   mutation_in?: Maybe<MutationType[] | MutationType>;
   updatedFields_contains?: Maybe<String>;
   updatedFields_contains_every?: Maybe<String[] | String>;
   updatedFields_contains_some?: Maybe<String[] | String>;
-  node?: Maybe<PlayerWhereInput>;
-  AND?: Maybe<PlayerSubscriptionWhereInput[] | PlayerSubscriptionWhereInput>;
-  OR?: Maybe<PlayerSubscriptionWhereInput[] | PlayerSubscriptionWhereInput>;
-  NOT?: Maybe<PlayerSubscriptionWhereInput[] | PlayerSubscriptionWhereInput>;
+  node?: Maybe<TeamWhereInput>;
+  AND?: Maybe<TeamSubscriptionWhereInput[] | TeamSubscriptionWhereInput>;
+  OR?: Maybe<TeamSubscriptionWhereInput[] | TeamSubscriptionWhereInput>;
+  NOT?: Maybe<TeamSubscriptionWhereInput[] | TeamSubscriptionWhereInput>;
+}
+
+export interface TeamUpdateManyMutationInput {
+  name?: Maybe<String>;
+  slug?: Maybe<String>;
 }
 
 export interface PlayerCreateInput {
@@ -293,76 +248,18 @@ export interface PlayerCreateInput {
   bnet: String;
   discord: String;
   role: Role;
+  sr?: Maybe<Int>;
   team?: Maybe<TeamCreateOneWithoutPlayersInput>;
 }
 
-export interface PlayerUpdateManyDataInput {
-  bnet?: Maybe<String>;
-  discord?: Maybe<String>;
-  role?: Maybe<Role>;
+export interface PlayerUpdateManyWithWhereNestedInput {
+  where: PlayerScalarWhereInput;
+  data: PlayerUpdateManyDataInput;
 }
 
 export interface TeamCreateOneWithoutPlayersInput {
   create?: Maybe<TeamCreateWithoutPlayersInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
-}
-
-export interface PlayerScalarWhereInput {
-  id?: Maybe<ID_Input>;
-  id_not?: Maybe<ID_Input>;
-  id_in?: Maybe<ID_Input[] | ID_Input>;
-  id_not_in?: Maybe<ID_Input[] | ID_Input>;
-  id_lt?: Maybe<ID_Input>;
-  id_lte?: Maybe<ID_Input>;
-  id_gt?: Maybe<ID_Input>;
-  id_gte?: Maybe<ID_Input>;
-  id_contains?: Maybe<ID_Input>;
-  id_not_contains?: Maybe<ID_Input>;
-  id_starts_with?: Maybe<ID_Input>;
-  id_not_starts_with?: Maybe<ID_Input>;
-  id_ends_with?: Maybe<ID_Input>;
-  id_not_ends_with?: Maybe<ID_Input>;
-  bnet?: Maybe<String>;
-  bnet_not?: Maybe<String>;
-  bnet_in?: Maybe<String[] | String>;
-  bnet_not_in?: Maybe<String[] | String>;
-  bnet_lt?: Maybe<String>;
-  bnet_lte?: Maybe<String>;
-  bnet_gt?: Maybe<String>;
-  bnet_gte?: Maybe<String>;
-  bnet_contains?: Maybe<String>;
-  bnet_not_contains?: Maybe<String>;
-  bnet_starts_with?: Maybe<String>;
-  bnet_not_starts_with?: Maybe<String>;
-  bnet_ends_with?: Maybe<String>;
-  bnet_not_ends_with?: Maybe<String>;
-  discord?: Maybe<String>;
-  discord_not?: Maybe<String>;
-  discord_in?: Maybe<String[] | String>;
-  discord_not_in?: Maybe<String[] | String>;
-  discord_lt?: Maybe<String>;
-  discord_lte?: Maybe<String>;
-  discord_gt?: Maybe<String>;
-  discord_gte?: Maybe<String>;
-  discord_contains?: Maybe<String>;
-  discord_not_contains?: Maybe<String>;
-  discord_starts_with?: Maybe<String>;
-  discord_not_starts_with?: Maybe<String>;
-  discord_ends_with?: Maybe<String>;
-  discord_not_ends_with?: Maybe<String>;
-  role?: Maybe<Role>;
-  role_not?: Maybe<Role>;
-  role_in?: Maybe<Role[] | Role>;
-  role_not_in?: Maybe<Role[] | Role>;
-  AND?: Maybe<PlayerScalarWhereInput[] | PlayerScalarWhereInput>;
-  OR?: Maybe<PlayerScalarWhereInput[] | PlayerScalarWhereInput>;
-  NOT?: Maybe<PlayerScalarWhereInput[] | PlayerScalarWhereInput>;
-}
-
-export interface TeamCreateWithoutPlayersInput {
-  id?: Maybe<ID_Input>;
-  name: String;
-  slug: String;
 }
 
 export interface PlayerUpsertWithWhereUniqueWithoutTeamInput {
@@ -371,34 +268,17 @@ export interface PlayerUpsertWithWhereUniqueWithoutTeamInput {
   create: PlayerCreateWithoutTeamInput;
 }
 
-export interface TeamUpdateInput {
-  name?: Maybe<String>;
-  players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
-  slug?: Maybe<String>;
+export interface TeamCreateWithoutPlayersInput {
+  id?: Maybe<ID_Input>;
+  name: String;
+  slug: String;
 }
 
-export interface PlayerUpdateWithWhereUniqueWithoutTeamInput {
-  where: PlayerWhereUniqueInput;
-  data: PlayerUpdateWithoutTeamDataInput;
-}
-
-export interface TeamUpdateOneWithoutPlayersInput {
-  create?: Maybe<TeamCreateWithoutPlayersInput>;
-  update?: Maybe<TeamUpdateWithoutPlayersDataInput>;
-  upsert?: Maybe<TeamUpsertWithoutPlayersInput>;
-  delete?: Maybe<Boolean>;
-  disconnect?: Maybe<Boolean>;
-  connect?: Maybe<TeamWhereUniqueInput>;
-}
-
-export interface TeamUpdateManyMutationInput {
-  name?: Maybe<String>;
-  slug?: Maybe<String>;
-}
-
-export interface PlayerCreateManyWithoutTeamInput {
-  create?: Maybe<PlayerCreateWithoutTeamInput[] | PlayerCreateWithoutTeamInput>;
-  connect?: Maybe<PlayerWhereUniqueInput[] | PlayerWhereUniqueInput>;
+export interface PlayerUpdateWithoutTeamDataInput {
+  bnet?: Maybe<String>;
+  discord?: Maybe<String>;
+  role?: Maybe<Role>;
+  sr?: Maybe<Int>;
 }
 
 export interface PlayerCreateWithoutTeamInput {
@@ -406,6 +286,7 @@ export interface PlayerCreateWithoutTeamInput {
   bnet: String;
   discord: String;
   role: Role;
+  sr?: Maybe<Int>;
 }
 
 export interface TeamWhereInput {
@@ -467,31 +348,174 @@ export interface TeamWhereInput {
   NOT?: Maybe<TeamWhereInput[] | TeamWhereInput>;
 }
 
+export interface TeamUpdateOneWithoutPlayersInput {
+  create?: Maybe<TeamCreateWithoutPlayersInput>;
+  update?: Maybe<TeamUpdateWithoutPlayersDataInput>;
+  upsert?: Maybe<TeamUpsertWithoutPlayersInput>;
+  delete?: Maybe<Boolean>;
+  disconnect?: Maybe<Boolean>;
+  connect?: Maybe<TeamWhereUniqueInput>;
+}
+
+export interface PlayerUpdateManyDataInput {
+  bnet?: Maybe<String>;
+  discord?: Maybe<String>;
+  role?: Maybe<Role>;
+  sr?: Maybe<Int>;
+}
+
+export interface PlayerCreateManyWithoutTeamInput {
+  create?: Maybe<PlayerCreateWithoutTeamInput[] | PlayerCreateWithoutTeamInput>;
+  connect?: Maybe<PlayerWhereUniqueInput[] | PlayerWhereUniqueInput>;
+}
+
+export interface PlayerUpdateManyMutationInput {
+  bnet?: Maybe<String>;
+  discord?: Maybe<String>;
+  role?: Maybe<Role>;
+  sr?: Maybe<Int>;
+}
+
+export interface PlayerWhereInput {
+  id?: Maybe<ID_Input>;
+  id_not?: Maybe<ID_Input>;
+  id_in?: Maybe<ID_Input[] | ID_Input>;
+  id_not_in?: Maybe<ID_Input[] | ID_Input>;
+  id_lt?: Maybe<ID_Input>;
+  id_lte?: Maybe<ID_Input>;
+  id_gt?: Maybe<ID_Input>;
+  id_gte?: Maybe<ID_Input>;
+  id_contains?: Maybe<ID_Input>;
+  id_not_contains?: Maybe<ID_Input>;
+  id_starts_with?: Maybe<ID_Input>;
+  id_not_starts_with?: Maybe<ID_Input>;
+  id_ends_with?: Maybe<ID_Input>;
+  id_not_ends_with?: Maybe<ID_Input>;
+  bnet?: Maybe<String>;
+  bnet_not?: Maybe<String>;
+  bnet_in?: Maybe<String[] | String>;
+  bnet_not_in?: Maybe<String[] | String>;
+  bnet_lt?: Maybe<String>;
+  bnet_lte?: Maybe<String>;
+  bnet_gt?: Maybe<String>;
+  bnet_gte?: Maybe<String>;
+  bnet_contains?: Maybe<String>;
+  bnet_not_contains?: Maybe<String>;
+  bnet_starts_with?: Maybe<String>;
+  bnet_not_starts_with?: Maybe<String>;
+  bnet_ends_with?: Maybe<String>;
+  bnet_not_ends_with?: Maybe<String>;
+  discord?: Maybe<String>;
+  discord_not?: Maybe<String>;
+  discord_in?: Maybe<String[] | String>;
+  discord_not_in?: Maybe<String[] | String>;
+  discord_lt?: Maybe<String>;
+  discord_lte?: Maybe<String>;
+  discord_gt?: Maybe<String>;
+  discord_gte?: Maybe<String>;
+  discord_contains?: Maybe<String>;
+  discord_not_contains?: Maybe<String>;
+  discord_starts_with?: Maybe<String>;
+  discord_not_starts_with?: Maybe<String>;
+  discord_ends_with?: Maybe<String>;
+  discord_not_ends_with?: Maybe<String>;
+  role?: Maybe<Role>;
+  role_not?: Maybe<Role>;
+  role_in?: Maybe<Role[] | Role>;
+  role_not_in?: Maybe<Role[] | Role>;
+  sr?: Maybe<Int>;
+  sr_not?: Maybe<Int>;
+  sr_in?: Maybe<Int[] | Int>;
+  sr_not_in?: Maybe<Int[] | Int>;
+  sr_lt?: Maybe<Int>;
+  sr_lte?: Maybe<Int>;
+  sr_gt?: Maybe<Int>;
+  sr_gte?: Maybe<Int>;
+  team?: Maybe<TeamWhereInput>;
+  AND?: Maybe<PlayerWhereInput[] | PlayerWhereInput>;
+  OR?: Maybe<PlayerWhereInput[] | PlayerWhereInput>;
+  NOT?: Maybe<PlayerWhereInput[] | PlayerWhereInput>;
+}
+
 export interface TeamUpdateWithoutPlayersDataInput {
   name?: Maybe<String>;
   slug?: Maybe<String>;
 }
 
-export interface PlayerUpdateManyWithWhereNestedInput {
-  where: PlayerScalarWhereInput;
-  data: PlayerUpdateManyDataInput;
+export interface PlayerScalarWhereInput {
+  id?: Maybe<ID_Input>;
+  id_not?: Maybe<ID_Input>;
+  id_in?: Maybe<ID_Input[] | ID_Input>;
+  id_not_in?: Maybe<ID_Input[] | ID_Input>;
+  id_lt?: Maybe<ID_Input>;
+  id_lte?: Maybe<ID_Input>;
+  id_gt?: Maybe<ID_Input>;
+  id_gte?: Maybe<ID_Input>;
+  id_contains?: Maybe<ID_Input>;
+  id_not_contains?: Maybe<ID_Input>;
+  id_starts_with?: Maybe<ID_Input>;
+  id_not_starts_with?: Maybe<ID_Input>;
+  id_ends_with?: Maybe<ID_Input>;
+  id_not_ends_with?: Maybe<ID_Input>;
+  bnet?: Maybe<String>;
+  bnet_not?: Maybe<String>;
+  bnet_in?: Maybe<String[] | String>;
+  bnet_not_in?: Maybe<String[] | String>;
+  bnet_lt?: Maybe<String>;
+  bnet_lte?: Maybe<String>;
+  bnet_gt?: Maybe<String>;
+  bnet_gte?: Maybe<String>;
+  bnet_contains?: Maybe<String>;
+  bnet_not_contains?: Maybe<String>;
+  bnet_starts_with?: Maybe<String>;
+  bnet_not_starts_with?: Maybe<String>;
+  bnet_ends_with?: Maybe<String>;
+  bnet_not_ends_with?: Maybe<String>;
+  discord?: Maybe<String>;
+  discord_not?: Maybe<String>;
+  discord_in?: Maybe<String[] | String>;
+  discord_not_in?: Maybe<String[] | String>;
+  discord_lt?: Maybe<String>;
+  discord_lte?: Maybe<String>;
+  discord_gt?: Maybe<String>;
+  discord_gte?: Maybe<String>;
+  discord_contains?: Maybe<String>;
+  discord_not_contains?: Maybe<String>;
+  discord_starts_with?: Maybe<String>;
+  discord_not_starts_with?: Maybe<String>;
+  discord_ends_with?: Maybe<String>;
+  discord_not_ends_with?: Maybe<String>;
+  role?: Maybe<Role>;
+  role_not?: Maybe<Role>;
+  role_in?: Maybe<Role[] | Role>;
+  role_not_in?: Maybe<Role[] | Role>;
+  sr?: Maybe<Int>;
+  sr_not?: Maybe<Int>;
+  sr_in?: Maybe<Int[] | Int>;
+  sr_not_in?: Maybe<Int[] | Int>;
+  sr_lt?: Maybe<Int>;
+  sr_lte?: Maybe<Int>;
+  sr_gt?: Maybe<Int>;
+  sr_gte?: Maybe<Int>;
+  AND?: Maybe<PlayerScalarWhereInput[] | PlayerScalarWhereInput>;
+  OR?: Maybe<PlayerScalarWhereInput[] | PlayerScalarWhereInput>;
+  NOT?: Maybe<PlayerScalarWhereInput[] | PlayerScalarWhereInput>;
 }
 
-export interface TeamSubscriptionWhereInput {
+export interface PlayerSubscriptionWhereInput {
   mutation_in?: Maybe<MutationType[] | MutationType>;
   updatedFields_contains?: Maybe<String>;
   updatedFields_contains_every?: Maybe<String[] | String>;
   updatedFields_contains_some?: Maybe<String[] | String>;
-  node?: Maybe<TeamWhereInput>;
-  AND?: Maybe<TeamSubscriptionWhereInput[] | TeamSubscriptionWhereInput>;
-  OR?: Maybe<TeamSubscriptionWhereInput[] | TeamSubscriptionWhereInput>;
-  NOT?: Maybe<TeamSubscriptionWhereInput[] | TeamSubscriptionWhereInput>;
+  node?: Maybe<PlayerWhereInput>;
+  AND?: Maybe<PlayerSubscriptionWhereInput[] | PlayerSubscriptionWhereInput>;
+  OR?: Maybe<PlayerSubscriptionWhereInput[] | PlayerSubscriptionWhereInput>;
+  NOT?: Maybe<PlayerSubscriptionWhereInput[] | PlayerSubscriptionWhereInput>;
 }
 
-export interface PlayerUpdateWithoutTeamDataInput {
-  bnet?: Maybe<String>;
-  discord?: Maybe<String>;
-  role?: Maybe<Role>;
+export interface PlayerUpdateWithWhereUniqueWithoutTeamInput {
+  where: PlayerWhereUniqueInput;
+  data: PlayerUpdateWithoutTeamDataInput;
 }
 
 export type TeamWhereUniqueInput = AtLeastOne<{
@@ -529,39 +553,20 @@ export interface TeamPreviousValuesSubscription
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
 }
 
-export interface Player {
-  id: ID_Output;
-  bnet: String;
-  discord: String;
-  role: Role;
+export interface AggregatePlayer {
+  count: Int;
 }
 
-export interface PlayerPromise extends Promise<Player>, Fragmentable {
-  id: () => Promise<ID_Output>;
-  bnet: () => Promise<String>;
-  discord: () => Promise<String>;
-  role: () => Promise<Role>;
-  team: <T = TeamPromise>() => T;
-}
-
-export interface PlayerSubscription
-  extends Promise<AsyncIterator<Player>>,
+export interface AggregatePlayerPromise
+  extends Promise<AggregatePlayer>,
     Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  bnet: () => Promise<AsyncIterator<String>>;
-  discord: () => Promise<AsyncIterator<String>>;
-  role: () => Promise<AsyncIterator<Role>>;
-  team: <T = TeamSubscription>() => T;
+  count: () => Promise<Int>;
 }
 
-export interface PlayerNullablePromise
-  extends Promise<Player | null>,
+export interface AggregatePlayerSubscription
+  extends Promise<AsyncIterator<AggregatePlayer>>,
     Fragmentable {
-  id: () => Promise<ID_Output>;
-  bnet: () => Promise<String>;
-  discord: () => Promise<String>;
-  role: () => Promise<Role>;
-  team: <T = TeamPromise>() => T;
+  count: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface PlayerSubscriptionPayload {
@@ -589,22 +594,6 @@ export interface PlayerSubscriptionPayloadSubscription
   previousValues: <T = PlayerPreviousValuesSubscription>() => T;
 }
 
-export interface AggregatePlayer {
-  count: Int;
-}
-
-export interface AggregatePlayerPromise
-  extends Promise<AggregatePlayer>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregatePlayerSubscription
-  extends Promise<AsyncIterator<AggregatePlayer>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
-}
-
 export interface PlayerEdge {
   node: Player;
   cursor: String;
@@ -620,132 +609,6 @@ export interface PlayerEdgeSubscription
     Fragmentable {
   node: <T = PlayerSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface TeamSubscriptionPayload {
-  mutation: MutationType;
-  node: Team;
-  updatedFields: String[];
-  previousValues: TeamPreviousValues;
-}
-
-export interface TeamSubscriptionPayloadPromise
-  extends Promise<TeamSubscriptionPayload>,
-    Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = TeamPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = TeamPreviousValuesPromise>() => T;
-}
-
-export interface TeamSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<TeamSubscriptionPayload>>,
-    Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = TeamSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = TeamPreviousValuesSubscription>() => T;
-}
-
-export interface PlayerConnection {
-  pageInfo: PageInfo;
-  edges: PlayerEdge[];
-}
-
-export interface PlayerConnectionPromise
-  extends Promise<PlayerConnection>,
-    Fragmentable {
-  pageInfo: <T = PageInfoPromise>() => T;
-  edges: <T = FragmentableArray<PlayerEdge>>() => T;
-  aggregate: <T = AggregatePlayerPromise>() => T;
-}
-
-export interface PlayerConnectionSubscription
-  extends Promise<AsyncIterator<PlayerConnection>>,
-    Fragmentable {
-  pageInfo: <T = PageInfoSubscription>() => T;
-  edges: <T = Promise<AsyncIterator<PlayerEdgeSubscription>>>() => T;
-  aggregate: <T = AggregatePlayerSubscription>() => T;
-}
-
-export interface PageInfo {
-  hasNextPage: Boolean;
-  hasPreviousPage: Boolean;
-  startCursor?: String;
-  endCursor?: String;
-}
-
-export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
-  hasNextPage: () => Promise<Boolean>;
-  hasPreviousPage: () => Promise<Boolean>;
-  startCursor: () => Promise<String>;
-  endCursor: () => Promise<String>;
-}
-
-export interface PageInfoSubscription
-  extends Promise<AsyncIterator<PageInfo>>,
-    Fragmentable {
-  hasNextPage: () => Promise<AsyncIterator<Boolean>>;
-  hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
-  startCursor: () => Promise<AsyncIterator<String>>;
-  endCursor: () => Promise<AsyncIterator<String>>;
-}
-
-export interface PlayerPreviousValues {
-  id: ID_Output;
-  bnet: String;
-  discord: String;
-  role: Role;
-}
-
-export interface PlayerPreviousValuesPromise
-  extends Promise<PlayerPreviousValues>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  bnet: () => Promise<String>;
-  discord: () => Promise<String>;
-  role: () => Promise<Role>;
-}
-
-export interface PlayerPreviousValuesSubscription
-  extends Promise<AsyncIterator<PlayerPreviousValues>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  bnet: () => Promise<AsyncIterator<String>>;
-  discord: () => Promise<AsyncIterator<String>>;
-  role: () => Promise<AsyncIterator<Role>>;
-}
-
-export interface BatchPayload {
-  count: Long;
-}
-
-export interface BatchPayloadPromise
-  extends Promise<BatchPayload>,
-    Fragmentable {
-  count: () => Promise<Long>;
-}
-
-export interface BatchPayloadSubscription
-  extends Promise<AsyncIterator<BatchPayload>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Long>>;
-}
-
-export interface AggregateTeam {
-  count: Int;
-}
-
-export interface AggregateTeamPromise
-  extends Promise<AggregateTeam>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregateTeamSubscription
-  extends Promise<AsyncIterator<AggregateTeam>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface Team {
@@ -807,6 +670,191 @@ export interface TeamNullablePromise
   updatedAt: () => Promise<DateTimeOutput>;
 }
 
+export interface AggregateTeam {
+  count: Int;
+}
+
+export interface AggregateTeamPromise
+  extends Promise<AggregateTeam>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateTeamSubscription
+  extends Promise<AsyncIterator<AggregateTeam>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface PlayerPreviousValues {
+  id: ID_Output;
+  bnet: String;
+  discord: String;
+  role: Role;
+  sr?: Int;
+}
+
+export interface PlayerPreviousValuesPromise
+  extends Promise<PlayerPreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  bnet: () => Promise<String>;
+  discord: () => Promise<String>;
+  role: () => Promise<Role>;
+  sr: () => Promise<Int>;
+}
+
+export interface PlayerPreviousValuesSubscription
+  extends Promise<AsyncIterator<PlayerPreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  bnet: () => Promise<AsyncIterator<String>>;
+  discord: () => Promise<AsyncIterator<String>>;
+  role: () => Promise<AsyncIterator<Role>>;
+  sr: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface PlayerConnection {
+  pageInfo: PageInfo;
+  edges: PlayerEdge[];
+}
+
+export interface PlayerConnectionPromise
+  extends Promise<PlayerConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<PlayerEdge>>() => T;
+  aggregate: <T = AggregatePlayerPromise>() => T;
+}
+
+export interface PlayerConnectionSubscription
+  extends Promise<AsyncIterator<PlayerConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<PlayerEdgeSubscription>>>() => T;
+  aggregate: <T = AggregatePlayerSubscription>() => T;
+}
+
+export interface PageInfo {
+  hasNextPage: Boolean;
+  hasPreviousPage: Boolean;
+  startCursor?: String;
+  endCursor?: String;
+}
+
+export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
+  hasNextPage: () => Promise<Boolean>;
+  hasPreviousPage: () => Promise<Boolean>;
+  startCursor: () => Promise<String>;
+  endCursor: () => Promise<String>;
+}
+
+export interface PageInfoSubscription
+  extends Promise<AsyncIterator<PageInfo>>,
+    Fragmentable {
+  hasNextPage: () => Promise<AsyncIterator<Boolean>>;
+  hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
+  startCursor: () => Promise<AsyncIterator<String>>;
+  endCursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface BatchPayload {
+  count: Long;
+}
+
+export interface BatchPayloadPromise
+  extends Promise<BatchPayload>,
+    Fragmentable {
+  count: () => Promise<Long>;
+}
+
+export interface BatchPayloadSubscription
+  extends Promise<AsyncIterator<BatchPayload>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Long>>;
+}
+
+export interface TeamEdge {
+  node: Team;
+  cursor: String;
+}
+
+export interface TeamEdgePromise extends Promise<TeamEdge>, Fragmentable {
+  node: <T = TeamPromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface TeamEdgeSubscription
+  extends Promise<AsyncIterator<TeamEdge>>,
+    Fragmentable {
+  node: <T = TeamSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface TeamSubscriptionPayload {
+  mutation: MutationType;
+  node: Team;
+  updatedFields: String[];
+  previousValues: TeamPreviousValues;
+}
+
+export interface TeamSubscriptionPayloadPromise
+  extends Promise<TeamSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = TeamPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = TeamPreviousValuesPromise>() => T;
+}
+
+export interface TeamSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<TeamSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = TeamSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = TeamPreviousValuesSubscription>() => T;
+}
+
+export interface Player {
+  id: ID_Output;
+  bnet: String;
+  discord: String;
+  role: Role;
+  sr?: Int;
+}
+
+export interface PlayerPromise extends Promise<Player>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  bnet: () => Promise<String>;
+  discord: () => Promise<String>;
+  role: () => Promise<Role>;
+  sr: () => Promise<Int>;
+  team: <T = TeamPromise>() => T;
+}
+
+export interface PlayerSubscription
+  extends Promise<AsyncIterator<Player>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  bnet: () => Promise<AsyncIterator<String>>;
+  discord: () => Promise<AsyncIterator<String>>;
+  role: () => Promise<AsyncIterator<Role>>;
+  sr: () => Promise<AsyncIterator<Int>>;
+  team: <T = TeamSubscription>() => T;
+}
+
+export interface PlayerNullablePromise
+  extends Promise<Player | null>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  bnet: () => Promise<String>;
+  discord: () => Promise<String>;
+  role: () => Promise<Role>;
+  sr: () => Promise<Int>;
+  team: <T = TeamPromise>() => T;
+}
+
 export interface TeamConnection {
   pageInfo: PageInfo;
   edges: TeamEdge[];
@@ -828,22 +876,18 @@ export interface TeamConnectionSubscription
   aggregate: <T = AggregateTeamSubscription>() => T;
 }
 
-export interface TeamEdge {
-  node: Team;
-  cursor: String;
-}
+/*
+The `Boolean` scalar type represents `true` or `false`.
+*/
+export type Boolean = boolean;
 
-export interface TeamEdgePromise extends Promise<TeamEdge>, Fragmentable {
-  node: <T = TeamPromise>() => T;
-  cursor: () => Promise<String>;
-}
+export type Long = string;
 
-export interface TeamEdgeSubscription
-  extends Promise<AsyncIterator<TeamEdge>>,
-    Fragmentable {
-  node: <T = TeamSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
-}
+/*
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
+*/
+export type ID_Input = string | number;
+export type ID_Output = string;
 
 /*
 DateTime scalar input type, allowing Date
@@ -855,23 +899,10 @@ DateTime scalar output type, which is always a string
 */
 export type DateTimeOutput = string;
 
-export type Long = string;
-
-/*
-The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
-*/
-export type ID_Input = string | number;
-export type ID_Output = string;
-
 /*
 The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. 
 */
 export type Int = number;
-
-/*
-The `Boolean` scalar type represents `true` or `false`.
-*/
-export type Boolean = boolean;
 
 /*
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.

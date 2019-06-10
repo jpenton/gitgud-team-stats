@@ -65,6 +65,7 @@ type Player {
   bnet: String!
   discord: String!
   role: Role!
+  sr: Int
   team: Team
 }
 
@@ -79,6 +80,7 @@ input PlayerCreateInput {
   bnet: String!
   discord: String!
   role: Role!
+  sr: Int
   team: TeamCreateOneWithoutPlayersInput
 }
 
@@ -92,6 +94,7 @@ input PlayerCreateWithoutTeamInput {
   bnet: String!
   discord: String!
   role: Role!
+  sr: Int
 }
 
 type PlayerEdge {
@@ -108,6 +111,8 @@ enum PlayerOrderByInput {
   discord_DESC
   role_ASC
   role_DESC
+  sr_ASC
+  sr_DESC
 }
 
 type PlayerPreviousValues {
@@ -115,6 +120,7 @@ type PlayerPreviousValues {
   bnet: String!
   discord: String!
   role: Role!
+  sr: Int
 }
 
 input PlayerScalarWhereInput {
@@ -164,6 +170,14 @@ input PlayerScalarWhereInput {
   role_not: Role
   role_in: [Role!]
   role_not_in: [Role!]
+  sr: Int
+  sr_not: Int
+  sr_in: [Int!]
+  sr_not_in: [Int!]
+  sr_lt: Int
+  sr_lte: Int
+  sr_gt: Int
+  sr_gte: Int
   AND: [PlayerScalarWhereInput!]
   OR: [PlayerScalarWhereInput!]
   NOT: [PlayerScalarWhereInput!]
@@ -191,6 +205,7 @@ input PlayerUpdateInput {
   bnet: String
   discord: String
   role: Role
+  sr: Int
   team: TeamUpdateOneWithoutPlayersInput
 }
 
@@ -198,12 +213,14 @@ input PlayerUpdateManyDataInput {
   bnet: String
   discord: String
   role: Role
+  sr: Int
 }
 
 input PlayerUpdateManyMutationInput {
   bnet: String
   discord: String
   role: Role
+  sr: Int
 }
 
 input PlayerUpdateManyWithoutTeamInput {
@@ -227,6 +244,7 @@ input PlayerUpdateWithoutTeamDataInput {
   bnet: String
   discord: String
   role: Role
+  sr: Int
 }
 
 input PlayerUpdateWithWhereUniqueWithoutTeamInput {
@@ -287,6 +305,14 @@ input PlayerWhereInput {
   role_not: Role
   role_in: [Role!]
   role_not_in: [Role!]
+  sr: Int
+  sr_not: Int
+  sr_in: [Int!]
+  sr_not_in: [Int!]
+  sr_lt: Int
+  sr_lte: Int
+  sr_gt: Int
+  sr_gte: Int
   team: TeamWhereInput
   AND: [PlayerWhereInput!]
   OR: [PlayerWhereInput!]
