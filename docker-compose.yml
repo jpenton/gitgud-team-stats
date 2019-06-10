@@ -15,8 +15,8 @@ services:
   prisma:
     image: prismagraphql/prisma:1.32
     restart: always
-    # ports:
-    #   - 4466:4466
+    ports:
+      - ${GITGUD_PRISMA_PORT}:4466
     environment:
       PRISMA_CONFIG: |
         port: 4466
