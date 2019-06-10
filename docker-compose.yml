@@ -4,7 +4,7 @@ services:
     build: ./server
     restart: always
     ports:
-      - 8000:8000
+      - ${GITGUD_BACKEND_PORT}:8000
     environment:
       GITGUD_PRISMA_ENDPOINT: ${GITGUD_PRISMA_ENDPOINT}
   next:
@@ -16,7 +16,7 @@ services:
     image: prismagraphql/prisma:1.32
     restart: always
     ports:
-      - '4466:4466'
+      - ${GITGUD_PRISMA_PORT}:4466
     environment:
       PRISMA_CONFIG: |
         port: 4466
