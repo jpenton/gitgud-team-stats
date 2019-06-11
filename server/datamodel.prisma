@@ -24,7 +24,9 @@ type Team {
   name: String! @unique
   players: [Player!] @relation(name: "TeamPlayer")
   pointDifference: Int
+  setWins: Int
   slug: String! @unique
+  tieBreakersWon: Int
   ties: Int
   updatedAt: DateTime! @updatedAt
   wins: Int

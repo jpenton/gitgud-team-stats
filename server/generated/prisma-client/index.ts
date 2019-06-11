@@ -171,8 +171,12 @@ export type TeamOrderByInput =
   | 'name_DESC'
   | 'pointDifference_ASC'
   | 'pointDifference_DESC'
+  | 'setWins_ASC'
+  | 'setWins_DESC'
   | 'slug_ASC'
   | 'slug_DESC'
+  | 'tieBreakersWon_ASC'
+  | 'tieBreakersWon_DESC'
   | 'ties_ASC'
   | 'ties_DESC'
   | 'updatedAt_ASC'
@@ -223,7 +227,9 @@ export interface TeamCreateInput {
   name: String;
   players?: Maybe<PlayerCreateManyWithoutTeamInput>;
   pointDifference?: Maybe<Int>;
+  setWins?: Maybe<Int>;
   slug: String;
+  tieBreakersWon?: Maybe<Int>;
   ties?: Maybe<Int>;
   wins?: Maybe<Int>;
 }
@@ -233,7 +239,9 @@ export interface TeamUpdateInput {
   name?: Maybe<String>;
   players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
   pointDifference?: Maybe<Int>;
+  setWins?: Maybe<Int>;
   slug?: Maybe<String>;
+  tieBreakersWon?: Maybe<Int>;
   ties?: Maybe<Int>;
   wins?: Maybe<Int>;
 }
@@ -258,7 +266,9 @@ export interface TeamUpdateManyMutationInput {
   losses?: Maybe<Int>;
   name?: Maybe<String>;
   pointDifference?: Maybe<Int>;
+  setWins?: Maybe<Int>;
   slug?: Maybe<String>;
+  tieBreakersWon?: Maybe<Int>;
   ties?: Maybe<Int>;
   wins?: Maybe<Int>;
 }
@@ -293,7 +303,9 @@ export interface TeamCreateWithoutPlayersInput {
   losses?: Maybe<Int>;
   name: String;
   pointDifference?: Maybe<Int>;
+  setWins?: Maybe<Int>;
   slug: String;
+  tieBreakersWon?: Maybe<Int>;
   ties?: Maybe<Int>;
   wins?: Maybe<Int>;
 }
@@ -361,6 +373,14 @@ export interface TeamWhereInput {
   pointDifference_lte?: Maybe<Int>;
   pointDifference_gt?: Maybe<Int>;
   pointDifference_gte?: Maybe<Int>;
+  setWins?: Maybe<Int>;
+  setWins_not?: Maybe<Int>;
+  setWins_in?: Maybe<Int[] | Int>;
+  setWins_not_in?: Maybe<Int[] | Int>;
+  setWins_lt?: Maybe<Int>;
+  setWins_lte?: Maybe<Int>;
+  setWins_gt?: Maybe<Int>;
+  setWins_gte?: Maybe<Int>;
   slug?: Maybe<String>;
   slug_not?: Maybe<String>;
   slug_in?: Maybe<String[] | String>;
@@ -375,6 +395,14 @@ export interface TeamWhereInput {
   slug_not_starts_with?: Maybe<String>;
   slug_ends_with?: Maybe<String>;
   slug_not_ends_with?: Maybe<String>;
+  tieBreakersWon?: Maybe<Int>;
+  tieBreakersWon_not?: Maybe<Int>;
+  tieBreakersWon_in?: Maybe<Int[] | Int>;
+  tieBreakersWon_not_in?: Maybe<Int[] | Int>;
+  tieBreakersWon_lt?: Maybe<Int>;
+  tieBreakersWon_lte?: Maybe<Int>;
+  tieBreakersWon_gt?: Maybe<Int>;
+  tieBreakersWon_gte?: Maybe<Int>;
   ties?: Maybe<Int>;
   ties_not?: Maybe<Int>;
   ties_in?: Maybe<Int[] | Int>;
@@ -497,7 +525,9 @@ export interface TeamUpdateWithoutPlayersDataInput {
   losses?: Maybe<Int>;
   name?: Maybe<String>;
   pointDifference?: Maybe<Int>;
+  setWins?: Maybe<Int>;
   slug?: Maybe<String>;
+  tieBreakersWon?: Maybe<Int>;
   ties?: Maybe<Int>;
   wins?: Maybe<Int>;
 }
@@ -593,7 +623,9 @@ export interface TeamPreviousValues {
   losses?: Int;
   name: String;
   pointDifference?: Int;
+  setWins?: Int;
   slug: String;
+  tieBreakersWon?: Int;
   ties?: Int;
   updatedAt: DateTimeOutput;
   wins?: Int;
@@ -606,7 +638,9 @@ export interface TeamPreviousValuesPromise
   losses: () => Promise<Int>;
   name: () => Promise<String>;
   pointDifference: () => Promise<Int>;
+  setWins: () => Promise<Int>;
   slug: () => Promise<String>;
+  tieBreakersWon: () => Promise<Int>;
   ties: () => Promise<Int>;
   updatedAt: () => Promise<DateTimeOutput>;
   wins: () => Promise<Int>;
@@ -619,7 +653,9 @@ export interface TeamPreviousValuesSubscription
   losses: () => Promise<AsyncIterator<Int>>;
   name: () => Promise<AsyncIterator<String>>;
   pointDifference: () => Promise<AsyncIterator<Int>>;
+  setWins: () => Promise<AsyncIterator<Int>>;
   slug: () => Promise<AsyncIterator<String>>;
+  tieBreakersWon: () => Promise<AsyncIterator<Int>>;
   ties: () => Promise<AsyncIterator<Int>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   wins: () => Promise<AsyncIterator<Int>>;
@@ -688,7 +724,9 @@ export interface Team {
   losses?: Int;
   name: String;
   pointDifference?: Int;
+  setWins?: Int;
   slug: String;
+  tieBreakersWon?: Int;
   ties?: Int;
   updatedAt: DateTimeOutput;
   wins?: Int;
@@ -708,7 +746,9 @@ export interface TeamPromise extends Promise<Team>, Fragmentable {
     last?: Int;
   }) => T;
   pointDifference: () => Promise<Int>;
+  setWins: () => Promise<Int>;
   slug: () => Promise<String>;
+  tieBreakersWon: () => Promise<Int>;
   ties: () => Promise<Int>;
   updatedAt: () => Promise<DateTimeOutput>;
   wins: () => Promise<Int>;
@@ -730,7 +770,9 @@ export interface TeamSubscription
     last?: Int;
   }) => T;
   pointDifference: () => Promise<AsyncIterator<Int>>;
+  setWins: () => Promise<AsyncIterator<Int>>;
   slug: () => Promise<AsyncIterator<String>>;
+  tieBreakersWon: () => Promise<AsyncIterator<Int>>;
   ties: () => Promise<AsyncIterator<Int>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   wins: () => Promise<AsyncIterator<Int>>;
@@ -752,7 +794,9 @@ export interface TeamNullablePromise
     last?: Int;
   }) => T;
   pointDifference: () => Promise<Int>;
+  setWins: () => Promise<Int>;
   slug: () => Promise<String>;
+  tieBreakersWon: () => Promise<Int>;
   ties: () => Promise<Int>;
   updatedAt: () => Promise<DateTimeOutput>;
   wins: () => Promise<Int>;

@@ -397,7 +397,9 @@ type Team {
     last: Int
   ): [Player!]
   pointDifference: Int
+  setWins: Int
   slug: String!
+  tieBreakersWon: Int
   ties: Int
   updatedAt: DateTime!
   wins: Int
@@ -415,7 +417,9 @@ input TeamCreateInput {
   name: String!
   players: PlayerCreateManyWithoutTeamInput
   pointDifference: Int
+  setWins: Int
   slug: String!
+  tieBreakersWon: Int
   ties: Int
   wins: Int
 }
@@ -430,7 +434,9 @@ input TeamCreateWithoutPlayersInput {
   losses: Int
   name: String!
   pointDifference: Int
+  setWins: Int
   slug: String!
+  tieBreakersWon: Int
   ties: Int
   wins: Int
 }
@@ -449,8 +455,12 @@ enum TeamOrderByInput {
   name_DESC
   pointDifference_ASC
   pointDifference_DESC
+  setWins_ASC
+  setWins_DESC
   slug_ASC
   slug_DESC
+  tieBreakersWon_ASC
+  tieBreakersWon_DESC
   ties_ASC
   ties_DESC
   updatedAt_ASC
@@ -464,7 +474,9 @@ type TeamPreviousValues {
   losses: Int
   name: String!
   pointDifference: Int
+  setWins: Int
   slug: String!
+  tieBreakersWon: Int
   ties: Int
   updatedAt: DateTime!
   wins: Int
@@ -493,7 +505,9 @@ input TeamUpdateInput {
   name: String
   players: PlayerUpdateManyWithoutTeamInput
   pointDifference: Int
+  setWins: Int
   slug: String
+  tieBreakersWon: Int
   ties: Int
   wins: Int
 }
@@ -502,7 +516,9 @@ input TeamUpdateManyMutationInput {
   losses: Int
   name: String
   pointDifference: Int
+  setWins: Int
   slug: String
+  tieBreakersWon: Int
   ties: Int
   wins: Int
 }
@@ -520,7 +536,9 @@ input TeamUpdateWithoutPlayersDataInput {
   losses: Int
   name: String
   pointDifference: Int
+  setWins: Int
   slug: String
+  tieBreakersWon: Int
   ties: Int
   wins: Int
 }
@@ -578,6 +596,14 @@ input TeamWhereInput {
   pointDifference_lte: Int
   pointDifference_gt: Int
   pointDifference_gte: Int
+  setWins: Int
+  setWins_not: Int
+  setWins_in: [Int!]
+  setWins_not_in: [Int!]
+  setWins_lt: Int
+  setWins_lte: Int
+  setWins_gt: Int
+  setWins_gte: Int
   slug: String
   slug_not: String
   slug_in: [String!]
@@ -592,6 +618,14 @@ input TeamWhereInput {
   slug_not_starts_with: String
   slug_ends_with: String
   slug_not_ends_with: String
+  tieBreakersWon: Int
+  tieBreakersWon_not: Int
+  tieBreakersWon_in: [Int!]
+  tieBreakersWon_not_in: [Int!]
+  tieBreakersWon_lt: Int
+  tieBreakersWon_lte: Int
+  tieBreakersWon_gt: Int
+  tieBreakersWon_gte: Int
   ties: Int
   ties_not: Int
   ties_in: [Int!]

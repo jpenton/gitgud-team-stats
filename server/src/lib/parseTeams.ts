@@ -120,6 +120,15 @@ const parseTeams = async (prisma: Prisma) => {
       };
     });
 
+    const playerPages = await Promise.all(
+      players.map(i =>
+        axios.get(
+          'https://playoverwatch.com/en-us/career/pc/' +
+            encodeURIComponent(i.bnet.replace('#', '-')),
+        ),
+      ),
+    );
+
     for (let j = 0; j < players.length; j++) {
       let player = await prisma.player({
         bnet: players[j].bnet,
@@ -129,10 +138,7 @@ const parseTeams = async (prisma: Prisma) => {
         player = await prisma.createPlayer(players[j]);
       }
 
-      const { data } = await axios.get(
-        'https://playoverwatch.com/en-us/career/pc/' +
-          encodeURIComponent(players[j].bnet.replace('#', '-')),
-      );
+      const { data } = playerPages[j];
       const $ = cheerio.load(data);
       const rank = $(
         'div.masthead-player-progression:nth-child(3) > div:nth-child(3) > div:nth-child(2)',
@@ -223,12 +229,20 @@ const parseTeams = async (prisma: Prisma) => {
     const pointDifference = Array.from(
       $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(4)'),
     ).map(i => i.children[0].data);
+    const tieBreakersWon = Array.from(
+      $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(5)'),
+    ).map(i => i.children[0].data);
+    const setWins = Array.from(
+      $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(7)'),
+    ).map(i => i.children[0].data);
 
     teamsData.push(
       ...names.map((name, index) => ({
         name: name as string,
         wlt: wlt[index] as string,
         pd: pointDifference[index] as string,
+        tieBreakersWon: tieBreakersWon[index] as string,
+        setWins: setWins[index] as string,
       })),
     );
   }
@@ -244,6 +258,8 @@ const parseTeams = async (prisma: Prisma) => {
 
     const [wins, losses, ties] = teamData.wlt.split(' - ').map(Number);
     const pd = Number(teamData.pd);
+    const tieBreakersWon = Number(teamData.tieBreakersWon);
+    const setWins = Number(teamData.setWins);
 
     await prisma.updateTeam({
       where: {
@@ -254,6 +270,8 @@ const parseTeams = async (prisma: Prisma) => {
         losses,
         ties,
         pointDifference: pd,
+        tieBreakersWon,
+        setWins,
       },
     });
   }

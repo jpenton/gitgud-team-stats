@@ -405,7 +405,9 @@ export const typeDefs = /* GraphQL */ `
       last: Int
     ): [Player!]
     pointDifference: Int
+    setWins: Int
     slug: String!
+    tieBreakersWon: Int
     ties: Int
     updatedAt: DateTime!
     wins: Int
@@ -423,7 +425,9 @@ export const typeDefs = /* GraphQL */ `
     name: String!
     players: PlayerCreateManyWithoutTeamInput
     pointDifference: Int
+    setWins: Int
     slug: String!
+    tieBreakersWon: Int
     ties: Int
     wins: Int
   }
@@ -438,7 +442,9 @@ export const typeDefs = /* GraphQL */ `
     losses: Int
     name: String!
     pointDifference: Int
+    setWins: Int
     slug: String!
+    tieBreakersWon: Int
     ties: Int
     wins: Int
   }
@@ -457,8 +463,12 @@ export const typeDefs = /* GraphQL */ `
     name_DESC
     pointDifference_ASC
     pointDifference_DESC
+    setWins_ASC
+    setWins_DESC
     slug_ASC
     slug_DESC
+    tieBreakersWon_ASC
+    tieBreakersWon_DESC
     ties_ASC
     ties_DESC
     updatedAt_ASC
@@ -472,7 +482,9 @@ export const typeDefs = /* GraphQL */ `
     losses: Int
     name: String!
     pointDifference: Int
+    setWins: Int
     slug: String!
+    tieBreakersWon: Int
     ties: Int
     updatedAt: DateTime!
     wins: Int
@@ -501,7 +513,9 @@ export const typeDefs = /* GraphQL */ `
     name: String
     players: PlayerUpdateManyWithoutTeamInput
     pointDifference: Int
+    setWins: Int
     slug: String
+    tieBreakersWon: Int
     ties: Int
     wins: Int
   }
@@ -510,7 +524,9 @@ export const typeDefs = /* GraphQL */ `
     losses: Int
     name: String
     pointDifference: Int
+    setWins: Int
     slug: String
+    tieBreakersWon: Int
     ties: Int
     wins: Int
   }
@@ -528,7 +544,9 @@ export const typeDefs = /* GraphQL */ `
     losses: Int
     name: String
     pointDifference: Int
+    setWins: Int
     slug: String
+    tieBreakersWon: Int
     ties: Int
     wins: Int
   }
@@ -586,6 +604,14 @@ export const typeDefs = /* GraphQL */ `
     pointDifference_lte: Int
     pointDifference_gt: Int
     pointDifference_gte: Int
+    setWins: Int
+    setWins_not: Int
+    setWins_in: [Int!]
+    setWins_not_in: [Int!]
+    setWins_lt: Int
+    setWins_lte: Int
+    setWins_gt: Int
+    setWins_gte: Int
     slug: String
     slug_not: String
     slug_in: [String!]
@@ -600,6 +626,14 @@ export const typeDefs = /* GraphQL */ `
     slug_not_starts_with: String
     slug_ends_with: String
     slug_not_ends_with: String
+    tieBreakersWon: Int
+    tieBreakersWon_not: Int
+    tieBreakersWon_in: [Int!]
+    tieBreakersWon_not_in: [Int!]
+    tieBreakersWon_lt: Int
+    tieBreakersWon_lte: Int
+    tieBreakersWon_gt: Int
+    tieBreakersWon_gte: Int
     ties: Int
     ties_not: Int
     ties_in: [Int!]
