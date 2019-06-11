@@ -19,6 +19,10 @@ const GET_TEAMS_QUERY = gql`
         sr
       }
       slug
+      wins
+      losses
+      ties
+      pointDifference
     }
   }
 `;
@@ -59,9 +63,43 @@ class Teams extends React.Component<PageProps> {
                     <tr>
                       <th>Name</th>
                       <th>Average SR</th>
+                      <th>Record (W-L-T)</th>
+                      <th>Point Difference</th>
                     </tr>
                     {data.teams
                       .filter(team => team.players)
+                      .sort((a, b) => {
+                        if (!(a.wins || b.wins)) {
+                          return 0;
+                        } else if (!a.wins) {
+                          return 1;
+                        } else if (!b.wins) {
+                          return -1;
+                        }
+
+                        const wins = b.wins - a.wins;
+
+                        if (wins !== 0) {
+                          return wins;
+                        }
+
+                        if (!(a.pointDifference || b.pointDifference)) {
+                          return 0;
+                        } else if (!a.pointDifference) {
+                          return 1;
+                        } else if (!b.pointDifference) {
+                          return -1;
+                        }
+
+                        const pointDifference =
+                          b.pointDifference - a.pointDifference;
+
+                        if (pointDifference !== 0) {
+                          return pointDifference;
+                        }
+
+                        return 0;
+                      })
                       .map(team =>
                         team.players ? (
                           <tr
@@ -93,6 +131,10 @@ class Teams extends React.Component<PageProps> {
                                 ? this.calculateAverageSR(team.players)
                                 : null}
                             </td>
+                            <td>
+                              {`${team.wins}-${team.losses}-${team.ties}`}
+                            </td>
+                            <td>{team.pointDifference}</td>
                           </tr>
                         ) : null,
                       )}

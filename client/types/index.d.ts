@@ -22,8 +22,12 @@ export type Role =
 
 export interface ITeam {
   id: string;
+  losses?: number;
   name: string;
   players: IPlayer[] | null;
+  pointDifference?: number;
   slug: string;
+  ties?: number;
   updatedAt: string;
+  wins?: number;
 }
