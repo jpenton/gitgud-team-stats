@@ -5,6 +5,7 @@ import Container from '../components/Container';
 import Header from '../components/Header';
 import { PageProps } from '../types';
 import Head from 'next/head';
+import classnames from 'classnames';
 
 const GET_TEAM_QUERY = gql`
   query GET_TEAM_QUERY($slug: String!) {
@@ -83,7 +84,14 @@ class Team extends React.Component<IProps> {
                       </tr>
                       {data.team.players
                         ? data.team.players.map(player => (
-                            <tr key={player.id}>
+                            <tr
+                              className={classnames({
+                                'row-red':
+                                  player.sr !== null && player.sr > 2999,
+                                'row-yellow': player.sr === null,
+                              })}
+                              key={player.id}
+                            >
                               <td>{player.discord}</td>
                               <td>{roleToText[player.role]}</td>
                               <td>{player.bnet}</td>

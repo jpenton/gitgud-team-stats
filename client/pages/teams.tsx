@@ -4,8 +4,10 @@ import { Query } from 'react-apollo';
 import Link from 'next/link';
 import Container from '../components/Container';
 import Header from '../components/Header';
-import { PageProps } from '../types';
+import { PageProps, IPlayer, ITeam } from '../types';
 import Head from 'next/head';
+import classnames from 'classnames';
+import isPlayerOverSR from '../lib/isPlayerOverSR';
 
 const GET_TEAMS_QUERY = gql`
   query GET_TEAMS_QUERY {
@@ -21,20 +23,8 @@ const GET_TEAMS_QUERY = gql`
   }
 `;
 
-interface ITeam {
-  id: string;
-  name: string;
-  players:
-    | {
-        id: string;
-        sr: number | null;
-      }[]
-    | null;
-  slug: string;
-}
-
 class Teams extends React.Component<PageProps> {
-  calculateAverageSR = (players: ITeam['players']): number | null => {
+  calculateAverageSR = (players: IPlayer[]): number | null => {
     if (!players) {
       return null;
     }
@@ -72,27 +62,40 @@ class Teams extends React.Component<PageProps> {
                     </tr>
                     {data.teams
                       .filter(team => team.players)
-                      .map(team => (
-                        <tr key={team.id}>
-                          <td>
-                            <Link
-                              href={{
-                                pathname: '/team',
-                                query: {
-                                  slug: team.slug,
-                                },
-                              }}
-                            >
-                              <a>{team.name}</a>
-                            </Link>
-                          </td>
-                          <td>
-                            {team.players
-                              ? this.calculateAverageSR(team.players)
-                              : null}
-                          </td>
-                        </tr>
-                      ))}
+                      .map(team =>
+                        team.players ? (
+                          <tr
+                            className={classnames({
+                              'row-red':
+                                team.players.filter(player =>
+                                  isPlayerOverSR(player),
+                                ).length !== 0,
+                              'row-yellow':
+                                team.players.filter(player => !player.sr)
+                                  .length !== 0,
+                            })}
+                            key={team.id}
+                          >
+                            <td>
+                              <Link
+                                href={{
+                                  pathname: '/team',
+                                  query: {
+                                    slug: team.slug,
+                                  },
+                                }}
+                              >
+                                <a>{team.name}</a>
+                              </Link>
+                            </td>
+                            <td>
+                              {team.players
+                                ? this.calculateAverageSR(team.players)
+                                : null}
+                            </td>
+                          </tr>
+                        ) : null,
+                      )}
                   </tbody>
                 </table>
               ) : null

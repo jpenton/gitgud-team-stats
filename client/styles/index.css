@@ -54,6 +54,22 @@ tbody tr td {
   @apply pl-6 py-2;
 }
 
+tbody tr.row-red {
+  @apply bg-red-vivid-050;
+}
+
+tbody tr.row-red:hover {
+  @apply bg-red-vivid-100;
+}
+
+tbody tr.row-yellow {
+  @apply bg-yellow-vivid-050;
+}
+
+tbody tr.row-yellow:hover {
+  @apply bg-yellow-vivid-100;
+}
+
 .header {
   @apply bg-cool-grey-900 align-baseline py-3;
 }
