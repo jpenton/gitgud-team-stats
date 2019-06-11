@@ -98,7 +98,7 @@ class Team extends React.Component<IProps> {
                               <td>
                                 <div className="flex justify-between">
                                   <span>{player.sr}</span>
-                                  <div className="ml-4">
+                                  <div className="ml-4 flex items-center">
                                     <a
                                       className="mr-2"
                                       href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
@@ -107,7 +107,11 @@ class Team extends React.Component<IProps> {
                                       )}`}
                                       target="_blank"
                                     >
-                                      OW
+                                      <img
+                                        className="w-5 h-5"
+                                        src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overwatch-logo.png"
+                                        alt="overwatch"
+                                      />
                                     </a>
                                     <a
                                       href={`https://www.overbuff.com/players/pc/${player.bnet.replace(
@@ -116,7 +120,11 @@ class Team extends React.Component<IProps> {
                                       )}?mode=competitive`}
                                       target="_blank"
                                     >
-                                      OB
+                                      <img
+                                        className="w-5 h-5"
+                                        src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overbuff-logo.png"
+                                        alt="overbuff"
+                                      />
                                     </a>
                                   </div>
                                 </div>
