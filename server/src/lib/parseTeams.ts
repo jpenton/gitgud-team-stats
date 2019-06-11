@@ -13,7 +13,6 @@ import {
 } from '../../generated/prisma-client';
 import slug from 'slug';
 import cheerio from 'cheerio';
-import puppeteer from 'puppeteer';
 
 const parseTeams = async (prisma: Prisma) => {
   const { data } = await axios.get(
@@ -193,33 +192,46 @@ const parseTeams = async (prisma: Prisma) => {
     }
   }
 
-  const browser = await puppeteer.launch();
-  const [page] = await browser.pages();
-
-  await page.goto('https://challonge.com/GGNA_S3_BGN');
-  await page.waitForSelector(
-    'div.group:nth-child(1) > ul:nth-child(1) > li:nth-child(1)',
+  const { data: bracketData } = await axios.get(
+    'https://challonge.com/GGNA_S3_BGN',
   );
+  let $ = cheerio.load(bracketData);
+  const standingsData = $('.full-screen-target > script:nth-child(1)').html();
+  const startText = `window._initialStoreState['TournamentStore'] = `;
+  const endText = `};`;
 
-  const teamsData = await page.evaluate(() => {
-    const names = document.querySelectorAll(
-      'div.group > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(2)',
-    );
-    const WLT = document.querySelectorAll(
-      'div.group > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(3)',
-    );
-    const pointDifference = document.querySelectorAll(
-      'div.group > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(4)',
-    );
+  if (!standingsData) {
+    return;
+  }
 
-    return Array.from(names).map((el, index) => ({
-      name: el.textContent as string,
-      wlt: WLT[index].textContent as string,
-      pd: pointDifference[index].textContent as string,
-    }));
-  });
+  const startIndex = standingsData.indexOf(startText) + startText.length;
+  let standings = standingsData.slice(startIndex);
+  const endIndex = standings.indexOf(endText) + endText.length - 1;
+  standings = JSON.parse(standings.slice(0, endIndex))['groups'].map((i: any) =>
+    i['scorecard_html'].replace('\u003c', '<').replace('\u003e', '>'),
+  );
+  const teamsData = [];
 
-  await browser.close();
+  for (const html of standings) {
+    $ = cheerio.load(html);
+    const names = Array.from(
+      $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(2)'),
+    ).map(i => i.children[0].data);
+    const wlt = Array.from(
+      $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(3)'),
+    ).map(i => i.children[0].data);
+    const pointDifference = Array.from(
+      $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(4)'),
+    ).map(i => i.children[0].data);
+
+    teamsData.push(
+      ...names.map((name, index) => ({
+        name: name as string,
+        wlt: wlt[index] as string,
+        pd: pointDifference[index] as string,
+      })),
+    );
+  }
 
   for (const teamData of teamsData) {
     const team = await prisma.team({

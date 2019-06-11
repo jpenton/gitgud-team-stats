@@ -33,7 +33,6 @@
     "graphql-yoga": "^1.17.4",
     "ms": "^2.1.2",
     "prisma-client-lib": "^1.33.0",
-    "puppeteer": "^1.17.0",
     "slug": "^1.1.0",
     "xlsx": "^0.14.3"
   }
