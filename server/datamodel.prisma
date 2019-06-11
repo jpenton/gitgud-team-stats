@@ -20,8 +20,12 @@ type Player {
 
 type Team {
   id: ID! @id
+  losses: Int
   name: String! @unique
   players: [Player!] @relation(name: "TeamPlayer")
+  pointDifference: Int
   slug: String! @unique
+  ties: Int
   updatedAt: DateTime! @updatedAt
+  wins: Int
 }

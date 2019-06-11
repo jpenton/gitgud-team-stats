@@ -165,12 +165,20 @@ export type Role =
 export type TeamOrderByInput =
   | 'id_ASC'
   | 'id_DESC'
+  | 'losses_ASC'
+  | 'losses_DESC'
   | 'name_ASC'
   | 'name_DESC'
+  | 'pointDifference_ASC'
+  | 'pointDifference_DESC'
   | 'slug_ASC'
   | 'slug_DESC'
+  | 'ties_ASC'
+  | 'ties_DESC'
   | 'updatedAt_ASC'
-  | 'updatedAt_DESC';
+  | 'updatedAt_DESC'
+  | 'wins_ASC'
+  | 'wins_DESC';
 
 export type MutationType = 'CREATED' | 'UPDATED' | 'DELETED';
 
@@ -211,15 +219,23 @@ export interface PlayerUpdateManyWithoutTeamInput {
 
 export interface TeamCreateInput {
   id?: Maybe<ID_Input>;
+  losses?: Maybe<Int>;
   name: String;
   players?: Maybe<PlayerCreateManyWithoutTeamInput>;
+  pointDifference?: Maybe<Int>;
   slug: String;
+  ties?: Maybe<Int>;
+  wins?: Maybe<Int>;
 }
 
 export interface TeamUpdateInput {
+  losses?: Maybe<Int>;
   name?: Maybe<String>;
   players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
+  pointDifference?: Maybe<Int>;
   slug?: Maybe<String>;
+  ties?: Maybe<Int>;
+  wins?: Maybe<Int>;
 }
 
 export interface TeamUpsertWithoutPlayersInput {
@@ -239,8 +255,12 @@ export interface TeamSubscriptionWhereInput {
 }
 
 export interface TeamUpdateManyMutationInput {
+  losses?: Maybe<Int>;
   name?: Maybe<String>;
+  pointDifference?: Maybe<Int>;
   slug?: Maybe<String>;
+  ties?: Maybe<Int>;
+  wins?: Maybe<Int>;
 }
 
 export interface PlayerCreateInput {
@@ -270,8 +290,12 @@ export interface PlayerUpsertWithWhereUniqueWithoutTeamInput {
 
 export interface TeamCreateWithoutPlayersInput {
   id?: Maybe<ID_Input>;
+  losses?: Maybe<Int>;
   name: String;
+  pointDifference?: Maybe<Int>;
   slug: String;
+  ties?: Maybe<Int>;
+  wins?: Maybe<Int>;
 }
 
 export interface PlayerUpdateWithoutTeamDataInput {
@@ -304,6 +328,14 @@ export interface TeamWhereInput {
   id_not_starts_with?: Maybe<ID_Input>;
   id_ends_with?: Maybe<ID_Input>;
   id_not_ends_with?: Maybe<ID_Input>;
+  losses?: Maybe<Int>;
+  losses_not?: Maybe<Int>;
+  losses_in?: Maybe<Int[] | Int>;
+  losses_not_in?: Maybe<Int[] | Int>;
+  losses_lt?: Maybe<Int>;
+  losses_lte?: Maybe<Int>;
+  losses_gt?: Maybe<Int>;
+  losses_gte?: Maybe<Int>;
   name?: Maybe<String>;
   name_not?: Maybe<String>;
   name_in?: Maybe<String[] | String>;
@@ -321,6 +353,14 @@ export interface TeamWhereInput {
   players_every?: Maybe<PlayerWhereInput>;
   players_some?: Maybe<PlayerWhereInput>;
   players_none?: Maybe<PlayerWhereInput>;
+  pointDifference?: Maybe<Int>;
+  pointDifference_not?: Maybe<Int>;
+  pointDifference_in?: Maybe<Int[] | Int>;
+  pointDifference_not_in?: Maybe<Int[] | Int>;
+  pointDifference_lt?: Maybe<Int>;
+  pointDifference_lte?: Maybe<Int>;
+  pointDifference_gt?: Maybe<Int>;
+  pointDifference_gte?: Maybe<Int>;
   slug?: Maybe<String>;
   slug_not?: Maybe<String>;
   slug_in?: Maybe<String[] | String>;
@@ -335,6 +375,14 @@ export interface TeamWhereInput {
   slug_not_starts_with?: Maybe<String>;
   slug_ends_with?: Maybe<String>;
   slug_not_ends_with?: Maybe<String>;
+  ties?: Maybe<Int>;
+  ties_not?: Maybe<Int>;
+  ties_in?: Maybe<Int[] | Int>;
+  ties_not_in?: Maybe<Int[] | Int>;
+  ties_lt?: Maybe<Int>;
+  ties_lte?: Maybe<Int>;
+  ties_gt?: Maybe<Int>;
+  ties_gte?: Maybe<Int>;
   updatedAt?: Maybe<DateTimeInput>;
   updatedAt_not?: Maybe<DateTimeInput>;
   updatedAt_in?: Maybe<DateTimeInput[] | DateTimeInput>;
@@ -343,6 +391,14 @@ export interface TeamWhereInput {
   updatedAt_lte?: Maybe<DateTimeInput>;
   updatedAt_gt?: Maybe<DateTimeInput>;
   updatedAt_gte?: Maybe<DateTimeInput>;
+  wins?: Maybe<Int>;
+  wins_not?: Maybe<Int>;
+  wins_in?: Maybe<Int[] | Int>;
+  wins_not_in?: Maybe<Int[] | Int>;
+  wins_lt?: Maybe<Int>;
+  wins_lte?: Maybe<Int>;
+  wins_gt?: Maybe<Int>;
+  wins_gte?: Maybe<Int>;
   AND?: Maybe<TeamWhereInput[] | TeamWhereInput>;
   OR?: Maybe<TeamWhereInput[] | TeamWhereInput>;
   NOT?: Maybe<TeamWhereInput[] | TeamWhereInput>;
@@ -438,8 +494,12 @@ export interface PlayerWhereInput {
 }
 
 export interface TeamUpdateWithoutPlayersDataInput {
+  losses?: Maybe<Int>;
   name?: Maybe<String>;
+  pointDifference?: Maybe<Int>;
   slug?: Maybe<String>;
+  ties?: Maybe<Int>;
+  wins?: Maybe<Int>;
 }
 
 export interface PlayerScalarWhereInput {
@@ -530,27 +590,39 @@ export interface NodeNode {
 
 export interface TeamPreviousValues {
   id: ID_Output;
+  losses?: Int;
   name: String;
+  pointDifference?: Int;
   slug: String;
+  ties?: Int;
   updatedAt: DateTimeOutput;
+  wins?: Int;
 }
 
 export interface TeamPreviousValuesPromise
   extends Promise<TeamPreviousValues>,
     Fragmentable {
   id: () => Promise<ID_Output>;
+  losses: () => Promise<Int>;
   name: () => Promise<String>;
+  pointDifference: () => Promise<Int>;
   slug: () => Promise<String>;
+  ties: () => Promise<Int>;
   updatedAt: () => Promise<DateTimeOutput>;
+  wins: () => Promise<Int>;
 }
 
 export interface TeamPreviousValuesSubscription
   extends Promise<AsyncIterator<TeamPreviousValues>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
+  losses: () => Promise<AsyncIterator<Int>>;
   name: () => Promise<AsyncIterator<String>>;
+  pointDifference: () => Promise<AsyncIterator<Int>>;
   slug: () => Promise<AsyncIterator<String>>;
+  ties: () => Promise<AsyncIterator<Int>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  wins: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface AggregatePlayer {
@@ -613,13 +685,18 @@ export interface PlayerEdgeSubscription
 
 export interface Team {
   id: ID_Output;
+  losses?: Int;
   name: String;
+  pointDifference?: Int;
   slug: String;
+  ties?: Int;
   updatedAt: DateTimeOutput;
+  wins?: Int;
 }
 
 export interface TeamPromise extends Promise<Team>, Fragmentable {
   id: () => Promise<ID_Output>;
+  losses: () => Promise<Int>;
   name: () => Promise<String>;
   players: <T = FragmentableArray<Player>>(args?: {
     where?: PlayerWhereInput;
@@ -630,14 +707,18 @@ export interface TeamPromise extends Promise<Team>, Fragmentable {
     first?: Int;
     last?: Int;
   }) => T;
+  pointDifference: () => Promise<Int>;
   slug: () => Promise<String>;
+  ties: () => Promise<Int>;
   updatedAt: () => Promise<DateTimeOutput>;
+  wins: () => Promise<Int>;
 }
 
 export interface TeamSubscription
   extends Promise<AsyncIterator<Team>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
+  losses: () => Promise<AsyncIterator<Int>>;
   name: () => Promise<AsyncIterator<String>>;
   players: <T = Promise<AsyncIterator<PlayerSubscription>>>(args?: {
     where?: PlayerWhereInput;
@@ -648,14 +729,18 @@ export interface TeamSubscription
     first?: Int;
     last?: Int;
   }) => T;
+  pointDifference: () => Promise<AsyncIterator<Int>>;
   slug: () => Promise<AsyncIterator<String>>;
+  ties: () => Promise<AsyncIterator<Int>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  wins: () => Promise<AsyncIterator<Int>>;
 }
 
 export interface TeamNullablePromise
   extends Promise<Team | null>,
     Fragmentable {
   id: () => Promise<ID_Output>;
+  losses: () => Promise<Int>;
   name: () => Promise<String>;
   players: <T = FragmentableArray<Player>>(args?: {
     where?: PlayerWhereInput;
@@ -666,8 +751,11 @@ export interface TeamNullablePromise
     first?: Int;
     last?: Int;
   }) => T;
+  pointDifference: () => Promise<Int>;
   slug: () => Promise<String>;
+  ties: () => Promise<Int>;
   updatedAt: () => Promise<DateTimeOutput>;
+  wins: () => Promise<Int>;
 }
 
 export interface AggregateTeam {

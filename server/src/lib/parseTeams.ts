@@ -13,6 +13,7 @@ import {
 } from '../../generated/prisma-client';
 import slug from 'slug';
 import cheerio from 'cheerio';
+import puppeteer from 'puppeteer';
 
 const parseTeams = async (prisma: Prisma) => {
   const { data } = await axios.get(
@@ -190,6 +191,59 @@ const parseTeams = async (prisma: Prisma) => {
         },
       });
     }
+  }
+
+  const browser = await puppeteer.launch();
+  const [page] = await browser.pages();
+
+  await page.goto('https://challonge.com/GGNA_S3_BGN');
+  await page.waitForSelector(
+    'div.group:nth-child(1) > ul:nth-child(1) > li:nth-child(1)',
+  );
+
+  const teamsData = await page.evaluate(() => {
+    const names = document.querySelectorAll(
+      'div.group > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(2)',
+    );
+    const WLT = document.querySelectorAll(
+      'div.group > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(3)',
+    );
+    const pointDifference = document.querySelectorAll(
+      'div.group > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(4)',
+    );
+
+    return Array.from(names).map((el, index) => ({
+      name: el.textContent as string,
+      wlt: WLT[index].textContent as string,
+      pd: pointDifference[index].textContent as string,
+    }));
+  });
+
+  await browser.close();
+
+  for (const teamData of teamsData) {
+    const team = await prisma.team({
+      slug: slug(teamData.name.trim().toLowerCase()),
+    });
+
+    if (!team) {
+      continue;
+    }
+
+    const [wins, losses, ties] = teamData.wlt.split(' - ').map(Number);
+    const pd = Number(teamData.pd);
+
+    await prisma.updateTeam({
+      where: {
+        slug: team.slug,
+      },
+      data: {
+        wins,
+        losses,
+        ties,
+        pointDifference: pd,
+      },
+    });
   }
 };
 

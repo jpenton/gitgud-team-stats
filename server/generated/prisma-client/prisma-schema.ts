@@ -393,6 +393,7 @@ export const typeDefs = /* GraphQL */ `
 
   type Team {
     id: ID!
+    losses: Int
     name: String!
     players(
       where: PlayerWhereInput
@@ -403,8 +404,11 @@ export const typeDefs = /* GraphQL */ `
       first: Int
       last: Int
     ): [Player!]
+    pointDifference: Int
     slug: String!
+    ties: Int
     updatedAt: DateTime!
+    wins: Int
   }
 
   type TeamConnection {
@@ -415,9 +419,13 @@ export const typeDefs = /* GraphQL */ `
 
   input TeamCreateInput {
     id: ID
+    losses: Int
     name: String!
     players: PlayerCreateManyWithoutTeamInput
+    pointDifference: Int
     slug: String!
+    ties: Int
+    wins: Int
   }
 
   input TeamCreateOneWithoutPlayersInput {
@@ -427,8 +435,12 @@ export const typeDefs = /* GraphQL */ `
 
   input TeamCreateWithoutPlayersInput {
     id: ID
+    losses: Int
     name: String!
+    pointDifference: Int
     slug: String!
+    ties: Int
+    wins: Int
   }
 
   type TeamEdge {
@@ -439,19 +451,31 @@ export const typeDefs = /* GraphQL */ `
   enum TeamOrderByInput {
     id_ASC
     id_DESC
+    losses_ASC
+    losses_DESC
     name_ASC
     name_DESC
+    pointDifference_ASC
+    pointDifference_DESC
     slug_ASC
     slug_DESC
+    ties_ASC
+    ties_DESC
     updatedAt_ASC
     updatedAt_DESC
+    wins_ASC
+    wins_DESC
   }
 
   type TeamPreviousValues {
     id: ID!
+    losses: Int
     name: String!
+    pointDifference: Int
     slug: String!
+    ties: Int
     updatedAt: DateTime!
+    wins: Int
   }
 
   type TeamSubscriptionPayload {
@@ -473,14 +497,22 @@ export const typeDefs = /* GraphQL */ `
   }
 
   input TeamUpdateInput {
+    losses: Int
     name: String
     players: PlayerUpdateManyWithoutTeamInput
+    pointDifference: Int
     slug: String
+    ties: Int
+    wins: Int
   }
 
   input TeamUpdateManyMutationInput {
+    losses: Int
     name: String
+    pointDifference: Int
     slug: String
+    ties: Int
+    wins: Int
   }
 
   input TeamUpdateOneWithoutPlayersInput {
@@ -493,8 +525,12 @@ export const typeDefs = /* GraphQL */ `
   }
 
   input TeamUpdateWithoutPlayersDataInput {
+    losses: Int
     name: String
+    pointDifference: Int
     slug: String
+    ties: Int
+    wins: Int
   }
 
   input TeamUpsertWithoutPlayersInput {
@@ -517,6 +553,14 @@ export const typeDefs = /* GraphQL */ `
     id_not_starts_with: ID
     id_ends_with: ID
     id_not_ends_with: ID
+    losses: Int
+    losses_not: Int
+    losses_in: [Int!]
+    losses_not_in: [Int!]
+    losses_lt: Int
+    losses_lte: Int
+    losses_gt: Int
+    losses_gte: Int
     name: String
     name_not: String
     name_in: [String!]
@@ -534,6 +578,14 @@ export const typeDefs = /* GraphQL */ `
     players_every: PlayerWhereInput
     players_some: PlayerWhereInput
     players_none: PlayerWhereInput
+    pointDifference: Int
+    pointDifference_not: Int
+    pointDifference_in: [Int!]
+    pointDifference_not_in: [Int!]
+    pointDifference_lt: Int
+    pointDifference_lte: Int
+    pointDifference_gt: Int
+    pointDifference_gte: Int
     slug: String
     slug_not: String
     slug_in: [String!]
@@ -548,6 +600,14 @@ export const typeDefs = /* GraphQL */ `
     slug_not_starts_with: String
     slug_ends_with: String
     slug_not_ends_with: String
+    ties: Int
+    ties_not: Int
+    ties_in: [Int!]
+    ties_not_in: [Int!]
+    ties_lt: Int
+    ties_lte: Int
+    ties_gt: Int
+    ties_gte: Int
     updatedAt: DateTime
     updatedAt_not: DateTime
     updatedAt_in: [DateTime!]
@@ -556,6 +616,14 @@ export const typeDefs = /* GraphQL */ `
     updatedAt_lte: DateTime
     updatedAt_gt: DateTime
     updatedAt_gte: DateTime
+    wins: Int
+    wins_not: Int
+    wins_in: [Int!]
+    wins_not_in: [Int!]
+    wins_lt: Int
+    wins_lte: Int
+    wins_gt: Int
+    wins_gte: Int
     AND: [TeamWhereInput!]
     OR: [TeamWhereInput!]
     NOT: [TeamWhereInput!]
