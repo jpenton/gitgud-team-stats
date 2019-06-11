@@ -11,4 +11,4 @@ deploy:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     - ssh-add <(echo "$PRIVATE_KEY")
-    - ssh -o StrictHostKeyChecking=no root@vps.penton.site "cd /root/gitgud-team-stats && git reset --hard && git clean -fd && git pull && cd server && GITGUD_PRISMA_ENDPOINT=http://localhost:4467 prisma deploy --force && docker-compose up -d --build backend next"
+    - ssh -o StrictHostKeyChecking=no root@vps.penton.site ". /root/.bash_profile && cd /root/gitgud-team-stats && git reset --hard && git clean -fd && git pull && cd server && GITGUD_PRISMA_ENDPOINT=http://localhost:4467 prisma deploy --force && docker-compose up -d --build backend next"
