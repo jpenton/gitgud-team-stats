@@ -12,7 +12,7 @@ const Container: React.SFC<IProps> = ({ children, addMargin = false }) => (
         'container',
         {
           'pt-4': addMargin,
-          'pb-14': addMargin,
+          'pb-16': addMargin,
         },
         'px-4',
       )}
