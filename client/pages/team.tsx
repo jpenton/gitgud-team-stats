@@ -74,66 +74,68 @@ class Team extends React.Component<IProps> {
                     <title>{`${data.team.name} | GitGud Stats`}</title>
                   </Head>
                   <h2>{data.team.name}</h2>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Discord</th>
-                        <th>Role</th>
-                        <th>BNet</th>
-                        <th>SR</th>
-                      </tr>
-                      {data.team.players
-                        ? data.team.players.map(player => (
-                            <tr
-                              className={classnames({
-                                'row-red':
-                                  player.sr !== null && player.sr > 2999,
-                                'row-yellow': player.sr === null,
-                              })}
-                              key={player.id}
-                            >
-                              <td>{player.discord}</td>
-                              <td>{roleToText[player.role]}</td>
-                              <td>{player.bnet}</td>
-                              <td>
-                                <div className="flex justify-between">
-                                  <span>{player.sr}</span>
-                                  <div className="ml-4 flex items-center">
-                                    <a
-                                      className="mr-2"
-                                      href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
-                                        '#',
-                                        '-',
-                                      )}`}
-                                      target="_blank"
-                                    >
-                                      <img
-                                        className="w-5 h-5"
-                                        src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overwatch-logo.png"
-                                        alt="overwatch"
-                                      />
-                                    </a>
-                                    <a
-                                      href={`https://www.overbuff.com/players/pc/${player.bnet.replace(
-                                        '#',
-                                        '-',
-                                      )}?mode=competitive`}
-                                      target="_blank"
-                                    >
-                                      <img
-                                        className="w-5 h-5"
-                                        src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overbuff-logo.png"
-                                        alt="overbuff"
-                                      />
-                                    </a>
+                  <div className="overflow-x-auto shadow-lg">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Discord</th>
+                          <th>Role</th>
+                          <th>BNet</th>
+                          <th>SR</th>
+                        </tr>
+                        {data.team.players
+                          ? data.team.players.map(player => (
+                              <tr
+                                className={classnames({
+                                  'row-red':
+                                    player.sr !== null && player.sr > 2999,
+                                  'row-yellow': player.sr === null,
+                                })}
+                                key={player.id}
+                              >
+                                <td>{player.discord}</td>
+                                <td>{roleToText[player.role]}</td>
+                                <td>{player.bnet}</td>
+                                <td>
+                                  <div className="flex justify-between">
+                                    <span>{player.sr}</span>
+                                    <div className="ml-4 flex items-center">
+                                      <a
+                                        className="mr-2"
+                                        href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
+                                          '#',
+                                          '-',
+                                        )}`}
+                                        target="_blank"
+                                      >
+                                        <img
+                                          className="w-5 h-5"
+                                          src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overwatch-logo.png"
+                                          alt="overwatch"
+                                        />
+                                      </a>
+                                      <a
+                                        href={`https://www.overbuff.com/players/pc/${player.bnet.replace(
+                                          '#',
+                                          '-',
+                                        )}?mode=competitive`}
+                                        target="_blank"
+                                      >
+                                        <img
+                                          className="w-5 h-5"
+                                          src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overbuff-logo.png"
+                                          alt="overbuff"
+                                        />
+                                      </a>
+                                    </div>
                                   </div>
-                                </div>
-                              </td>
-                            </tr>
-                          ))
-                        : null}
-                    </tbody>
-                  </table>
+                                </td>
+                              </tr>
+                            ))
+                          : null}
+                      </tbody>
+                    </table>
+                  </div>
                 </>
               ) : null
             }

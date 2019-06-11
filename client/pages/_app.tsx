@@ -1,4 +1,4 @@
-import App, { Container, NextAppContext } from 'next/app';
+import App, { Container, AppContext } from 'next/app';
 import React from 'react';
 import withApolloClient from '../lib/withApolloClient';
 import { ApolloProvider } from 'react-apollo';
@@ -8,7 +8,7 @@ import getConfig from 'next/config';
 import Head from 'next/head';
 
 class MyApp extends App<{ apollo: ApolloClient<any> }> {
-  static async getInitialProps({ Component, ctx }: NextAppContext) {
+  static async getInitialProps({ Component, ctx }: AppContext) {
     let pageProps: Record<string, any> = {};
 
     if (Component.getInitialProps) {

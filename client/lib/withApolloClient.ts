@@ -4,7 +4,7 @@ import ApolloClient from 'apollo-boost/lib/index';
 
 export default (isProd: () => boolean) =>
   withApollo(
-    ({ ctx, headers, initialState }) =>
+    ({ initialState }) =>
       new ApolloClient({
         uri: isProd() ? 'https://gitgud-api.cpu.tf' : 'http://localhost:8000',
         cache: new InMemoryCache().restore(initialState || {}),

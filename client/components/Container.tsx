@@ -8,10 +8,14 @@ interface IProps {
 const Container: React.SFC<IProps> = ({ children, addMargin = false }) => (
   <div className="flex justify-center">
     <div
-      className={classnames('container', {
-        'mt-4': addMargin,
-        'mb-4': addMargin,
-      })}
+      className={classnames(
+        'container',
+        {
+          'pt-4': addMargin,
+          'pb-14': addMargin,
+        },
+        'px-4',
+      )}
     >
       {children}
     </div>
