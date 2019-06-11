@@ -26,7 +26,9 @@ export interface ITeam {
   name: string;
   players: IPlayer[] | null;
   pointDifference?: number;
+  setWins?: number;
   slug: string;
+  tieBreakersWon?: number;
   ties?: number;
   updatedAt: string;
   wins?: number;
