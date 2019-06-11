@@ -100,7 +100,7 @@ class Teams extends React.Component<PageProps> {
 
                         return 0;
                       })
-                      .map(team =>
+                      .map((team, index) =>
                         team.players ? (
                           <tr
                             className={classnames({
@@ -111,6 +111,7 @@ class Teams extends React.Component<PageProps> {
                               'row-yellow':
                                 team.players.filter(player => !player.sr)
                                   .length !== 0,
+                              'border-cool-grey-200 border-dashed': index === 7,
                             })}
                             key={team.id}
                           >
