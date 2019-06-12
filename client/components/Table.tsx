@@ -1,11 +1,19 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 interface IProps {
+  dashedIndex?: number;
   headers: string[];
-  rows: React.ReactNode[][];
+  rows: IRow[];
 }
 
-const Table: React.FC<IProps> = ({ headers, rows }) => {
+interface IRow {
+  content: React.ReactNode[];
+  red?: boolean;
+  yellow?: boolean;
+}
+
+const Table: React.FC<IProps> = ({ dashedIndex, headers, rows }) => {
   return (
     <div className="overflow-x-auto shadow-lg rounded-lg">
       <table>
@@ -15,10 +23,17 @@ const Table: React.FC<IProps> = ({ headers, rows }) => {
               <th key={i}>{i}</th>
             ))}
           </tr>
-          {rows.map((i, index) => (
-            <tr key={index}>
-              {i.map((j, index) => (
-                <td key={index}>{j}</td>
+          {rows.map((row, index) => (
+            <tr
+              className={classnames({
+                'row-red': row.red,
+                'row-yellow': row.yellow,
+                'border-dashed border-cool-grey-200': dashedIndex === index,
+              })}
+              key={index}
+            >
+              {row.content.map((cell, index) => (
+                <td key={index}>{cell}</td>
               ))}
             </tr>
           ))}
