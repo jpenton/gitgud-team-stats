@@ -22,14 +22,14 @@ export type Role =
 
 export interface ITeam {
   id: string;
-  losses?: number;
+  losses: number | null;
   name: string;
   players: IPlayer[] | null;
-  pointDifference?: number;
-  setWins?: number;
+  pointDifference: number | null;
+  setWins: number | null;
   slug: string;
-  tieBreakersWon?: number;
-  ties?: number;
+  tieBreakersWon: number | null;
+  ties: number | null;
   updatedAt: string;
-  wins?: number;
+  wins: number | null;
 }
