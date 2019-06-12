@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosPromise, AxiosRequestConfig, AxiosResponse } from 'axios';
 import xlsx from 'xlsx';
 import sheetToRows from './sheetToRows';
 import {
@@ -13,6 +13,7 @@ import {
 } from '../../generated/prisma-client';
 import slug from 'slug';
 import cheerio from 'cheerio';
+import _ from 'lodash';
 
 const parseTeams = async (prisma: Prisma) => {
   console.log(`${new Date().toISOString()} Beginning team parsing...`);
@@ -75,6 +76,20 @@ const parseTeams = async (prisma: Prisma) => {
     tempRows.push(rows[i]);
   }
 
+  const playerPagesPromises: AxiosPromise[] = [];
+  for (let i = 0; i < teams.length; i++) {
+    playerPagesPromises.push(
+      ...teams[i].players.map(j =>
+        axios.get(
+          'https://playoverwatch.com/en-us/career/pc/' +
+            encodeURIComponent(j.bnet.replace('#', '-')),
+        ),
+      ),
+    );
+  }
+
+  const playerPages = await Promise.all(playerPagesPromises);
+
   for (let i = 0; i < teams.length; i++) {
     const team = await prisma.team({
       slug: teams[i].slug,
@@ -122,15 +137,6 @@ const parseTeams = async (prisma: Prisma) => {
       };
     });
 
-    const playerPages = await Promise.all(
-      players.map(i =>
-        axios.get(
-          'https://playoverwatch.com/en-us/career/pc/' +
-            encodeURIComponent(i.bnet.replace('#', '-')),
-        ),
-      ),
-    );
-
     for (let j = 0; j < players.length; j++) {
       let player = await prisma.player({
         bnet: players[j].bnet,
@@ -140,7 +146,7 @@ const parseTeams = async (prisma: Prisma) => {
         player = await prisma.createPlayer(players[j]);
       }
 
-      const { data } = playerPages[j];
+      const { data } = playerPages.splice(0, 1)[0];
       const $ = cheerio.load(data);
       const rank = $(
         'div.masthead-player-progression:nth-child(3) > div:nth-child(3) > div:nth-child(2)',
