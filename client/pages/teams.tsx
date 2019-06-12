@@ -8,6 +8,7 @@ import { PageProps, IPlayer, ITeam } from '../types';
 import Head from 'next/head';
 import classnames from 'classnames';
 import isPlayerOverSR from '../lib/isPlayerOverSR';
+import Table from '../components/Table';
 
 const GET_TEAMS_QUERY = gql`
   query GET_TEAMS_QUERY {
@@ -60,124 +61,109 @@ class Teams extends React.Component<PageProps> {
           <Query<{ teams: ITeam[] }> query={GET_TEAMS_QUERY}>
             {({ data }) =>
               data ? (
-                <div className="overflow-x-auto shadow-lg rounded-lg">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Name</th>
-                        <th>Average SR</th>
-                        <th>Record (W-L-T)</th>
-                        <th>Point Difference</th>
-                      </tr>
-                      {data.teams
-                        .filter(team => team.players)
-                        .sort((a, b) => {
-                          if (!(a.wins || b.wins)) {
-                            if (!a.wins) {
-                              return 1;
-                            } else if (!b.wins) {
-                              return -1;
-                            }
-                          }
+                <Table
+                  dashedIndex={7}
+                  headers={[
+                    'Name',
+                    'Average SR',
+                    'Record (W-L-T)',
+                    'Point Difference',
+                  ]}
+                  rows={data.teams
+                    .filter(team => team.players)
+                    .sort((a, b) => {
+                      if (!(a.wins || b.wins)) {
+                        if (!a.wins) {
+                          return 1;
+                        } else if (!b.wins) {
+                          return -1;
+                        }
+                      }
 
-                          const wins = (b.wins as number) - (a.wins as number);
+                      const wins = (b.wins as number) - (a.wins as number);
 
-                          if (wins !== 0) {
-                            return wins;
-                          }
+                      if (wins !== 0) {
+                        return wins;
+                      }
 
-                          if (!(a.pointDifference || b.pointDifference)) {
-                            if (!a.pointDifference) {
-                              return 1;
-                            } else if (!b.pointDifference) {
-                              return -1;
-                            }
-                          }
+                      if (!(a.pointDifference || b.pointDifference)) {
+                        if (!a.pointDifference) {
+                          return 1;
+                        } else if (!b.pointDifference) {
+                          return -1;
+                        }
+                      }
 
-                          const pointDifference =
-                            (b.pointDifference as number) -
-                            (a.pointDifference as number);
+                      const pointDifference =
+                        (b.pointDifference as number) -
+                        (a.pointDifference as number);
 
-                          if (pointDifference !== 0) {
-                            return pointDifference;
-                          }
+                      if (pointDifference !== 0) {
+                        return pointDifference;
+                      }
 
-                          if (!(a.tieBreakersWon || b.tieBreakersWon)) {
-                            if (!a.tieBreakersWon) {
-                              return 1;
-                            } else if (!b.tieBreakersWon) {
-                              return -1;
-                            }
-                          }
+                      if (!(a.tieBreakersWon || b.tieBreakersWon)) {
+                        if (!a.tieBreakersWon) {
+                          return 1;
+                        } else if (!b.tieBreakersWon) {
+                          return -1;
+                        }
+                      }
 
-                          const tieBreakersWon =
-                            (b.tieBreakersWon as number) -
-                            (a.tieBreakersWon as number);
+                      const tieBreakersWon =
+                        (b.tieBreakersWon as number) -
+                        (a.tieBreakersWon as number);
 
-                          if (tieBreakersWon !== 0) {
-                            return tieBreakersWon;
-                          }
+                      if (tieBreakersWon !== 0) {
+                        return tieBreakersWon;
+                      }
 
-                          if (!(a.setWins || b.setWins)) {
-                            if (!a.setWins) {
-                              return 1;
-                            } else if (!b.setWins) {
-                              return -1;
-                            }
-                          }
+                      if (!(a.setWins || b.setWins)) {
+                        if (!a.setWins) {
+                          return 1;
+                        } else if (!b.setWins) {
+                          return -1;
+                        }
+                      }
 
-                          const setWins =
-                            (b.setWins as number) - (a.setWins as number);
+                      const setWins =
+                        (b.setWins as number) - (a.setWins as number);
 
-                          if (setWins !== 0) {
-                            return setWins;
-                          }
+                      if (setWins !== 0) {
+                        return setWins;
+                      }
 
-                          return a.name.localeCompare(b.name);
-                        })
-                        .map((team, index) =>
-                          team.players ? (
-                            <tr
-                              className={classnames({
-                                'row-red':
-                                  team.players.filter(player =>
-                                    isPlayerOverSR(player),
-                                  ).length !== 0,
-                                'row-yellow':
-                                  team.players.filter(player => !player.sr)
-                                    .length !== 0,
-                                'border-cool-grey-200 border-dashed':
-                                  index === 7,
-                              })}
-                              key={team.id}
-                            >
-                              <td>
-                                <Link
-                                  href={{
-                                    pathname: '/team',
-                                    query: {
-                                      slug: team.slug,
-                                    },
-                                  }}
-                                >
-                                  <a>{team.name}</a>
-                                </Link>
-                              </td>
-                              <td>
-                                {team.players
-                                  ? this.calculateAverageSR(team.players)
-                                  : null}
-                              </td>
-                              <td>
-                                {`${team.wins}-${team.losses}-${team.ties}`}
-                              </td>
-                              <td>{team.pointDifference}</td>
-                            </tr>
-                          ) : null,
-                        )}
-                    </tbody>
-                  </table>
-                </div>
+                      return a.name.localeCompare(b.name);
+                    })
+                    .map(team => ({
+                      content: [
+                        <Link
+                          href={{
+                            pathname: '/team',
+                            query: {
+                              slug: team.slug,
+                            },
+                          }}
+                        >
+                          <a>{team.name}</a>
+                        </Link>,
+                        team.players
+                          ? this.calculateAverageSR(team.players)
+                          : null,
+                        `${team.wins}-${team.losses}-${team.ties}`,
+                        team.pointDifference,
+                      ],
+                      red: !!(
+                        team.players &&
+                        team.players.filter(player => isPlayerOverSR(player))
+                          .length !== 0
+                      ),
+                      yellow: !!(
+                        team.players &&
+                        team.players.filter(player => !player.sr).length !== 0
+                      ),
+                    }))}
+                />
               ) : null
             }
           </Query>

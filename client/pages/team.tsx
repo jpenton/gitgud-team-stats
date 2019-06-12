@@ -78,42 +78,46 @@ class Team extends React.Component<IProps> {
                   {data.team.players ? (
                     <Table
                       headers={['Discord', 'Role', 'BNet', 'SR']}
-                      rows={data.team.players.map(i => [
-                        i.discord,
-                        roleToText[i.role],
-                        i.bnet,
-                        <div className="flex justify-between items-center">
-                          <span>{i.sr}</span>
-                          <div className="ml-4 flex flex-no-wrap">
-                            <a
-                              className="mr-2 inline-block w-5 h-5"
-                              href={`https://playoverwatch.com/en-us/career/pc/${i.bnet.replace(
-                                '#',
-                                '-',
-                              )}`}
-                              target="_blank"
-                            >
-                              <img
-                                src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overwatch-logo.png"
-                                alt="overwatch"
-                              />
-                            </a>
-                            <a
-                              className="inline-block w-5 h-5"
-                              href={`https://www.overbuff.com/players/pc/${i.bnet.replace(
-                                '#',
-                                '-',
-                              )}?mode=competitive`}
-                              target="_blank"
-                            >
-                              <img
-                                src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overbuff-logo.png"
-                                alt="overbuff"
-                              />
-                            </a>
-                          </div>
-                        </div>,
-                      ])}
+                      rows={data.team.players.map(player => ({
+                        content: [
+                          player.discord,
+                          roleToText[player.role],
+                          player.bnet,
+                          <div className="flex justify-between items-center">
+                            <span>{player.sr}</span>
+                            <div className="ml-4 flex flex-no-wrap">
+                              <a
+                                className="mr-2 inline-block w-5 h-5"
+                                href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
+                                  '#',
+                                  '-',
+                                )}`}
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overwatch-logo.png"
+                                  alt="overwatch"
+                                />
+                              </a>
+                              <a
+                                className="inline-block w-5 h-5"
+                                href={`https://www.overbuff.com/players/pc/${player.bnet.replace(
+                                  '#',
+                                  '-',
+                                )}?mode=competitive`}
+                                target="_blank"
+                              >
+                                <img
+                                  src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overbuff-logo.png"
+                                  alt="overbuff"
+                                />
+                              </a>
+                            </div>
+                          </div>,
+                        ],
+                        red: player.sr !== null && player.sr > 2999,
+                        yellow: player.sr === null,
+                      }))}
                     />
                   ) : null}
                   {/* <div className="overflow-x-auto shadow-lg">
