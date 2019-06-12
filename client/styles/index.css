@@ -51,7 +51,7 @@ tbody tr:last-child {
 }
 
 tbody tr td {
-  @apply pl-6 py-2;
+  @apply pl-6 py-2 whitespace-no-wrap;
 }
 
 tbody tr.row-red {
