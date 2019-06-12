@@ -85,7 +85,7 @@ class Team extends React.Component<IProps> {
                           player.bnet,
                           <div className="flex justify-between items-center">
                             <span>{player.sr}</span>
-                            <div className="ml-4 flex flex-no-wrap">
+                            <div className="ml-8 flex flex-no-wrap">
                               <a
                                 className="mr-2 inline-block w-5 h-5"
                                 href={`https://playoverwatch.com/en-us/career/pc/${player.bnet.replace(
