@@ -15,6 +15,8 @@ import slug from 'slug';
 import cheerio from 'cheerio';
 
 const parseTeams = async (prisma: Prisma) => {
+  console.log(`${new Date().toISOString()} Beginning team parsing...`);
+
   const { data } = await axios.get(
     'https://docs.google.com/spreadsheets/d/1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw/export?format=csv&id=1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw&gid=1325593297',
   );
@@ -275,6 +277,8 @@ const parseTeams = async (prisma: Prisma) => {
       },
     });
   }
+
+  console.log(`${new Date().toISOString()} Done with team parsing.`);
 };
 
 export default parseTeams;
