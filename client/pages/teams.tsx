@@ -72,62 +72,51 @@ class Teams extends React.Component<PageProps> {
                   rows={data.teams
                     .filter(team => team.players)
                     .sort((a, b) => {
-                      if (!(a.wins || b.wins)) {
-                        if (!a.wins) {
-                          return 1;
-                        } else if (!b.wins) {
-                          return -1;
-                        }
+                      if (a.wins === null) {
+                        return 1;
+                      } else if (b.wins === null) {
+                        return -1;
                       }
 
-                      const wins = (b.wins as number) - (a.wins as number);
+                      const wins = b.wins - a.wins;
 
                       if (wins !== 0) {
                         return wins;
                       }
 
-                      if (!(a.pointDifference || b.pointDifference)) {
-                        if (!a.pointDifference) {
-                          return 1;
-                        } else if (!b.pointDifference) {
-                          return -1;
-                        }
+                      if (a.pointDifference === null) {
+                        return 1;
+                      } else if (b.pointDifference === null) {
+                        return -1;
                       }
 
                       const pointDifference =
-                        (b.pointDifference as number) -
-                        (a.pointDifference as number);
+                        b.pointDifference - a.pointDifference;
 
                       if (pointDifference !== 0) {
                         return pointDifference;
                       }
 
-                      if (!(a.tieBreakersWon || b.tieBreakersWon)) {
-                        if (!a.tieBreakersWon) {
-                          return 1;
-                        } else if (!b.tieBreakersWon) {
-                          return -1;
-                        }
+                      if (a.tieBreakersWon === null) {
+                        return 1;
+                      } else if (b.tieBreakersWon === null) {
+                        return -1;
                       }
 
                       const tieBreakersWon =
-                        (b.tieBreakersWon as number) -
-                        (a.tieBreakersWon as number);
+                        b.tieBreakersWon - a.tieBreakersWon;
 
                       if (tieBreakersWon !== 0) {
                         return tieBreakersWon;
                       }
 
-                      if (!(a.setWins || b.setWins)) {
-                        if (!a.setWins) {
-                          return 1;
-                        } else if (!b.setWins) {
-                          return -1;
-                        }
+                      if (a.setWins === null) {
+                        return 1;
+                      } else if (b.setWins === null) {
+                        return -1;
                       }
 
-                      const setWins =
-                        (b.setWins as number) - (a.setWins as number);
+                      const setWins = b.setWins - a.setWins;
 
                       if (setWins !== 0) {
                         return setWins;
