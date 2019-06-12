@@ -119,9 +119,13 @@ class Team extends React.Component<IProps> {
                         yellow: player.sr === null,
                       }))}
                     />
-                  ) : null}
+                  ) : (
+                    <h3 className="text-center">Players not found.</h3>
+                  )}
                 </>
-              ) : null
+              ) : (
+                <h3 className="text-center">Team not found.</h3>
+              )
             }
           </Query>
         </Container>

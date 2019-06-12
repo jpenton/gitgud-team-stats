@@ -164,7 +164,9 @@ class Teams extends React.Component<PageProps> {
                       ),
                     }))}
                 />
-              ) : null
+              ) : (
+                <h3 className="text-center">Teams not found.</h3>
+              )
             }
           </Query>
         </Container>
