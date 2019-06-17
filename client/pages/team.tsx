@@ -3,15 +3,17 @@ import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
 import Container from '../components/Container';
 import Header from '../components/Header';
-import { PageProps } from '../types';
+import { PageProps, IPlayer } from '../types';
 import Head from 'next/head';
 import classnames from 'classnames';
 import Table from '../components/Table';
+import isPlayerOverSR from '../lib/isPlayerOverSR';
 
 const GET_TEAM_QUERY = gql`
   query GET_TEAM_QUERY($slug: String!) {
     team(slug: $slug) {
       id
+      division
       name
       players {
         id
@@ -26,16 +28,9 @@ const GET_TEAM_QUERY = gql`
 interface GetTeamQueryData {
   team: {
     id: string;
+    division: string;
     name: string;
-    players:
-      | {
-          id: string;
-          discord: string;
-          bnet: string;
-          role: string;
-          sr: number | null;
-        }[]
-      | null;
+    players: IPlayer[] | null;
   };
 }
 
@@ -115,7 +110,9 @@ class Team extends React.Component<IProps> {
                             </div>
                           </div>,
                         ],
-                        red: player.sr !== null && player.sr > 2999,
+                        red:
+                          player.sr !== null &&
+                          isPlayerOverSR(player, data.team.division),
                         yellow: player.sr === null,
                       }))}
                     />

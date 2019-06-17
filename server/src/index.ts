@@ -19,7 +19,7 @@ server.start(
   },
   () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-    parseTeams(prisma);
-    setInterval(parseTeams, ms('3h'), prisma);
+    // parseTeams(prisma);
+    // setInterval(parseTeams, ms('3h'), prisma);
   },
 );

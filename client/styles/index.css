@@ -79,7 +79,7 @@ tr .collapse-cell {
 }
 
 .header .nav-brand {
-  @apply text-cool-grey-050 text-lg pr-8;
+  @apply text-cool-grey-050 text-lg;
 }
 
 .header .nav-link {
@@ -92,4 +92,22 @@ tr .collapse-cell {
 
 .header .nav-link.active {
   @apply text-cool-grey-100;
+}
+
+.sidebar {
+  @apply w-40;
+}
+
+.sidebar h6 {
+  @apply text-xs uppercase text-cool-grey-400 font-bold tracking-wide mb-3 ml-1;
+}
+
+.sidebar ul a {
+  @apply block px-3 py-1 my-1 text-cool-grey-800 outline-none text-sm;
+}
+
+.sidebar ul a:active,
+.sidebar ul a:hover,
+.sidebar ul a.active {
+  @apply bg-teal-075 text-teal-900 rounded;
 }

@@ -140,6 +140,15 @@ export interface ClientConstructor<T> {
  * Types
  */
 
+export type Region = 'NA' | 'EU';
+
+export type Division =
+  | 'BEGINNER'
+  | 'ROOKIE'
+  | 'INTERMEDIATE'
+  | 'ADVANCED'
+  | 'EXPERT';
+
 export type PlayerOrderByInput =
   | 'id_ASC'
   | 'id_DESC'
@@ -160,11 +169,16 @@ export type Role =
   | 'MAIN_SUPPORT'
   | 'FLEX_SUPPORT'
   | 'SUB'
-  | 'PLAYER';
+  | 'PLAYER'
+  | 'FLEX';
 
 export type TeamOrderByInput =
   | 'id_ASC'
   | 'id_DESC'
+  | 'region_ASC'
+  | 'region_DESC'
+  | 'division_ASC'
+  | 'division_DESC'
   | 'losses_ASC'
   | 'losses_DESC'
   | 'name_ASC'
@@ -186,18 +200,22 @@ export type TeamOrderByInput =
 
 export type MutationType = 'CREATED' | 'UPDATED' | 'DELETED';
 
-export interface PlayerUpdateInput {
-  bnet?: Maybe<String>;
-  discord?: Maybe<String>;
-  role?: Maybe<Role>;
-  sr?: Maybe<Int>;
-  team?: Maybe<TeamUpdateOneWithoutPlayersInput>;
+export interface TeamCreateWithoutPlayersInput {
+  id?: Maybe<ID_Input>;
+  region: Region;
+  division: Division;
+  losses?: Maybe<Int>;
+  name: String;
+  pointDifference?: Maybe<Int>;
+  setWins?: Maybe<Int>;
+  slug: String;
+  tieBreakersWon?: Maybe<Int>;
+  ties?: Maybe<Int>;
+  wins?: Maybe<Int>;
 }
 
 export type PlayerWhereUniqueInput = AtLeastOne<{
   id: Maybe<ID_Input>;
-  bnet?: Maybe<String>;
-  discord?: Maybe<String>;
 }>;
 
 export interface PlayerUpdateManyWithoutTeamInput {
@@ -223,6 +241,8 @@ export interface PlayerUpdateManyWithoutTeamInput {
 
 export interface TeamCreateInput {
   id?: Maybe<ID_Input>;
+  region: Region;
+  division: Division;
   losses?: Maybe<Int>;
   name: String;
   players?: Maybe<PlayerCreateManyWithoutTeamInput>;
@@ -235,6 +255,8 @@ export interface TeamCreateInput {
 }
 
 export interface TeamUpdateInput {
+  region?: Maybe<Region>;
+  division?: Maybe<Division>;
   losses?: Maybe<Int>;
   name?: Maybe<String>;
   players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
@@ -263,6 +285,8 @@ export interface TeamSubscriptionWhereInput {
 }
 
 export interface TeamUpdateManyMutationInput {
+  region?: Maybe<Region>;
+  division?: Maybe<Division>;
   losses?: Maybe<Int>;
   name?: Maybe<String>;
   pointDifference?: Maybe<Int>;
@@ -298,16 +322,12 @@ export interface PlayerUpsertWithWhereUniqueWithoutTeamInput {
   create: PlayerCreateWithoutTeamInput;
 }
 
-export interface TeamCreateWithoutPlayersInput {
+export interface PlayerCreateWithoutTeamInput {
   id?: Maybe<ID_Input>;
-  losses?: Maybe<Int>;
-  name: String;
-  pointDifference?: Maybe<Int>;
-  setWins?: Maybe<Int>;
-  slug: String;
-  tieBreakersWon?: Maybe<Int>;
-  ties?: Maybe<Int>;
-  wins?: Maybe<Int>;
+  bnet: String;
+  discord: String;
+  role: Role;
+  sr?: Maybe<Int>;
 }
 
 export interface PlayerUpdateWithoutTeamDataInput {
@@ -317,12 +337,12 @@ export interface PlayerUpdateWithoutTeamDataInput {
   sr?: Maybe<Int>;
 }
 
-export interface PlayerCreateWithoutTeamInput {
-  id?: Maybe<ID_Input>;
-  bnet: String;
-  discord: String;
-  role: Role;
+export interface PlayerUpdateInput {
+  bnet?: Maybe<String>;
+  discord?: Maybe<String>;
+  role?: Maybe<Role>;
   sr?: Maybe<Int>;
+  team?: Maybe<TeamUpdateOneWithoutPlayersInput>;
 }
 
 export interface TeamWhereInput {
@@ -340,6 +360,14 @@ export interface TeamWhereInput {
   id_not_starts_with?: Maybe<ID_Input>;
   id_ends_with?: Maybe<ID_Input>;
   id_not_ends_with?: Maybe<ID_Input>;
+  region?: Maybe<Region>;
+  region_not?: Maybe<Region>;
+  region_in?: Maybe<Region[] | Region>;
+  region_not_in?: Maybe<Region[] | Region>;
+  division?: Maybe<Division>;
+  division_not?: Maybe<Division>;
+  division_in?: Maybe<Division[] | Division>;
+  division_not_in?: Maybe<Division[] | Division>;
   losses?: Maybe<Int>;
   losses_not?: Maybe<Int>;
   losses_in?: Maybe<Int[] | Int>;
@@ -522,6 +550,8 @@ export interface PlayerWhereInput {
 }
 
 export interface TeamUpdateWithoutPlayersDataInput {
+  region?: Maybe<Region>;
+  division?: Maybe<Division>;
   losses?: Maybe<Int>;
   name?: Maybe<String>;
   pointDifference?: Maybe<Int>;
@@ -620,6 +650,8 @@ export interface NodeNode {
 
 export interface TeamPreviousValues {
   id: ID_Output;
+  region: Region;
+  division: Division;
   losses?: Int;
   name: String;
   pointDifference?: Int;
@@ -635,6 +667,8 @@ export interface TeamPreviousValuesPromise
   extends Promise<TeamPreviousValues>,
     Fragmentable {
   id: () => Promise<ID_Output>;
+  region: () => Promise<Region>;
+  division: () => Promise<Division>;
   losses: () => Promise<Int>;
   name: () => Promise<String>;
   pointDifference: () => Promise<Int>;
@@ -650,6 +684,8 @@ export interface TeamPreviousValuesSubscription
   extends Promise<AsyncIterator<TeamPreviousValues>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
+  region: () => Promise<AsyncIterator<Region>>;
+  division: () => Promise<AsyncIterator<Division>>;
   losses: () => Promise<AsyncIterator<Int>>;
   name: () => Promise<AsyncIterator<String>>;
   pointDifference: () => Promise<AsyncIterator<Int>>;
@@ -677,29 +713,43 @@ export interface AggregatePlayerSubscription
   count: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface PlayerSubscriptionPayload {
-  mutation: MutationType;
-  node: Player;
-  updatedFields: String[];
-  previousValues: PlayerPreviousValues;
+export interface Player {
+  id: ID_Output;
+  bnet: String;
+  discord: String;
+  role: Role;
+  sr?: Int;
 }
 
-export interface PlayerSubscriptionPayloadPromise
-  extends Promise<PlayerSubscriptionPayload>,
-    Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = PlayerPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = PlayerPreviousValuesPromise>() => T;
+export interface PlayerPromise extends Promise<Player>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  bnet: () => Promise<String>;
+  discord: () => Promise<String>;
+  role: () => Promise<Role>;
+  sr: () => Promise<Int>;
+  team: <T = TeamPromise>() => T;
 }
 
-export interface PlayerSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<PlayerSubscriptionPayload>>,
+export interface PlayerSubscription
+  extends Promise<AsyncIterator<Player>>,
     Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = PlayerSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = PlayerPreviousValuesSubscription>() => T;
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  bnet: () => Promise<AsyncIterator<String>>;
+  discord: () => Promise<AsyncIterator<String>>;
+  role: () => Promise<AsyncIterator<Role>>;
+  sr: () => Promise<AsyncIterator<Int>>;
+  team: <T = TeamSubscription>() => T;
+}
+
+export interface PlayerNullablePromise
+  extends Promise<Player | null>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  bnet: () => Promise<String>;
+  discord: () => Promise<String>;
+  role: () => Promise<Role>;
+  sr: () => Promise<Int>;
+  team: <T = TeamPromise>() => T;
 }
 
 export interface PlayerEdge {
@@ -721,6 +771,8 @@ export interface PlayerEdgeSubscription
 
 export interface Team {
   id: ID_Output;
+  region: Region;
+  division: Division;
   losses?: Int;
   name: String;
   pointDifference?: Int;
@@ -734,6 +786,8 @@ export interface Team {
 
 export interface TeamPromise extends Promise<Team>, Fragmentable {
   id: () => Promise<ID_Output>;
+  region: () => Promise<Region>;
+  division: () => Promise<Division>;
   losses: () => Promise<Int>;
   name: () => Promise<String>;
   players: <T = FragmentableArray<Player>>(args?: {
@@ -758,6 +812,8 @@ export interface TeamSubscription
   extends Promise<AsyncIterator<Team>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
+  region: () => Promise<AsyncIterator<Region>>;
+  division: () => Promise<AsyncIterator<Division>>;
   losses: () => Promise<AsyncIterator<Int>>;
   name: () => Promise<AsyncIterator<String>>;
   players: <T = Promise<AsyncIterator<PlayerSubscription>>>(args?: {
@@ -782,6 +838,8 @@ export interface TeamNullablePromise
   extends Promise<Team | null>,
     Fragmentable {
   id: () => Promise<ID_Output>;
+  region: () => Promise<Region>;
+  division: () => Promise<Division>;
   losses: () => Promise<Int>;
   name: () => Promise<String>;
   players: <T = FragmentableArray<Player>>(args?: {
@@ -818,32 +876,29 @@ export interface AggregateTeamSubscription
   count: () => Promise<AsyncIterator<Int>>;
 }
 
-export interface PlayerPreviousValues {
-  id: ID_Output;
-  bnet: String;
-  discord: String;
-  role: Role;
-  sr?: Int;
+export interface PlayerSubscriptionPayload {
+  mutation: MutationType;
+  node: Player;
+  updatedFields: String[];
+  previousValues: PlayerPreviousValues;
 }
 
-export interface PlayerPreviousValuesPromise
-  extends Promise<PlayerPreviousValues>,
+export interface PlayerSubscriptionPayloadPromise
+  extends Promise<PlayerSubscriptionPayload>,
     Fragmentable {
-  id: () => Promise<ID_Output>;
-  bnet: () => Promise<String>;
-  discord: () => Promise<String>;
-  role: () => Promise<Role>;
-  sr: () => Promise<Int>;
+  mutation: () => Promise<MutationType>;
+  node: <T = PlayerPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = PlayerPreviousValuesPromise>() => T;
 }
 
-export interface PlayerPreviousValuesSubscription
-  extends Promise<AsyncIterator<PlayerPreviousValues>>,
+export interface PlayerSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<PlayerSubscriptionPayload>>,
     Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  bnet: () => Promise<AsyncIterator<String>>;
-  discord: () => Promise<AsyncIterator<String>>;
-  role: () => Promise<AsyncIterator<Role>>;
-  sr: () => Promise<AsyncIterator<Int>>;
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = PlayerSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = PlayerPreviousValuesSubscription>() => T;
 }
 
 export interface PlayerConnection {
@@ -948,7 +1003,7 @@ export interface TeamSubscriptionPayloadSubscription
   previousValues: <T = TeamPreviousValuesSubscription>() => T;
 }
 
-export interface Player {
+export interface PlayerPreviousValues {
   id: ID_Output;
   bnet: String;
   discord: String;
@@ -956,35 +1011,24 @@ export interface Player {
   sr?: Int;
 }
 
-export interface PlayerPromise extends Promise<Player>, Fragmentable {
+export interface PlayerPreviousValuesPromise
+  extends Promise<PlayerPreviousValues>,
+    Fragmentable {
   id: () => Promise<ID_Output>;
   bnet: () => Promise<String>;
   discord: () => Promise<String>;
   role: () => Promise<Role>;
   sr: () => Promise<Int>;
-  team: <T = TeamPromise>() => T;
 }
 
-export interface PlayerSubscription
-  extends Promise<AsyncIterator<Player>>,
+export interface PlayerPreviousValuesSubscription
+  extends Promise<AsyncIterator<PlayerPreviousValues>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   bnet: () => Promise<AsyncIterator<String>>;
   discord: () => Promise<AsyncIterator<String>>;
   role: () => Promise<AsyncIterator<Role>>;
   sr: () => Promise<AsyncIterator<Int>>;
-  team: <T = TeamSubscription>() => T;
-}
-
-export interface PlayerNullablePromise
-  extends Promise<Player | null>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  bnet: () => Promise<String>;
-  discord: () => Promise<String>;
-  role: () => Promise<Role>;
-  sr: () => Promise<Int>;
-  team: <T = TeamPromise>() => T;
 }
 
 export interface TeamConnection {
@@ -1032,20 +1076,28 @@ DateTime scalar output type, which is always a string
 export type DateTimeOutput = string;
 
 /*
-The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. 
-*/
-export type Int = number;
-
-/*
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
 */
 export type String = string;
+
+/*
+The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. 
+*/
+export type Int = number;
 
 /**
  * Model Metadata
  */
 
 export const models: Model[] = [
+  {
+    name: 'Division',
+    embedded: false,
+  },
+  {
+    name: 'Region',
+    embedded: false,
+  },
   {
     name: 'Role',
     embedded: false,

@@ -31,7 +31,7 @@ const Table: React.FC<IProps> = ({ dashedIndex, headers, numbered, rows }) => {
             <tr
               className={classnames({
                 'row-red': row.red,
-                'row-yellow': row.yellow,
+                'row-yellow': row.yellow && !row.red,
                 'border-dashed border-cool-grey-200': dashedIndex === rowIndex,
               })}
               key={rowIndex}

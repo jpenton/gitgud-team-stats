@@ -27,16 +27,7 @@ class Header extends React.Component<IProps> {
       <div className="header">
         <Container>
           <Link href="/">
-            <a className="nav-brand">GitGud</a>
-          </Link>
-          <Link href="/teams">
-            <a
-              className={classnames('nav-link', {
-                active: this.props.pathname === '/teams',
-              })}
-            >
-              Teams
-            </a>
+            <a className="nav-brand">GitGud Stats</a>
           </Link>
         </Container>
       </div>

@@ -1,3 +1,16 @@
+enum Division {
+  BEGINNER
+  ROOKIE
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+enum Region {
+  NA
+  EU
+}
+
 enum Role {
   MAIN_TANK
   OFF_TANK
@@ -7,12 +20,13 @@ enum Role {
   FLEX_SUPPORT
   SUB
   PLAYER
+  FLEX
 }
 
 type Player {
   id: ID! @id
-  bnet: String! @unique
-  discord: String! @unique
+  bnet: String!
+  discord: String!
   role: Role!
   sr: Int
   team: Team @relation(name: "TeamPlayer")
@@ -20,6 +34,8 @@ type Player {
 
 type Team {
   id: ID! @id
+  region: Region!
+  division: Division!
   losses: Int
   name: String! @unique
   players: [Player!] @relation(name: "TeamPlayer")

@@ -1,5 +1,6 @@
 export interface PageProps {
   pathname: string;
+  query: Partial<Record<string, string>>;
 }
 
 export interface IPlayer {
