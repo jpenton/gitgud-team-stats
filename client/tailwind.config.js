@@ -77,6 +77,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    textAlign: ['hover'],
+  },
   plugins: [],
 };

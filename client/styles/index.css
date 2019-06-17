@@ -70,6 +70,10 @@ tbody tr.row-yellow:hover {
   @apply bg-yellow-vivid-100;
 }
 
+tr .collapse-cell {
+  @apply w-6;
+}
+
 .header {
   @apply bg-cool-grey-900 align-baseline py-3;
 }
