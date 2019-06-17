@@ -12,6 +12,14 @@ type BatchPayload {
 
 scalar DateTime
 
+enum Division {
+  BEGINNER
+  ROOKIE
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
 scalar Long
 
 type Mutation {
@@ -321,8 +329,6 @@ input PlayerWhereInput {
 
 input PlayerWhereUniqueInput {
   id: ID
-  bnet: String
-  discord: String
 }
 
 type Query {
@@ -367,6 +373,11 @@ type Query {
   node(id: ID!): Node
 }
 
+enum Region {
+  NA
+  EU
+}
+
 enum Role {
   MAIN_TANK
   OFF_TANK
@@ -376,6 +387,7 @@ enum Role {
   FLEX_SUPPORT
   SUB
   PLAYER
+  FLEX
 }
 
 type Subscription {
@@ -385,6 +397,8 @@ type Subscription {
 
 type Team {
   id: ID!
+  region: Region!
+  division: Division!
   losses: Int
   name: String!
   players(
@@ -413,6 +427,8 @@ type TeamConnection {
 
 input TeamCreateInput {
   id: ID
+  region: Region!
+  division: Division!
   losses: Int
   name: String!
   players: PlayerCreateManyWithoutTeamInput
@@ -431,6 +447,8 @@ input TeamCreateOneWithoutPlayersInput {
 
 input TeamCreateWithoutPlayersInput {
   id: ID
+  region: Region!
+  division: Division!
   losses: Int
   name: String!
   pointDifference: Int
@@ -449,6 +467,10 @@ type TeamEdge {
 enum TeamOrderByInput {
   id_ASC
   id_DESC
+  region_ASC
+  region_DESC
+  division_ASC
+  division_DESC
   losses_ASC
   losses_DESC
   name_ASC
@@ -471,6 +493,8 @@ enum TeamOrderByInput {
 
 type TeamPreviousValues {
   id: ID!
+  region: Region!
+  division: Division!
   losses: Int
   name: String!
   pointDifference: Int
@@ -501,6 +525,8 @@ input TeamSubscriptionWhereInput {
 }
 
 input TeamUpdateInput {
+  region: Region
+  division: Division
   losses: Int
   name: String
   players: PlayerUpdateManyWithoutTeamInput
@@ -513,6 +539,8 @@ input TeamUpdateInput {
 }
 
 input TeamUpdateManyMutationInput {
+  region: Region
+  division: Division
   losses: Int
   name: String
   pointDifference: Int
@@ -533,6 +561,8 @@ input TeamUpdateOneWithoutPlayersInput {
 }
 
 input TeamUpdateWithoutPlayersDataInput {
+  region: Region
+  division: Division
   losses: Int
   name: String
   pointDifference: Int
@@ -563,6 +593,14 @@ input TeamWhereInput {
   id_not_starts_with: ID
   id_ends_with: ID
   id_not_ends_with: ID
+  region: Region
+  region_not: Region
+  region_in: [Region!]
+  region_not_in: [Region!]
+  division: Division
+  division_not: Division
+  division_in: [Division!]
+  division_not_in: [Division!]
   losses: Int
   losses_not: Int
   losses_in: [Int!]

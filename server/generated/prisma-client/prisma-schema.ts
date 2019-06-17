@@ -17,6 +17,14 @@ export const typeDefs = /* GraphQL */ `
 
   scalar DateTime
 
+  enum Division {
+    BEGINNER
+    ROOKIE
+    INTERMEDIATE
+    ADVANCED
+    EXPERT
+  }
+
   scalar Long
 
   type Mutation {
@@ -329,8 +337,6 @@ export const typeDefs = /* GraphQL */ `
 
   input PlayerWhereUniqueInput {
     id: ID
-    bnet: String
-    discord: String
   }
 
   type Query {
@@ -375,6 +381,11 @@ export const typeDefs = /* GraphQL */ `
     node(id: ID!): Node
   }
 
+  enum Region {
+    NA
+    EU
+  }
+
   enum Role {
     MAIN_TANK
     OFF_TANK
@@ -384,6 +395,7 @@ export const typeDefs = /* GraphQL */ `
     FLEX_SUPPORT
     SUB
     PLAYER
+    FLEX
   }
 
   type Subscription {
@@ -393,6 +405,8 @@ export const typeDefs = /* GraphQL */ `
 
   type Team {
     id: ID!
+    region: Region!
+    division: Division!
     losses: Int
     name: String!
     players(
@@ -421,6 +435,8 @@ export const typeDefs = /* GraphQL */ `
 
   input TeamCreateInput {
     id: ID
+    region: Region!
+    division: Division!
     losses: Int
     name: String!
     players: PlayerCreateManyWithoutTeamInput
@@ -439,6 +455,8 @@ export const typeDefs = /* GraphQL */ `
 
   input TeamCreateWithoutPlayersInput {
     id: ID
+    region: Region!
+    division: Division!
     losses: Int
     name: String!
     pointDifference: Int
@@ -457,6 +475,10 @@ export const typeDefs = /* GraphQL */ `
   enum TeamOrderByInput {
     id_ASC
     id_DESC
+    region_ASC
+    region_DESC
+    division_ASC
+    division_DESC
     losses_ASC
     losses_DESC
     name_ASC
@@ -479,6 +501,8 @@ export const typeDefs = /* GraphQL */ `
 
   type TeamPreviousValues {
     id: ID!
+    region: Region!
+    division: Division!
     losses: Int
     name: String!
     pointDifference: Int
@@ -509,6 +533,8 @@ export const typeDefs = /* GraphQL */ `
   }
 
   input TeamUpdateInput {
+    region: Region
+    division: Division
     losses: Int
     name: String
     players: PlayerUpdateManyWithoutTeamInput
@@ -521,6 +547,8 @@ export const typeDefs = /* GraphQL */ `
   }
 
   input TeamUpdateManyMutationInput {
+    region: Region
+    division: Division
     losses: Int
     name: String
     pointDifference: Int
@@ -541,6 +569,8 @@ export const typeDefs = /* GraphQL */ `
   }
 
   input TeamUpdateWithoutPlayersDataInput {
+    region: Region
+    division: Division
     losses: Int
     name: String
     pointDifference: Int
@@ -571,6 +601,14 @@ export const typeDefs = /* GraphQL */ `
     id_not_starts_with: ID
     id_ends_with: ID
     id_not_ends_with: ID
+    region: Region
+    region_not: Region
+    region_in: [Region!]
+    region_not_in: [Region!]
+    division: Division
+    division_not: Division
+    division_in: [Division!]
+    division_not_in: [Division!]
     losses: Int
     losses_not: Int
     losses_in: [Int!]

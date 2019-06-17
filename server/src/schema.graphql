@@ -3,5 +3,5 @@
 type Query {
   player(id: ID!): Player
   team(id: ID, slug: String): Team
-  teams: [Team!]
+  teams(division: Division, region: Region): [Team!]
 }

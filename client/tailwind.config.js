@@ -65,6 +65,7 @@ module.exports = {
         'yellow-vivid-900': '#8D2B0B',
 
         'teal-050': '#EFFCF6',
+        'teal-075': 'hsl(155, 69%, 90%)',
         'teal-100': '#C6F7E2',
         'teal-200': '#8EEDC7',
         'teal-300': '#65D6AD',
@@ -77,6 +78,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ['hover'],
+  },
   plugins: [],
 };

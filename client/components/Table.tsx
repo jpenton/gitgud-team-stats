@@ -27,7 +27,7 @@ const Table: React.FC<IProps> = ({ dashedIndex, headers, rows }) => {
             <tr
               className={classnames({
                 'row-red': row.red,
-                'row-yellow': row.yellow,
+                'row-yellow': row.yellow && !row.red,
                 'border-dashed border-cool-grey-200': dashedIndex === index,
               })}
               key={index}

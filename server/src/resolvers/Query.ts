@@ -13,8 +13,13 @@ const Query: IResolverObject<any, IContext> = {
       slug,
     });
   },
-  teams: (_, __, { prisma }) => {
-    return prisma.teams();
+  teams: (_, { division, region }, { prisma }) => {
+    return prisma.teams({
+      where: {
+        division,
+        region,
+      },
+    });
   },
 };
 
