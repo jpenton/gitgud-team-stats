@@ -23,20 +23,20 @@ const divisions: {
   region: Region;
   sheet: string;
 }[] = [
-  // {
-  //   bracket: 'https://challonge.com/GGNA_S3_BGN',
-  //   region: 'NA',
-  //   name: 'BEGINNER',
-  //   sheet:
-  //     'https://docs.google.com/spreadsheets/d/1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw/export?format=csv&id=1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw&gid=1325593297',
-  // },
-  // {
-  //   bracket: 'https://challonge.com/GGNA_S3_ROOK',
-  //   region: 'NA',
-  //   name: 'ROOKIE',
-  //   sheet:
-  //     'https://docs.google.com/spreadsheets/d/1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw/export?format=csv&id=1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw&gid=549246776',
-  // },
+  {
+    bracket: 'https://challonge.com/GGNA_S3_BGN',
+    region: 'NA',
+    name: 'BEGINNER',
+    sheet:
+      'https://docs.google.com/spreadsheets/d/1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw/export?format=csv&id=1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw&gid=1325593297',
+  },
+  {
+    bracket: 'https://challonge.com/GGNA_S3_ROOK',
+    region: 'NA',
+    name: 'ROOKIE',
+    sheet:
+      'https://docs.google.com/spreadsheets/d/1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw/export?format=csv&id=1DhtqAhu6PiAzeq87_5s0WchYvEADkBFoKpISpPugLJw&gid=549246776',
+  },
   {
     bracket: 'https://challonge.com/GGNA_S3_INT',
     region: 'NA',
