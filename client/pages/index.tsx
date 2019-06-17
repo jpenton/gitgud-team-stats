@@ -163,6 +163,7 @@ class Standings extends React.Component<PageProps> {
                         'Record (W-L-T)',
                         'Point Difference',
                       ]}
+                      numbered
                       rows={data.teams
                         .filter(team => team.players)
                         .sort((a, b) => {
