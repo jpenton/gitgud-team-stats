@@ -275,7 +275,13 @@ const parseTeams = async (prisma: Prisma) => {
       $ = cheerio.load(html);
       const names = Array.from(
         $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(2)'),
-      ).map(i => i.children[0].data);
+      ).map(i => {
+        if (i.children.length === 3) {
+          return i.children[2].data;
+        }
+
+        return i.children[0].data;
+      });
       const wlt = Array.from(
         $('table:nth-child(1) > tbody:nth-child(2) > tr > td:nth-child(3)'),
       ).map(i => i.children[0].data);
