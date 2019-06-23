@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import Link from 'next/link';
 import Container from '../components/Container';
 import Header from '../components/Header';
-import { PageProps, IPlayer, ITeam } from '../types';
+import { PageProps, ITeam } from '../types';
 import Head from 'next/head';
 import isPlayerOverSR from '../lib/isPlayerOverSR';
 import Table from '../components/Table';
@@ -31,23 +31,23 @@ const GET_TEAMS_QUERY = gql`
 `;
 
 class Standings extends React.Component<PageProps> {
-  calculateAverageSR = (players: IPlayer[]): number | null => {
-    if (!players) {
-      return null;
-    }
+  // calculateAverageSR = (players: IPlayer[]): number | null => {
+  //   if (!players) {
+  //     return null;
+  //   }
 
-    const filteredPlayers = players.filter(i => i.sr !== null);
-    const total = filteredPlayers.reduce(
-      (prev, curr) => prev + (curr.sr as number),
-      0,
-    );
+  //   const filteredPlayers = players.filter(i => i.sr !== null);
+  //   const total = filteredPlayers.reduce(
+  //     (prev, curr) => prev + (curr.sr as number),
+  //     0,
+  //   );
 
-    if (total === 0) {
-      return null;
-    }
+  //   if (total === 0) {
+  //     return null;
+  //   }
 
-    return Math.floor(total / filteredPlayers.length);
-  };
+  //   return Math.floor(total / filteredPlayers.length);
+  // };
 
   render() {
     const {
@@ -159,9 +159,10 @@ class Standings extends React.Component<PageProps> {
                       dashedIndex={7}
                       headers={[
                         'Name',
-                        'Average SR',
                         'Record (W-L-T)',
                         'Point Difference',
+                        'Ties Won',
+                        'Set Wins',
                       ]}
                       numbered
                       rows={data.teams
@@ -231,12 +232,11 @@ class Standings extends React.Component<PageProps> {
                             >
                               <a>{team.name}</a>
                             </Link>,
-                            team.players
-                              ? this.calculateAverageSR(team.players)
-                              : null,
                             `${team.wins || 0}-${team.losses ||
                               0}-${team.ties || 0}`,
                             team.pointDifference || 0,
+                            team.tieBreakersWon || 0,
+                            team.setWins || 0,
                           ],
                           red: !!(
                             team.players &&
