@@ -30,6 +30,14 @@ const GET_TEAMS_QUERY = gql`
   }
 `;
 
+const divisionLimit: Record<string, number> = {
+  BEGINNER: 8,
+  ROOKIE: 15,
+  INTERMEDIATE: 12,
+  ADVANCED: 12,
+  EXPERT: 4,
+};
+
 class Standings extends React.Component<PageProps> {
   // calculateAverageSR = (players: IPlayer[]): number | null => {
   //   if (!players) {
@@ -156,7 +164,7 @@ class Standings extends React.Component<PageProps> {
                 {({ data }) =>
                   data ? (
                     <Table
-                      dashedIndex={7}
+                      dashedIndex={divisionLimit[division || 'BEGINNER'] - 1}
                       headers={[
                         'Name',
                         'Record (W-L-T)',
