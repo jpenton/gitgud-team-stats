@@ -28,10 +28,6 @@ class MyApp extends App<{ apollo: ApolloClient<any> }> {
         <Head>
           <title>GitGud Stats</title>
           <link
-            rel="shortcut icon"
-            href="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/favicon.ico"
-          />
-          <link
             rel="stylesheet"
             type="text/css"
             href="https://rsms.me/inter/inter.css"
