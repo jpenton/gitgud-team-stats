@@ -1,14 +1,11 @@
-import App, { Container, AppContext } from 'next/app';
+import App, { Container, AppComponentContext } from 'next/app';
 import React from 'react';
-import withApolloClient from '../lib/withApolloClient';
-import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-boost';
 import '../styles/index.css';
-import getConfig from 'next/config';
 import Head from 'next/head';
 
 class MyApp extends App<{ apollo: ApolloClient<any> }> {
-  static async getInitialProps({ Component, ctx }: AppContext) {
+  static async getInitialProps({ Component, ctx }: AppComponentContext) {
     let pageProps: Record<string, any> = {};
 
     if (Component.getInitialProps) {
@@ -25,38 +22,30 @@ class MyApp extends App<{ apollo: ApolloClient<any> }> {
   }
 
   render() {
-    const { Component, pageProps, apollo } = this.props;
+    const { Component, pageProps } = this.props;
     return (
       <Container>
-        <ApolloProvider client={apollo}>
-          <Head>
-            <title>GitGud Stats</title>
-            <link
-              rel="shortcut icon"
-              href="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/favicon.ico"
-            />
-            <link
-              rel="stylesheet"
-              type="text/css"
-              href="https://rsms.me/inter/inter.css"
-            />
-            <link
-              rel="stylesheet"
-              type="text/css"
-              href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
-            />
-          </Head>
-          <Component {...pageProps} />
-        </ApolloProvider>
+        <Head>
+          <title>GitGud Stats</title>
+          <link
+            rel="shortcut icon"
+            href="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/favicon.ico"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://rsms.me/inter/inter.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
+          />
+        </Head>
+        <Component {...pageProps} />
       </Container>
     );
   }
 }
 
-const isProd = (): boolean => {
-  const config = getConfig();
-
-  return config.publicRuntimeConfig.NODE_ENV === 'production';
-};
-
-export default withApolloClient(isProd)(MyApp);
+export default MyApp;

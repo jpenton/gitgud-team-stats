@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { gql } from 'apollo-boost';
-import { Query } from 'react-apollo';
 import Link from 'next/link';
 import Container from '../components/Container';
 import Header from '../components/Header';
@@ -9,26 +7,7 @@ import Head from 'next/head';
 import isPlayerOverSR from '../lib/isPlayerOverSR';
 import Table from '../components/Table';
 import classnames from 'classnames';
-
-const GET_TEAMS_QUERY = gql`
-  query GET_TEAMS_QUERY($division: Division, $region: Region) {
-    teams(division: $division, region: $region) {
-      id
-      name
-      players {
-        id
-        sr
-      }
-      slug
-      wins
-      losses
-      ties
-      pointDifference
-      tieBreakersWon
-      setWins
-    }
-  }
-`;
+import data from '../teams';
 
 const divisionLimit: Record<string, number> = {
   BEGINNER: 8,
@@ -61,6 +40,7 @@ class Standings extends React.Component<PageProps> {
     const {
       query: { division },
     } = this.props;
+    const teams: ITeam[] = data[division || 'BEGINNER'];
 
     return (
       <>
@@ -157,113 +137,99 @@ class Standings extends React.Component<PageProps> {
               </ul>
             </div>
             <div className="flex-1 lg:pl-8">
-              <Query<{ teams: ITeam[] }>
-                query={GET_TEAMS_QUERY}
-                variables={{ region: 'NA', division: division || 'BEGINNER' }}
-              >
-                {({ data }) =>
-                  data ? (
-                    <Table
-                      dashedIndex={divisionLimit[division || 'BEGINNER'] - 1}
-                      headers={[
-                        'Name',
-                        'Record (W-L-T)',
-                        'Point Difference',
-                        'Ties Won',
-                        'Set Wins',
-                      ]}
-                      numbered
-                      rows={data.teams
-                        .filter(team => team.players)
-                        .sort((a, b) => {
-                          if (a.wins === null) {
-                            return 1;
-                          } else if (b.wins === null) {
-                            return -1;
-                          }
+              <Table
+                dashedIndex={divisionLimit[division || 'BEGINNER'] - 1}
+                headers={[
+                  'Name',
+                  'Record (W-L-T)',
+                  'Point Difference',
+                  'Ties Won',
+                  'Set Wins',
+                ]}
+                numbered
+                rows={teams
+                  .filter(team => team.players)
+                  .sort((a, b) => {
+                    if (a.wins === null) {
+                      return 1;
+                    } else if (b.wins === null) {
+                      return -1;
+                    }
 
-                          const wins = b.wins - a.wins;
+                    const wins = b.wins - a.wins;
 
-                          if (wins !== 0) {
-                            return wins;
-                          }
+                    if (wins !== 0) {
+                      return wins;
+                    }
 
-                          if (a.pointDifference === null) {
-                            return 1;
-                          } else if (b.pointDifference === null) {
-                            return -1;
-                          }
+                    if (a.pointDifference === null) {
+                      return 1;
+                    } else if (b.pointDifference === null) {
+                      return -1;
+                    }
 
-                          const pointDifference =
-                            b.pointDifference - a.pointDifference;
+                    const pointDifference =
+                      b.pointDifference - a.pointDifference;
 
-                          if (pointDifference !== 0) {
-                            return pointDifference;
-                          }
+                    if (pointDifference !== 0) {
+                      return pointDifference;
+                    }
 
-                          if (a.tieBreakersWon === null) {
-                            return 1;
-                          } else if (b.tieBreakersWon === null) {
-                            return -1;
-                          }
+                    if (a.tieBreakersWon === null) {
+                      return 1;
+                    } else if (b.tieBreakersWon === null) {
+                      return -1;
+                    }
 
-                          const tieBreakersWon =
-                            b.tieBreakersWon - a.tieBreakersWon;
+                    const tieBreakersWon = b.tieBreakersWon - a.tieBreakersWon;
 
-                          if (tieBreakersWon !== 0) {
-                            return tieBreakersWon;
-                          }
+                    if (tieBreakersWon !== 0) {
+                      return tieBreakersWon;
+                    }
 
-                          if (a.setWins === null) {
-                            return 1;
-                          } else if (b.setWins === null) {
-                            return -1;
-                          }
+                    if (a.setWins === null) {
+                      return 1;
+                    } else if (b.setWins === null) {
+                      return -1;
+                    }
 
-                          const setWins = b.setWins - a.setWins;
+                    const setWins = b.setWins - a.setWins;
 
-                          if (setWins !== 0) {
-                            return setWins;
-                          }
+                    if (setWins !== 0) {
+                      return setWins;
+                    }
 
-                          return a.name.localeCompare(b.name);
-                        })
-                        .map(team => ({
-                          content: [
-                            <Link
-                              href={{
-                                pathname: '/team',
-                                query: {
-                                  slug: team.slug,
-                                },
-                              }}
-                            >
-                              <a>{team.name}</a>
-                            </Link>,
-                            `${team.wins || 0}-${team.losses ||
-                              0}-${team.ties || 0}`,
-                            team.pointDifference || 0,
-                            team.tieBreakersWon || 0,
-                            team.setWins || 0,
-                          ],
-                          red: !!(
-                            team.players &&
-                            team.players.filter(player =>
-                              isPlayerOverSR(player, division),
-                            ).length !== 0
-                          ),
-                          yellow: !!(
-                            team.players &&
-                            team.players.filter(player => !player.sr).length !==
-                              0
-                          ),
-                        }))}
-                    />
-                  ) : (
-                    <h3 className="text-center">Teams not found.</h3>
-                  )
-                }
-              </Query>
+                    return a.name.localeCompare(b.name);
+                  })
+                  .map(team => ({
+                    content: [
+                      <Link
+                        href={{
+                          pathname: '/team',
+                          query: {
+                            slug: team.slug,
+                          },
+                        }}
+                      >
+                        <a>{team.name}</a>
+                      </Link>,
+                      `${team.wins || 0}-${team.losses || 0}-${team.ties || 0}`,
+                      team.pointDifference || 0,
+                      team.tieBreakersWon || 0,
+                      team.setWins || 0,
+                    ],
+                    red: !!(
+                      team.players &&
+                      team.players.filter(player =>
+                        isPlayerOverSR(player, division),
+                      ).length !== 0
+                    ),
+                    yellow: !!(
+                      team.players &&
+                      team.players.filter(player => !player.sr).length !== 0
+                    ),
+                  }))}
+              />
             </div>
           </div>
         </Container>
