@@ -1,0 +1,594 @@
+[
+  {
+    "id": "cjzwzqjog07vf0750i9vq6elm",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": null,
+    "name": "VaultBrig",
+    "players": [
+      {
+        "id": "cjzwzoj9f06z50750znj3yt4v",
+        "bnet": "Joe#17674",
+        "discord": "Joedon#7253",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqg2s07us0750iepd23cj",
+        "bnet": "Blastoise#11142",
+        "discord": "Blastoise#0603",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqg2s07ut07501sofleg0",
+        "bnet": "Festive#11294",
+        "discord": "Festive#8524",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqg2s07uu0750uu67bnmy",
+        "bnet": "Entity#11444",
+        "discord": "Scarlet#8476",
+        "role": "OFF_TANK",
+        "sr": 3880
+      },
+      {
+        "id": "cjzwzqg2s07uv0750psmkzckj",
+        "bnet": "Sheikah#11438",
+        "discord": "Sheikah#7998",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqg2s07uw0750c0s93x3j",
+        "bnet": "LEMUX#11478",
+        "discord": "LemuxL#4341",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      }
+    ],
+    "pointDifference": null,
+    "setWins": null,
+    "slug": "vaultbrig",
+    "tieBreakersWon": null,
+    "ties": null,
+    "updatedAt": "2019-08-29T17:57:22.336Z",
+    "wins": null
+  },
+  {
+    "id": "cjzwzqo3507x607502e9mz7ar",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 1,
+    "name": "Mythenatic",
+    "players": [
+      {
+        "id": "cjzwzqjqg07vy0750xa1t2qg5",
+        "bnet": "Cal#11947",
+        "discord": "Cal#7740",
+        "role": "PLAYER",
+        "sr": 3934
+      },
+      {
+        "id": "cjzwzqjqg07vz0750mxodgovv",
+        "bnet": "koodlenoodle#1674",
+        "discord": "koodlenoodle#6969",
+        "role": "PLAYER",
+        "sr": 4221
+      },
+      {
+        "id": "cjzwzqjqh07w00750mio3h1wk",
+        "bnet": "JustIsaac#11323",
+        "discord": "Isaac✓#6969",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqjqh07w10750ccj9rgnu",
+        "bnet": "Lava#11549",
+        "discord": "Lava#8856",
+        "role": "PLAYER",
+        "sr": 3773
+      },
+      {
+        "id": "cjzwzqjqi07w20750pfk04ldx",
+        "bnet": "MǾbbiGL#1610",
+        "discord": "Mobbi#0775 (didnt place any other season than 13 on his main, alt account placed 4191 https://gyazo.com/7091d73274c93c5a6e7606e60b4fb5bb )",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqjqj07w30750pe9lu8zj",
+        "bnet": "Mythenatic#2195",
+        "discord": "Mythenatic#6969 (didnt place any season after)",
+        "role": "PLAYER",
+        "sr": 3672
+      },
+      {
+        "id": "cjzwzqjqj07w40750xa2gzu20",
+        "bnet": "FalcǾŊ#1463",
+        "discord": "Accurate#7290",
+        "role": "SUB",
+        "sr": 4249
+      }
+    ],
+    "pointDifference": 6,
+    "setWins": 0,
+    "slug": "mythenatic",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.446Z",
+    "wins": 3
+  },
+  {
+    "id": "cjzwzqrap07yt0750reqqlna3",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 2,
+    "name": "Scar3d",
+    "players": [
+      {
+        "id": "cjzwzqo4y07xp0750h8fxez6a",
+        "bnet": "Fractal#11983",
+        "discord": "Fractal#2139",
+        "role": "PLAYER",
+        "sr": 4116
+      },
+      {
+        "id": "cjzwzqo4y07xq0750qnaq8q80",
+        "bnet": "Moonz#11984",
+        "discord": "Moonzy#8343",
+        "role": "PLAYER",
+        "sr": 4132
+      },
+      {
+        "id": "cjzwzqo4y07xr0750h1tajc5s",
+        "bnet": "SoSure#1310",
+        "discord": "So_Sure#3519",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqo4y07xs0750688bffk7",
+        "bnet": "Bandit#11829",
+        "discord": "Bandit#2811",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqo4y07xt07504lmwlgwd",
+        "bnet": "RhysCi#1426",
+        "discord": "Rhysci#1509",
+        "role": "PLAYER",
+        "sr": 3665
+      },
+      {
+        "id": "cjzwzqo4y07xu0750bjlrfxe7",
+        "bnet": "Maercs#11130",
+        "discord": "MaercS ♿#7172",
+        "role": "PLAYER",
+        "sr": 3692
+      },
+      {
+        "id": "cjzwzqo4y07xv075036wuo4di",
+        "bnet": "RichyRich#11321",
+        "discord": "RichyRich#4719",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 2,
+    "setWins": 0,
+    "slug": "scar3d",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.471Z",
+    "wins": 2
+  },
+  {
+    "id": "cjzwzqtli07zz0750fjyrdp98",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 4,
+    "name": "Blue Screen Boys ",
+    "players": [
+      {
+        "id": "cjzwzqrcq07zc0750g1wb46yr",
+        "bnet": "SquidYouKnow#1861",
+        "discord": "Squid#1212",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqrcq07zd0750ajq28icw",
+        "bnet": "GOAGANE#1538",
+        "discord": "sk1p#3399",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqrcq07ze0750funlosvr",
+        "bnet": "ezsnyper#1940",
+        "discord": "Snyper#4037",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqrcq07zf0750ve6yfw6z",
+        "bnet": "Daquan#11790",
+        "discord": "GoooLag#3552",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqrcq07zg0750todfxbni",
+        "bnet": "Tex#11523",
+        "discord": "Tex#3464",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqrcq07zh0750e6lwzwix",
+        "bnet": "prospect#11284",
+        "discord": "Prospect#9157",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqrcq07zi07508spzhkw6",
+        "bnet": "saaaas#21743",
+        "discord": "( ͡° ͜ʖ ͡°)ᕦ(^ω^)ᕥ #6124",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": -11,
+    "setWins": 0,
+    "slug": "blue-screen-boys",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.620Z",
+    "wins": 0
+  },
+  {
+    "id": "cjzwzqxhi081v0750z2oold3a",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 1,
+    "name": "Serendipity Esports",
+    "players": [
+      {
+        "id": "cjzwzqtni080k07504ievan3o",
+        "bnet": "Pone#11604",
+        "discord": "Pone#7777",
+        "role": "PLAYER",
+        "sr": 4116
+      },
+      {
+        "id": "cjzwzqtnj080l0750e5coob65",
+        "bnet": "freNoc#1537",
+        "discord": "freNoc#2335",
+        "role": "PLAYER",
+        "sr": 4022
+      },
+      {
+        "id": "cjzwzqtnj080m0750oyvom2mr",
+        "bnet": "Mystic#12768",
+        "discord": "Mystic#1088",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqtnj080n0750pagn8n92",
+        "bnet": "Korībakusutā#1904",
+        "discord": "blobmasterpepe#0467",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqtnj080o0750hjwh1jer",
+        "bnet": "StillKIWI#1761",
+        "discord": "StillKIWI#4473",
+        "role": "PLAYER",
+        "sr": 3827
+      },
+      {
+        "id": "cjzwzqtnj080p0750kmk01b0s",
+        "bnet": "Cainam#11233",
+        "discord": "Cainam ㅇㅅㅇ#8701",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqtnj080q0750mnmadz6g",
+        "bnet": "pancake#11131",
+        "discord": "pancake#7515",
+        "role": "SUB",
+        "sr": 3787
+      },
+      {
+        "id": "cjzwzqtnj080r0750rlyk7v2c",
+        "bnet": "Cash#11893",
+        "discord": "Cash#5427",
+        "role": "SUB",
+        "sr": 4139
+      }
+    ],
+    "pointDifference": 6,
+    "setWins": 0,
+    "slug": "serendipity-esports",
+    "tieBreakersWon": 1,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.412Z",
+    "wins": 3
+  },
+  {
+    "id": "cjzwzr1eu083f07509h8ppslf",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 2,
+    "name": "Guap Legends",
+    "players": [
+      {
+        "id": "cjzwzqxji082g0750uo6wa7ot",
+        "bnet": "SOBERǃ#1761",
+        "discord": "soober#1856",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqxji082h0750u14bw31x",
+        "bnet": "ŦÇħąĿĿĄ#1246",
+        "discord": "Fernando#5435",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqxji082i0750ynjqwsva",
+        "bnet": "doughnut#11510",
+        "discord": "pandathedoughnutbear#4719",
+        "role": "PLAYER",
+        "sr": 4023
+      },
+      {
+        "id": "cjzwzqxji082j0750fr5omuu5",
+        "bnet": "inXy#11157",
+        "discord": "kaimu#2133 ",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqxji082k0750vrh15dwi",
+        "bnet": "Lyrah#21345",
+        "discord": "Lyrah#4439",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqxji082l0750x7ef6zdk",
+        "bnet": "cdawg#11172",
+        "discord": "Cdawg#9031",
+        "role": "PLAYER",
+        "sr": 3932
+      },
+      {
+        "id": "cjzwzqxji082m0750gkm9zmdj",
+        "bnet": "shocĸs#1337",
+        "discord": "shocks#5151",
+        "role": "SUB",
+        "sr": null
+      },
+      {
+        "id": "cjzwzqxji082n075057hpg8lx",
+        "bnet": "Egoist#11943",
+        "discord": "Oceans#6661",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": -3,
+    "setWins": 0,
+    "slug": "guap-legends",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.495Z",
+    "wins": 2
+  },
+  {
+    "id": "cjzwzr3mb084l075012nmhxsy",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 3,
+    "name": "Chinese Takeout",
+    "players": [
+      {
+        "id": "cjzwzr1gt083w0750hmcvwvft",
+        "bnet": "Deo#11746",
+        "discord": "Nova#3165",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr1gt083x0750m2cy3sxy",
+        "bnet": "LilJohnno#1824",
+        "discord": "Johnathon#3342",
+        "role": "PLAYER",
+        "sr": 4121
+      },
+      {
+        "id": "cjzwzr1gt083y0750udeuf7az",
+        "bnet": "Tempt#11906",
+        "discord": "Tempt#1405",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr1gu083z0750zoaa65xh",
+        "bnet": "MØØN#11324",
+        "discord": "AppLe#5117",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr1gu084007500ozv3u5l",
+        "bnet": "Nolan#11998",
+        "discord": "Nbab91#9299",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr1gv08410750aopzpgo4",
+        "bnet": "September#11875",
+        "discord": "EvilDivaWezl#2003",
+        "role": "PLAYER",
+        "sr": null
+      }
+    ],
+    "pointDifference": -4,
+    "setWins": 0,
+    "slug": "chinese-takeout",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.597Z",
+    "wins": 1
+  },
+  {
+    "id": "cjzwzr75y086507506cywjjev",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 0,
+    "name": "495",
+    "players": [
+      {
+        "id": "cjzwzr3p108560750pwvnnj4p",
+        "bnet": "Genji#17444",
+        "discord": "Bolt7988#5331",
+        "role": "PLAYER",
+        "sr": 4088
+      },
+      {
+        "id": "cjzwzr3p108570750gx2fp10j",
+        "bnet": "SpeedyRogue#1238",
+        "discord": "SpeedyRogue#6826",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr3p208580750qf6e2dfc",
+        "bnet": "SupaSouljah#1288",
+        "discord": "Rose#9370",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr3p208590750kz7e948z",
+        "bnet": "HyperLUL#1242",
+        "discord": "MonkeyMan#4005",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr3p2085a0750pmqtcdud",
+        "bnet": "Lapis#12309",
+        "discord": "Lapis#9268",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr3p3085b0750xuay4hyn",
+        "bnet": "ƂĿǾǬĸȐ#1190",
+        "discord": "BlooCR#7678",
+        "role": "PLAYER",
+        "sr": 4138
+      },
+      {
+        "id": "cjzwzr3p3085c075067jnpv94",
+        "bnet": "ZĘNYAŦŦA#1718",
+        "discord": "tarej#1178",
+        "role": "SUB",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr3p4085d0750v6dbf6ga",
+        "bnet": "NightTime#11479",
+        "discord": "NightTimeOW#0806",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 7,
+    "setWins": 0,
+    "slug": "495",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.525Z",
+    "wins": 4
+  },
+  {
+    "id": "cjzwzraxt087n0750jdzc1n6s",
+    "region": "NA",
+    "division": "EXPERT",
+    "losses": 1,
+    "name": "Valor",
+    "players": [
+      {
+        "id": "cjzwzr78w086o0750ydr8rtlt",
+        "bnet": "Nimbus#12789",
+        "discord": "Nimbus#5561",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr78w086p07502c2gc55d",
+        "bnet": "wizawhat#1105",
+        "discord": "wizawhat#3360",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr78w086q0750zngskdr7",
+        "bnet": "Symbs#11701",
+        "discord": "Symbs#9558",
+        "role": "PLAYER",
+        "sr": 3725
+      },
+      {
+        "id": "cjzwzr78w086r0750lci3um2z",
+        "bnet": "Nistrik#1417",
+        "discord": "Nistrik#9425",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwzr78w086s0750461wl9nd",
+        "bnet": "Brick#11395",
+        "discord": "Brick#7991",
+        "role": "PLAYER",
+        "sr": 3873
+      },
+      {
+        "id": "cjzwzr78w086t0750kmzzqs4x",
+        "bnet": "Lueyyy#1730",
+        "discord": "Luey#8895",
+        "role": "PLAYER",
+        "sr": 3891
+      },
+      {
+        "id": "cjzwzr78w086u0750zofqze18",
+        "bnet": "WinterTime#11115",
+        "discord": "WinterTime#0551",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 7,
+    "setWins": 0,
+    "slug": "valor",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T17:57:58.548Z",
+    "wins": 3
+  }
+]

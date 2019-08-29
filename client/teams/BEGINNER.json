@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "cjzwz617900260750lw6wcpdl",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 2,
+    "name": "Underwatch",
+    "players": [
+      {
+        "id": "cjzwz5wa900190750kqvqwlao",
+        "bnet": "CPU#11595",
+        "discord": "Computer#4039",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz5wal001a0750qjcs2i8c",
+        "bnet": "Pinkawe#1224",
+        "discord": "Pinkawe#9043",
+        "role": "OFF_TANK",
+        "sr": 2364
+      },
+      {
+        "id": "cjzwz5wax001b0750tr8q4eks",
+        "bnet": "NotYourGF#1696",
+        "discord": "NotYourGF#3796",
+        "role": "FLEX_SUPPORT",
+        "sr": 2532
+      },
+      {
+        "id": "cjzwz5way001c0750xs7g7gkl",
+        "bnet": "Heroes#11686",
+        "discord": "Heroes#9425",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz5wb3001d075026rhdsud",
+        "bnet": "Keyboard#11465",
+        "discord": "Keyboard#6860",
+        "role": "HITSCAN_DPS",
+        "sr": 3029
+      },
+      {
+        "id": "cjzwz5wbk001e0750zugsj7ak",
+        "bnet": "Shade#13867",
+        "discord": "Shade#0913",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      }
+    ],
+    "pointDifference": 11,
+    "setWins": 7,
+    "slug": "underwatch",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:50.880Z",
+    "wins": 8
+  },
+  {
+    "id": "cjzwz67bh003t0750k2qhtm9e",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 4,
+    "name": "Bird Biting A Lime",
+    "players": [
+      {
+        "id": "cjzwz61e9002p0750g4bw12xp",
+        "bnet": "RobloxTiddy#1201",
+        "discord": "Homeboy Jimmy Neukong#5362",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz61e9002q0750gcc0czb7",
+        "bnet": "Rowlet#1425",
+        "discord": "rowlet#1473",
+        "role": "MAIN_TANK",
+        "sr": 2403
+      },
+      {
+        "id": "cjzwz61ec002r07506btpcrla",
+        "bnet": "whalelike#1521",
+        "discord": "whalelike#9457",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz61ec002s0750qw5mi4y9",
+        "bnet": "Brzle#1662",
+        "discord": "Brzle#4047",
+        "role": "OFF_TANK",
+        "sr": 2051
+      },
+      {
+        "id": "cjzwz61ed002t0750op3vag88",
+        "bnet": "Schiller#11283",
+        "discord": "Von_Schiller#2354",
+        "role": "MAIN_SUPPORT",
+        "sr": 2246
+      },
+      {
+        "id": "cjzwz61ed002u0750nnxa3vgp",
+        "bnet": "Chungus#11538",
+        "discord": "FortyFree#9593",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz61ee002v0750n7y90xjb",
+        "bnet": "ToddCuber#1799",
+        "discord": "toddcuber#9061",
+        "role": "SUB",
+        "sr": 2255
+      }
+    ],
+    "pointDifference": 8,
+    "setWins": 5,
+    "slug": "bird-biting-a-lime",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:50.925Z",
+    "wins": 6
+  },
+  {
+    "id": "cjzwz6d5q005k0750d0v0gmm8",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 2,
+    "name": "Ignited Embers",
+    "players": [
+      {
+        "id": "cjzwz67gk004c07504k730beu",
+        "bnet": "PikaBandito#1997",
+        "discord": "elPikaBandito#0025",
+        "role": "OFF_TANK",
+        "sr": 2464
+      },
+      {
+        "id": "cjzwz67gl004d0750a0toy17b",
+        "bnet": "TorrentFury#1210",
+        "discord": "TorrentFury#5594 ",
+        "role": "PROJECTILE_DPS",
+        "sr": 2507
+      },
+      {
+        "id": "cjzwz67gp004e07502a0bwp1g",
+        "bnet": "FixedSoup#1312",
+        "discord": "FixedSoup#7429",
+        "role": "FLEX_SUPPORT",
+        "sr": 2727
+      },
+      {
+        "id": "cjzwz67gq004f0750dqy976cg",
+        "bnet": "Samterr#1865",
+        "discord": "Samterr#8033",
+        "role": "MAIN_TANK",
+        "sr": 2644
+      },
+      {
+        "id": "cjzwz67gr004g0750273mrzws",
+        "bnet": "CalliÀ´pe#1107",
+        "discord": "CalliÀ´pe#8543",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz67h3004j0750gnpww4oo",
+        "bnet": "WAV#11456",
+        "discord": "WAVðŸ ¦ #0789",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz67h3004l0750tofrrtbg",
+        "bnet": "Achillesfoot#1928",
+        "discord": "Achillesfoot#4964 ",
+        "role": "SUB",
+        "sr": 2512
+      }
+    ],
+    "pointDifference": 10,
+    "setWins": 6,
+    "slug": "ignited-embers",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:50.902Z",
+    "wins": 8
+  },
+  {
+    "id": "cjzwz6hbo006y0750dhk8w2vc",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 9,
+    "name": "Leviathans",
+    "players": [
+      {
+        "id": "cjzwz6dbv006107502ym6c8av",
+        "bnet": "WordMan#11488",
+        "discord": "WordMan#6666",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6dbw00620750y6p4rtfy",
+        "bnet": "JBoars#1638",
+        "discord": "JBoars#0347",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6dbx00630750ogaridca",
+        "bnet": "Maikeroppi#1599",
+        "discord": "Maikeroppi #8706",
+        "role": "FLEX_SUPPORT",
+        "sr": 2470
+      },
+      {
+        "id": "cjzwz6dbx00640750ngfycxo3",
+        "bnet": "Alani#11303",
+        "discord": "Alani#2262",
+        "role": "MAIN_SUPPORT",
+        "sr": 1726
+      },
+      {
+        "id": "cjzwz6dc200650750hgxx7wk0",
+        "bnet": "Revan#12517",
+        "discord": "Christopher#9244",
+        "role": "PROJECTILE_DPS",
+        "sr": 2221
+      },
+      {
+        "id": "cjzwz6dc3006607507mprzlac",
+        "bnet": "NME#11165",
+        "discord": "A_Feeder #8362",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      }
+    ],
+    "pointDifference": -18,
+    "setWins": 1,
+    "slug": "leviathans",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.116Z",
+    "wins": 1
+  },
+  {
+    "id": "cjzwz6ldo008h0750ewthi4tv",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 3,
+    "name": "Arsenal",
+    "players": [
+      {
+        "id": "cjzwz6hhq007h0750ebpgr41x",
+        "bnet": "monkyb#11543",
+        "discord": "monkyb#7093",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6hhu007i0750dy5647uo",
+        "bnet": "Kitteh#11506",
+        "discord": "Kitteh#6235",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6hhu007j0750seue453c",
+        "bnet": "SamE#11260",
+        "discord": "SamE#8420",
+        "role": "MAIN_TANK",
+        "sr": 1893
+      },
+      {
+        "id": "cjzwz6hhv007k07509c5ub1sw",
+        "bnet": "Air#1476",
+        "discord": "Air#2688",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6hhv007l0750j9lp81qv",
+        "bnet": "Nakishima#1837",
+        "discord": "ê²°ì •ì²´#0002",
+        "role": "PROJECTILE_DPS",
+        "sr": 2515
+      },
+      {
+        "id": "cjzwz6hi2007m0750764z61lz",
+        "bnet": "ZeevTenebris#1163",
+        "discord": "ZeevTenebris#4494",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6hi3007n0750kabnyxlr",
+        "bnet": "Spiree#1335",
+        "discord": "Momo#7748",
+        "role": "SUB",
+        "sr": 2503
+      }
+    ],
+    "pointDifference": 9,
+    "setWins": 7,
+    "slug": "arsenal",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.028Z",
+    "wins": 7
+  },
+  {
+    "id": "cjzwz6p6t00a00750gwmtwr09",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 6,
+    "name": "Kraken8ors",
+    "players": [
+      {
+        "id": "cjzwz6li000900750ry0igokj",
+        "bnet": "Hooper#11703",
+        "discord": "Hooper#4135",
+        "role": "MAIN_TANK",
+        "sr": 2039
+      },
+      {
+        "id": "cjzwz6li100910750s8ajtcxb",
+        "bnet": "OffTopic#11340",
+        "discord": "OffTopic#8331",
+        "role": "MAIN_SUPPORT",
+        "sr": 2053
+      },
+      {
+        "id": "cjzwz6li100920750mb3l8edx",
+        "bnet": "RespectMe#11791",
+        "discord": "ShadowShooter#2788",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6li1009307509l6s8zjx",
+        "bnet": "Summer#12555",
+        "discord": "Winter#4942",
+        "role": "PROJECTILE_DPS",
+        "sr": 2750
+      },
+      {
+        "id": "cjzwz6li200940750jdkogh0e",
+        "bnet": "SleepyPeePee#1442",
+        "discord": "AstralCars#6737",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6li200950750kgf2gsx9",
+        "bnet": "ŀVîŀĀŸĀ#1138",
+        "discord": "ŀVîŀĀŸĀ11223",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6lia009607507kbphnyt",
+        "bnet": "CuteWhiteBoi#1131",
+        "discord": "CuteWhiteBoi#5865",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": -6,
+    "setWins": 4,
+    "slug": "kraken8ors",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.072Z",
+    "wins": 4
+  },
+  {
+    "id": "cjzwz6sny00bn07506bvq1dts",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 4,
+    "name": "Hard Ana Bots",
+    "players": [
+      {
+        "id": "cjzwz6pd800al0750dr1zfktj",
+        "bnet": "Mozzarella#11945",
+        "discord": "Mozzarella#1122",
+        "role": "FLEX_SUPPORT",
+        "sr": 2190
+      },
+      {
+        "id": "cjzwz6pd900am0750wuyitsyr",
+        "bnet": "Cooleraid#11966",
+        "discord": "Cooleraid#4971",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6pd900an0750e5se6lvb",
+        "bnet": "mkjns#1884",
+        "discord": "mkjns#8002",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6pde00ao07507xdksvgb",
+        "bnet": "dfire#11554",
+        "discord": "Founded#1111",
+        "role": "MAIN_TANK",
+        "sr": 2513
+      },
+      {
+        "id": "cjzwz6pdg00ap07508db9z6ox",
+        "bnet": "Tennebris#1319",
+        "discord": "Tennebris Brassen#7408",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6pdh00aq0750xzxpt20m",
+        "bnet": "gurpy1#1688",
+        "discord": "gurpy1829#2026",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6pdi00ar07503vxgygp0",
+        "bnet": "Berniesander#1587",
+        "discord": "daddysenpai#2417",
+        "role": "SUB",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6pdj00as07505g4su58m",
+        "bnet": "IronThane#1931",
+        "discord": "PXEIronThane#3779",
+        "role": "SUB",
+        "sr": 2154
+      }
+    ],
+    "pointDifference": 1,
+    "setWins": 6,
+    "slug": "hard-ana-bots",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.050Z",
+    "wins": 6
+  },
+  {
+    "id": "cjzwz6xbc00da0750fx6zxrm6",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 1,
+    "name": "The Mighty Nein",
+    "players": [
+      {
+        "id": "cjzwz6sst00c60750x8b4r46l",
+        "bnet": "SilentSword#121626",
+        "discord": "Coolnamehere#3330",
+        "role": "OFF_TANK",
+        "sr": 2793
+      },
+      {
+        "id": "cjzwz6ssu00c70750hfe6es1p",
+        "bnet": "Tquen#1934",
+        "discord": "Tquen#3364",
+        "role": "FLEX_SUPPORT",
+        "sr": 2810
+      },
+      {
+        "id": "cjzwz6ssw00c80750moz7scbc",
+        "bnet": "Seaborg#11472",
+        "discord": "Seaborg#2167",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6ssw00c90750plf5k73f",
+        "bnet": "SpaceRanger#11451",
+        "discord": "Space Ranger Alpha#1144",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6ssx00ca0750pfxyyxjm",
+        "bnet": "Knagh#1210",
+        "discord": "knagh#1350",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6st000cb0750hg5g8mzo",
+        "bnet": "Tkags#1268",
+        "discord": "Doomblade #5641",
+        "role": "PROJECTILE_DPS",
+        "sr": 2519
+      },
+      {
+        "id": "cjzwz6ste00ce07506fsaqff0",
+        "bnet": "Thundershot#11204",
+        "discord": "Thundershot #1029",
+        "role": "SUB",
+        "sr": 2390
+      }
+    ],
+    "pointDifference": 17,
+    "setWins": 7,
+    "slug": "the-mighty-nein",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.138Z",
+    "wins": 9
+  },
+  {
+    "id": "cjzwz70k000eo0750u6f6nipe",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 5,
+    "name": "The Goldfish Paradox",
+    "players": [
+      {
+        "id": "cjzwz6xfh00dr0750endp9w4l",
+        "bnet": "nobody#12360",
+        "discord": "paddington#3350",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6xfi00ds0750h4caiyu0",
+        "bnet": "Jman#1669",
+        "discord": "SouthDown#2933",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6xfi00dt0750khnxcase",
+        "bnet": "johnlink123#1530",
+        "discord": "johnlink123#0348",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz6xfl00du07509f0nay74",
+        "bnet": "L3MONS#2623",
+        "discord": "mark44#4141",
+        "role": "PROJECTILE_DPS",
+        "sr": 2478
+      },
+      {
+        "id": "cjzwz6xfm00dv07501ltqifb8",
+        "bnet": "lancelot#12868",
+        "discord": "lance#3390",
+        "role": "MAIN_TANK",
+        "sr": 2210
+      },
+      {
+        "id": "cjzwz6xfo00dw07508qeyaam5",
+        "bnet": "Snowbird#11687",
+        "discord": "Ravenorus#6562",
+        "role": "OFF_TANK",
+        "sr": 1887
+      }
+    ],
+    "pointDifference": -6,
+    "setWins": 2,
+    "slug": "the-goldfish-paradox",
+    "tieBreakersWon": 0,
+    "ties": 1,
+    "updatedAt": "2019-08-29T18:01:51.212Z",
+    "wins": 4
+  },
+  {
+    "id": "cjzwz74ag00g00750ml2wudcs",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 4,
+    "name": "Daddy's Darlings",
+    "players": [
+      {
+        "id": "cjzwz70p800f90750mzwxfg5y",
+        "bnet": "Medioxre#1302",
+        "discord": "Medioxre#7349",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70p800fa0750vw9mkpq6",
+        "bnet": "JewishHotPkt#1327",
+        "discord": "Estate#8996",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70p900fb07501uw0ge75",
+        "bnet": "Alibaba#11485",
+        "discord": "Strega#1244",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70p900fc0750cefchwzw",
+        "bnet": "Grant#12211",
+        "discord": "grant#1053",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70p900fd0750hhpot6xg",
+        "bnet": "sparky#12665",
+        "discord": "sparky#7735",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70pc00fe0750ithk734s",
+        "bnet": "WateryMelon#11164",
+        "discord": "WateryMelon#6538",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70pc00ff07509083zqnd",
+        "bnet": "blaze#12697",
+        "discord": "blaze#6691",
+        "role": "SUB",
+        "sr": null
+      },
+      {
+        "id": "cjzwz70pd00fg07509qeft1l0",
+        "bnet": "Thalas#1597",
+        "discord": "thalasas#2442",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 0,
+    "setWins": 4,
+    "slug": "daddys-darlings",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.187Z",
+    "wins": 6
+  },
+  {
+    "id": "cjzwz78j400ha07500msiufq9",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 2,
+    "name": "Team Cube",
+    "players": [
+      {
+        "id": "cjzwz74ex00gj0750lz6abf69",
+        "bnet": "Getchoo#3874",
+        "discord": "Getchoo#3681",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz74ey00gk0750bixljj8l",
+        "bnet": "Immune#11104",
+        "discord": "TonyP#8786",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz74ey00gl0750aqwhaffh",
+        "bnet": "phoenixfyre#11600",
+        "discord": "phoenixfyrefly#8662",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz74ey00gm0750ifqvlj6y",
+        "bnet": "kelpfan1997#3606",
+        "discord": "lando#8888",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz74f000gn0750vn3m5nto",
+        "bnet": "kman#11227",
+        "discord": "bencash#3687",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz74f300go0750hewaq2ut",
+        "bnet": "Aluerad#11721",
+        "discord": "Aluerad#3177",
+        "role": "MAIN_SUPPORT",
+        "sr": 2153
+      },
+      {
+        "id": "cjzwz74f400gp0750sp6hvw9v",
+        "bnet": "LazyHealer#1323",
+        "discord": "LazyHealer #3207",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 10,
+    "setWins": 6,
+    "slug": "team-cube",
+    "tieBreakersWon": 0,
+    "ties": 1,
+    "updatedAt": "2019-08-29T18:01:51.161Z",
+    "wins": 7
+  },
+  {
+    "id": "cjzwz7bf500is07505q00a3xg",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 5,
+    "name": "Unlucky",
+    "players": [
+      {
+        "id": "cjzwz78no00hr0750aiwy732x",
+        "bnet": "LokiVanadis#1402",
+        "discord": "Loki_Vanadis#1402",
+        "role": "HITSCAN_DPS",
+        "sr": 2218
+      },
+      {
+        "id": "cjzwz78no00hs0750otuo7ym5",
+        "bnet": "ProbNotHuman#1298",
+        "discord": "ᴀʀᴀʀɴᴀᴀʀᴀᴀᴀɴ#8921",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz78np00ht0750mragaptg",
+        "bnet": "ArGianTine#1857",
+        "discord": "[G]#9085",
+        "role": "OFF_TANK",
+        "sr": 2391
+      },
+      {
+        "id": "cjzwz78np00hu0750dthkjh6h",
+        "bnet": "dirt#11110",
+        "discord": "dirt#2026",
+        "role": "FLEX_SUPPORT",
+        "sr": 2397
+      },
+      {
+        "id": "cjzwz78nq00hv0750c0re1u5z",
+        "bnet": "Stratagus#1195",
+        "discord": "Stratagus#8110",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz78ns00hw0750g2ssnlte",
+        "bnet": "hobbesmaster#1432",
+        "discord": "hobbesmaster#3508",
+        "role": "MAIN_SUPPORT",
+        "sr": 1552
+      }
+    ],
+    "pointDifference": -6,
+    "setWins": 3,
+    "slug": "unlucky",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.341Z",
+    "wins": 5
+  },
+  {
+    "id": "cjzwz7fgq00kh07500i6f3b3i",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 3,
+    "name": "Charlie Niners",
+    "players": [
+      {
+        "id": "cjzwz7bj000j907503y2w7f56",
+        "bnet": "Sialocin#1764",
+        "discord": "sialocin#8370",
+        "role": "OFF_TANK",
+        "sr": 1985
+      },
+      {
+        "id": "cjzwz7bj100ja07505hro3lv6",
+        "bnet": "Sinnabon#11166",
+        "discord": "Sinnabon#8004",
+        "role": "FLEX_SUPPORT",
+        "sr": 2342
+      },
+      {
+        "id": "cjzwz7bj100jb0750octej37b",
+        "bnet": "MrsObama#1749",
+        "discord": "FlockoSeagul#6150",
+        "role": "HITSCAN_DPS",
+        "sr": 1942
+      },
+      {
+        "id": "cjzwz7bj100jc0750lsxqpkao",
+        "bnet": "Bardemic#2689",
+        "discord": "Thresh out of Hooks#3333",
+        "role": "MAIN_SUPPORT",
+        "sr": 2289
+      },
+      {
+        "id": "cjzwz7bj200je0750mlgiui1a",
+        "bnet": "Lol247#11550",
+        "discord": "Lol247#3778",
+        "role": "MAIN_TANK",
+        "sr": 2239
+      }
+    ],
+    "pointDifference": 5,
+    "setWins": 5,
+    "slug": "charlie-niners",
+    "tieBreakersWon": 1,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.320Z",
+    "wins": 7
+  },
+  {
+    "id": "cjzwz7iek00lo0750lxp9r459",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 2,
+    "name": "MOGA",
+    "players": [
+      {
+        "id": "cjzwz7bj200jd0750qd3qyvbc",
+        "bnet": "DvorakEagle#1602",
+        "discord": "DvorakEagle#9180",
+        "role": "PROJECTILE_DPS",
+        "sr": 2592
+      },
+      {
+        "id": "cjzwz7fk900ky0750kx98b6td",
+        "bnet": "Tykin #1776",
+        "discord": "Tykin #4318",
+        "role": "OFF_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7fkg00kz0750noi1z5hz",
+        "bnet": "FastPhil#11587",
+        "discord": "FastPhil19#7438",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7fkh00l007507nnd55fd",
+        "bnet": "Aurum#1692",
+        "discord": "TheAurumGamer#1394",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7fkm00l10750rg8arorl",
+        "bnet": "OutlawPope#1605",
+        "discord": "OutlawPope#0590",
+        "role": "PROJECTILE_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7fkm00l20750emqw0olg",
+        "bnet": "Domin8tor#1878",
+        "discord": "Domin8tor#3606",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7fkn00l30750zdsy361z",
+        "bnet": "MayLu#11431",
+        "discord": "MayLu#7781",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 11,
+    "setWins": 6,
+    "slug": "moga",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.273Z",
+    "wins": 8
+  },
+  {
+    "id": "cjzwz7nyp00nc07508eeqj5ps",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 3,
+    "name": "6Teen",
+    "players": [
+      {
+        "id": "cjzwz7ikd00m90750a4kxka7x",
+        "bnet": "cookies9#1258",
+        "discord": "cookies9#3458",
+        "role": "MAIN_TANK",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7ike00ma0750238p9qrm",
+        "bnet": "Kevin#110402",
+        "discord": "Blue #9582",
+        "role": "PROJECTILE_DPS",
+        "sr": 2722
+      },
+      {
+        "id": "cjzwz7ikf00mb0750pufbsnuw",
+        "bnet": "Dana#11629",
+        "discord": "Dana#5946",
+        "role": "MAIN_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7ikf00mc0750hwsqzir7",
+        "bnet": "Crimsioninja#1983",
+        "discord": "Thecrimsionninja#7688",
+        "role": "HITSCAN_DPS",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7ikf00md0750hxwmtel8",
+        "bnet": "sameethan1#1894",
+        "discord": "Sameethan1#1063",
+        "role": "FLEX_SUPPORT",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7ikg00me0750nqjxnxr6",
+        "bnet": "ImAhBanana#11799",
+        "discord": "Kowalski#4665",
+        "role": "OFF_TANK",
+        "sr": 2584
+      },
+      {
+        "id": "cjzwz7ikg00mf075033xf9i89",
+        "bnet": "Geni#11949",
+        "discord": "Kinani#0139",
+        "role": "SUB",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7ikg00mg0750cdx1v3j7",
+        "bnet": "Saerus#11156",
+        "discord": "Saerus#5464",
+        "role": "SUB",
+        "sr": 2153
+      }
+    ],
+    "pointDifference": 5,
+    "setWins": 5,
+    "slug": "6teen",
+    "tieBreakersWon": 1,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.296Z",
+    "wins": 7
+  },
+  {
+    "id": "cjzwz7t6t00pc0750ytreentr",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 7,
+    "name": "Talon Redshirts",
+    "players": [
+      {
+        "id": "cjzwz7o3700nx075080e31gxi",
+        "bnet": "Link#11689",
+        "discord": "Link#6735",
+        "role": "PLAYER",
+        "sr": 2413
+      },
+      {
+        "id": "cjzwz7o3800ny0750fmtt27eq",
+        "bnet": "Bluewolf#11739",
+        "discord": "bluewolf89#4684",
+        "role": "PLAYER",
+        "sr": 2536
+      },
+      {
+        "id": "cjzwz7o3800nz0750yds0vqtq",
+        "bnet": "Josbird#1908",
+        "discord": "jprosk#6749",
+        "role": "PLAYER",
+        "sr": 2235
+      },
+      {
+        "id": "cjzwz7o3800o00750xlzp12ay",
+        "bnet": "weallwould#1763",
+        "discord": "weallwould#5849",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7o3a00o107505xwkz3by",
+        "bnet": "IdolHell#1492",
+        "discord": "kayechi#6969",
+        "role": "PLAYER",
+        "sr": 1702
+      },
+      {
+        "id": "cjzwz7o3c00o207500n59zpjl",
+        "bnet": "Luminescence#11166",
+        "discord": "Neo1928#9763",
+        "role": "PLAYER",
+        "sr": 2168
+      },
+      {
+        "id": "cjzwz7o3f00o30750vcvz0dv7",
+        "bnet": "CeleryMan#11535",
+        "discord": "CeleryMan#3577",
+        "role": "SUB",
+        "sr": 2665
+      },
+      {
+        "id": "cjzwz7o3j00o507509g8zneak",
+        "bnet": "jimmydippy#1241",
+        "discord": "PopeEggsBenedict #8859",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": -15,
+    "setWins": 2,
+    "slug": "talon-redshirts",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:50.976Z",
+    "wins": 3
+  },
+  {
+    "id": "cjzwz7zet00qz0750xvul7q2j",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 5,
+    "name": "Walkaway",
+    "players": [
+      {
+        "id": "cjzwz7tcf00pv0750ur434sod",
+        "bnet": "DrAce#11521",
+        "discord": "xIAceIx#9632",
+        "role": "PLAYER",
+        "sr": 2234
+      },
+      {
+        "id": "cjzwz7tcf00pw0750u33zxvfz",
+        "bnet": "Zusor#2553",
+        "discord": "Zusor#4172",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7tcg00px0750nnrpccf5",
+        "bnet": "Positivitea#1566",
+        "discord": "ann_astro#5197",
+        "role": "PLAYER",
+        "sr": 2460
+      },
+      {
+        "id": "cjzwz7tch00py0750azcu9zv8",
+        "bnet": "I8enBI#1256",
+        "discord": "8enB#5585",
+        "role": "PLAYER",
+        "sr": 2535
+      },
+      {
+        "id": "cjzwz7tci00pz0750jp6vzxek",
+        "bnet": "wheeWoW#1719",
+        "discord": "Yasu#0841",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7tci00q00750yxulf7tf",
+        "bnet": "madamadamada#2116",
+        "discord": "pranav#5831",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7tcl00q10750ukldoqnf",
+        "bnet": "dang3r#11192",
+        "discord": "dang3r#1337",
+        "role": "SUB",
+        "sr": 2277
+      }
+    ],
+    "pointDifference": -2,
+    "setWins": 4,
+    "slug": "walkaway",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:50.950Z",
+    "wins": 5
+  },
+  {
+    "id": "cjzwz83tj00s10750svkctaji",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 7,
+    "name": "HoA Lyssa",
+    "players": [
+      {
+        "id": "cjzwz7zj300rg075010r7swpx",
+        "bnet": "GrandR#11158",
+        "discord": "Atethys#5188",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7zj500rh0750thyevcsk",
+        "bnet": "wingzim#1642",
+        "discord": "wingizm#5345",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7zj600ri0750n2kulr6n",
+        "bnet": "amhare97#1379",
+        "discord": "amhare97#4486",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7zj900rj07506kn5nz6l",
+        "bnet": "KittenMeowo#1809",
+        "discord": "MightyKitten_#2710",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7zjb00rk0750z6iiie7m",
+        "bnet": "SB9182#1795",
+        "discord": "Shadowblade9182#6320",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz7zje00rm0750oee2xfzq",
+        "bnet": "neoDeux#1957",
+        "discord": "neo#0001",
+        "role": "PLAYER",
+        "sr": null
+      }
+    ],
+    "pointDifference": -4,
+    "setWins": 3,
+    "slug": "hoa-lyssa",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.094Z",
+    "wins": 3
+  },
+  {
+    "id": "cjzwz88y400tx0750anumox39",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 1,
+    "name": "Unity",
+    "players": [
+      {
+        "id": "cjzwz83y600sm07503ntii6a1",
+        "bnet": "WaterDancer#1460",
+        "discord": "WaterDancer#8445",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz83y600sn0750czd6kuzg",
+        "bnet": "shantz#11262",
+        "discord": "shantzie#5183",
+        "role": "PLAYER",
+        "sr": 2844
+      },
+      {
+        "id": "cjzwz83y700so0750epiahb4t",
+        "bnet": "Myriadskills#1994",
+        "discord": "myriadskills#0635",
+        "role": "PLAYER",
+        "sr": 1851
+      },
+      {
+        "id": "cjzwz83y700sp0750s0m3r9fu",
+        "bnet": "Alexithmia#1723",
+        "discord": "Alexithmia#4101",
+        "role": "PLAYER",
+        "sr": 2789
+      },
+      {
+        "id": "cjzwz83y700sq0750xz9usn88",
+        "bnet": "chops#11627",
+        "discord": "eric#3062",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz83y800sr0750b1r0okk8",
+        "bnet": "StevieRay#11394",
+        "discord": "StevieRay#6259",
+        "role": "PLAYER",
+        "sr": 2271
+      },
+      {
+        "id": "cjzwz83y800ss0750xfsvy411",
+        "bnet": "SirDarmah#1962",
+        "discord": "dharmah#8970",
+        "role": "SUB",
+        "sr": 3035
+      },
+      {
+        "id": "cjzwz83y800st0750cvgg4lxz",
+        "bnet": "VixynOmega#1366",
+        "discord": "VixynOmega#0891",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": 18,
+    "setWins": 9,
+    "slug": "unity",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.005Z",
+    "wins": 9
+  },
+  {
+    "id": "cjzwz8dmb00v7075056pvqay5",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 8,
+    "name": "Padlost",
+    "players": [
+      {
+        "id": "cjzwz892500ug0750xuflmt69",
+        "bnet": "BWenz#1759",
+        "discord": "B-Wenz#8302",
+        "role": "PLAYER",
+        "sr": 2508
+      },
+      {
+        "id": "cjzwz892600uh0750ppaqgwsp",
+        "bnet": "Greg#13180",
+        "discord": "Greg#9541",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz892600ui0750yli487sw",
+        "bnet": "jordanfmc#1469",
+        "discord": "jfmc#0272",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz892900uj0750zsijw9jv",
+        "bnet": "Halberd#11710",
+        "discord": "Halberd#6307",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz892900uk07504i5tqlue",
+        "bnet": "olc#11941",
+        "discord": "olc#3370",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz892900ul0750aamudxsp",
+        "bnet": "Desiringly#11898",
+        "discord": "Seo#6896",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz892b00um0750yh1xzxrw",
+        "bnet": "Carnage#12403",
+        "discord": "Zachary Johnston#6516",
+        "role": "SUB",
+        "sr": null
+      }
+    ],
+    "pointDifference": -21,
+    "setWins": 1,
+    "slug": "padlost",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.241Z",
+    "wins": 2
+  },
+  {
+    "id": "cjzwz8ihg00wu0750reqguvsc",
+    "region": "NA",
+    "division": "BEGINNER",
+    "losses": 7,
+    "name": "Team Draconic",
+    "players": [
+      {
+        "id": "cjzwz8dqp00vq0750xpkps27o",
+        "bnet": "Prestige#11739",
+        "discord": "Prestige#5433",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz8dqp00vr075003qv9t9s",
+        "bnet": "RedMudkip#1321",
+        "discord": "MysteriousMagmaMudkip#0206",
+        "role": "PLAYER",
+        "sr": 1970
+      },
+      {
+        "id": "cjzwz8dqv00vt0750fymm6cxa",
+        "bnet": "GrumpyMonk#1106676",
+        "discord": "GrumpyMonk#1386",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz8dqv00vu07508uqmh0de",
+        "bnet": " crash#12160",
+        "discord": "Crash#8751",
+        "role": "PLAYER",
+        "sr": 2786
+      },
+      {
+        "id": "cjzwz8dqw00vv0750acpjiy6p",
+        "bnet": "Cinister#11156",
+        "discord": "cinister12#7377",
+        "role": "PLAYER",
+        "sr": null
+      },
+      {
+        "id": "cjzwz8dqy00vw0750mmdynevo",
+        "bnet": "Digi#11934",
+        "discord": "Digi#6325",
+        "role": "PLAYER",
+        "sr": 2349
+      },
+      {
+        "id": "cjzwz8dqz00vx0750s84522h7",
+        "bnet": "DeadInside#11601",
+        "discord": "DeadInside#7423",
+        "role": "SUB",
+        "sr": 2564
+      }
+    ],
+    "pointDifference": -15,
+    "setWins": 1,
+    "slug": "team-draconic",
+    "tieBreakersWon": 0,
+    "ties": 0,
+    "updatedAt": "2019-08-29T18:01:51.363Z",
+    "wins": 3
+  }
+]
