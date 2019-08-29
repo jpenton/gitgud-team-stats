@@ -63,7 +63,7 @@ function TeamPage(props: IProps) {
                       target="_blank"
                     >
                       <img
-                        src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overwatch-logo.png"
+                        src="https://logonoid.com/images/overwatch-logo.png"
                         alt="overwatch"
                       />
                     </a>
@@ -76,7 +76,7 @@ function TeamPage(props: IProps) {
                       target="_blank"
                     >
                       <img
-                        src="https://gitgud.nyc3.cdn.digitaloceanspaces.com/images/overbuff-logo.png"
+                        src="https://www.overbuff.com/assets/favicon.png?v=4503633"
                         alt="overbuff"
                       />
                     </a>
