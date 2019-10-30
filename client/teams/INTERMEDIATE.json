@@ -18,7 +18,7 @@
         "bnet": "Teddy#11396",
         "discord": "Teddy#3806",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgmxw03iv0750w48c6vt5",
@@ -32,7 +32,7 @@
         "bnet": "bot001#11913",
         "discord": "Kosh NE#7106",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgmxx03ix0750oxj5gw10",
@@ -46,7 +46,7 @@
         "bnet": "daveman#11311",
         "discord": "Daveman#8469",
         "role": "FLEX_SUPPORT",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 0,
@@ -69,7 +69,7 @@
         "bnet": "Bruh 11543",
         "discord": "Ham Ham 1123",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgq7h03ka07500v60egdj",
@@ -104,14 +104,14 @@
         "bnet": "Olamh#1580",
         "discord": "Olamh#2160",
         "role": "MAIN_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgq7i03kf0750s4yjxv76",
         "bnet": " Ƿ7D#1493",
         "discord": "7D#5723",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": null,
@@ -134,7 +134,7 @@
         "bnet": "Sinik#11225",
         "discord": "Sinik#5289",
         "role": "OFF_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgv6103ly0750pg138to1",
@@ -155,7 +155,7 @@
         "bnet": "Chandelier#11356",
         "discord": "Chandelier#6589",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgv6403m10750cp8im4vy",
@@ -169,21 +169,21 @@
         "bnet": "Altwhite#1509",
         "discord": "Master#4492",
         "role": "MAIN_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgv6603m307503nzwzt9j",
         "bnet": "honxy#1633",
         "discord": "honxy#0912",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgv6703m40750cnhnt9z0",
         "bnet": "Jellydough#1822",
         "discord": "Jellydough#7045",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": null,
@@ -213,7 +213,7 @@
         "bnet": "TheHiddenMan#1190",
         "discord": "TheHiddenManiac#3390",
         "role": "MAIN_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgzpj03nk0750y5wb3ay1",
@@ -227,7 +227,7 @@
         "bnet": "Flapjacks#11124",
         "discord": "iluvflapjacks#5167",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgzpk03nm0750ksfvgfu5",
@@ -241,14 +241,14 @@
         "bnet": "Cygnet#11246",
         "discord": "mudkip#5151",
         "role": "MAIN_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzgzpu03np0750ck4hmqj7",
         "bnet": "ZeroTalon#1966",
         "discord": "Omar#8020",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": null,
@@ -271,7 +271,7 @@
         "bnet": "mattayer5#1861",
         "discord": "TimAyers#3094",
         "role": "FLEX_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzh3ws03p00750stslph6z",
@@ -299,7 +299,7 @@
         "bnet": "coocoochu#1949",
         "discord": "TheQwertyTumor#9929",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzh3wu03p407509ieyop0m",
@@ -336,7 +336,7 @@
         "bnet": "Kokl#11752",
         "discord": "kokl#1566",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzh7on03qn07504k6b5mjm",
@@ -350,14 +350,14 @@
         "bnet": "AgentPikachu#1693",
         "discord": "AgentPikachu#1693",
         "role": "MAIN_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzh7on03qp0750euxcvzrs",
         "bnet": "BodyShotKing#1578",
         "discord": "BodyShotKing#2085",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzh7on03qq0750edfyzjah",
@@ -408,14 +408,14 @@
         "bnet": "Gohan#11946",
         "discord": "gohaN#7519",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhcno03sf07506wxkeulh",
         "bnet": "Dauntless#11532",
         "discord": "BraydenJinx#7461",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhcno03sg0750g9su56bd",
@@ -480,35 +480,35 @@
         "bnet": "SLYS2R#1996",
         "discord": "slyser#9457",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhgwe03u30750qh3yosg9",
         "bnet": "Dragonalfa#1578",
         "discord": "GamingReaper#9331",
         "role": "MAIN_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhgwe03u40750o853esvg",
         "bnet": "Korluss#1348",
         "discord": "Korluss#7812",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhgwe03u50750cdl15dyh",
         "bnet": "Rainchu#11371",
         "discord": "Rain#4061",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhgwe03u60750bjshb41z",
         "bnet": "Shinoa#11513",
         "discord": "mandipandi#0819",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": null,
@@ -552,14 +552,14 @@
         "bnet": "DrSmiles15#1828",
         "discord": "Dr_Smiles15#4808",
         "role": "FLEX_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhkge03vp07508ooxcw4z",
         "bnet": "SoftBlanket#11160",
         "discord": "Softest Blanket#0628",
         "role": "MAIN_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhkge03vq0750ykddh2pm",
@@ -596,7 +596,7 @@
         "bnet": "Unieveth#1537",
         "discord": "Unieveth#1761",
         "role": "OFF_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhpvq03xb0750yss3st48",
@@ -617,14 +617,14 @@
         "bnet": "Lagrange#11317",
         "discord": "Calculus#7868",
         "role": "MAIN_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhpvu03xe0750qqndcz8g",
         "bnet": "lubeskyballa#1847",
         "discord": "ginjaninja1337#1533",
         "role": "HITSCAN_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhpvw03xf0750mqa4yzq4",
@@ -654,7 +654,7 @@
         "bnet": "ǶAfroSpeed#1848",
         "discord": "Moon#7329",
         "role": "FLEX_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzht9003yr0750javico21",
@@ -668,7 +668,7 @@
         "bnet": "TheLittlest#11806",
         "discord": "TheLittlest#3487",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzht9203yt0750ia22nq7s",
@@ -682,28 +682,28 @@
         "bnet": "Kal#11283",
         "discord": "Kal#8930",
         "role": "FLEX_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzht9403yv0750eh4wccoe",
         "bnet": "StiffTyagra #1327",
         "discord": "Stiffy T #6960",
         "role": "MAIN_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzht9503yw0750qsmj953l",
         "bnet": "ƘŊįģħţFąŁŁ#1421",
         "discord": "Zhiyuan.Zhu #5607",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzht9603yx0750m4k4vsig",
         "bnet": "THEDOCTOR#13369",
         "discord": "VAMWSZ#2362",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": null,
@@ -726,7 +726,7 @@
         "bnet": "Toastie#21136",
         "discord": "Toastie#9184",
         "role": "MAIN_SUPPORT",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhw64040907500ibgkol9",
@@ -740,7 +740,7 @@
         "bnet": "Neomimi#1608",
         "discord": "Neomimi#1533",
         "role": "PROJECTILE_DPS",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhw65040b07504vftg1ys",
@@ -754,7 +754,7 @@
         "bnet": "Gianni#11610",
         "discord": "Gianni#6553",
         "role": "OFF_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzhw65040d0750nno62sjy",
@@ -768,7 +768,7 @@
         "bnet": "Rydarus#1377",
         "discord": "Rydarus™#0435",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": null,
@@ -805,7 +805,7 @@
         "bnet": "Chili#11315",
         "discord": "Chili#8165",
         "role": "MAIN_TANK",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi0cb041s0750dt1m0sye",
@@ -849,21 +849,21 @@
         "bnet": "DƁM #1685",
         "discord": "DƁM #4075",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi50k043e0750e576m3b8",
         "bnet": "DJR#1631",
         "discord": "DJR#7369",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi50k043f07507ad3qnb9",
         "bnet": "RockJumper#11284",
         "discord": "Rockjumper#7249",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi50k043g0750iopwvu87",
@@ -877,21 +877,21 @@
         "bnet": "Chrome#12316",
         "discord": "CRMZN#3562",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi50l043i07502mlha4pb",
         "bnet": "paint#11747",
         "discord": "pa!nt#2169",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi50m043j0750lsmvc1ip",
         "bnet": "YoonChild#1768",
         "discord": "Yoonicorn#6127",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 1,
@@ -914,7 +914,7 @@
         "bnet": "rifftor#1537",
         "discord": "Halither#7386",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi8qf044p0750vepdhmgq",
@@ -928,21 +928,21 @@
         "bnet": "Bovine#11690",
         "discord": "Bovine#2075",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi8qg044r0750vbq2myqv",
         "bnet": "moyer#11679",
         "discord": "mtxmoyer#7114",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi8qg044s0750veqhgy1p",
         "bnet": "Singe#1881",
         "discord": "koko#5287",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzi8qh044t0750x5zjg4pa",
@@ -986,14 +986,14 @@
         "bnet": "Noodle#12744",
         "discord": "Noodle#8008",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzic1d046a0750sxps82gb",
         "bnet": "broccoli$11668",
         "discord": "Broccoli#6704",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzic1e046b0750k12t024h",
@@ -1007,14 +1007,14 @@
         "bnet": "leamer06#1709",
         "discord": "leamer06#4294",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzic1f046d0750le7so2wx",
         "bnet": "Gattsu#3483",
         "discord": "Gattsu#3483",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzic1f046e0750ni2kzlp9",
@@ -1051,35 +1051,35 @@
         "bnet": "UcantCghost",
         "discord": "youcantseeghost#2469",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzifn3047z07502ikpf26g",
         "bnet": "Davodle#1534",
         "discord": "Davodle#7785",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzifn304800750ox8qgxsz",
         "bnet": "Ike#1927",
         "discord": "EvilOlivE#1237",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzifn304810750i4nvvxht",
         "bnet": "AquaNeptune#11396",
         "discord": "Aqua_Neptune#6180",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzifn304820750em0x96a9",
         "bnet": "t0xin#11569",
         "discord": "Calvin#0969",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzifn304830750dx0ru0du",
@@ -1093,7 +1093,7 @@
         "bnet": "Arrivand#1424",
         "discord": "Arrivand#9500",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -10,
@@ -1116,14 +1116,14 @@
         "bnet": "TrooMoo#11972",
         "discord": "agans_#5098",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzii36049c0750zr121bl8",
         "bnet": "Max#16242",
         "discord": "TaxTheMax#4942",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzii37049d0750x3wxnlnd",
@@ -1165,7 +1165,7 @@
         "bnet": "Ȉnnu3ndo#1164",
         "discord": "innu3ndo#0412",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 0,
@@ -1188,21 +1188,21 @@
         "bnet": "airdylan#1343",
         "discord": "airdylanca#1343",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzinof04b807509ynbif43",
         "bnet": "Zarrif#8068",
         "discord": "Zarrif#1533",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzinof04b90750tza3i2vx",
         "bnet": "YottaChad#1460",
         "discord": "DrBlueKnight#5280",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzinof04ba0750kl49br7o",
@@ -1230,14 +1230,14 @@
         "bnet": "Joey#13373",
         "discord": "Joey#3388",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzinof04be07507zy68zgo",
         "bnet": "ÚwÙ#1881",
         "discord": "Zach#7149",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 10,
@@ -1267,28 +1267,28 @@
         "bnet": "Surg#11572",
         "discord": "!Surg#4149",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziqu604cx0750amxgm7n5",
         "bnet": "Yeti#12359",
         "discord": "Yeti#6796",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziqu704cy0750i5n6g9n8",
         "bnet": "Inky#11276",
         "discord": "Inky#0817",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziqu804cz0750hwdczv0i",
         "bnet": "ǨŌŊČŘÅÅĐ#1178",
         "discord": "koncraad #4921",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziqu904d00750qxc92qpq",
@@ -1302,7 +1302,7 @@
         "bnet": "Garrett#12323",
         "discord": "Garrett#9555",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziqua04d20750k4r67vtn",
@@ -1332,28 +1332,28 @@
         "bnet": "TwentyTwo#11407",
         "discord": "[OSU]TwentyTwo#2867",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziv9304ek07503dv815oq",
         "bnet": "Flux#11307",
         "discord": "Flux#6708",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziv9304el0750h9um2z3y",
         "bnet": "Epicository#1999",
         "discord": "Epicository#1983",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziv9304em0750mq0e1hyc",
         "bnet": "DarkKnight#15508",
         "discord": "Eleron#6948",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziv9304en0750xd85wfkq",
@@ -1367,21 +1367,21 @@
         "bnet": "DougCrab#1868",
         "discord": "DougCrab#7335",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziv9304ep0750l2ypspvx",
         "bnet": "Bread#12545",
         "discord": "BreadBoi #3745",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwziv9304eq0750jk1aed86",
         "bnet": "Nanovisor#1256",
         "discord": "Schroedey #5499",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 1,
@@ -1418,21 +1418,21 @@
         "bnet": "PlatTrash#1468",
         "discord": "JVice#9747",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj09t04g207509qr08gwi",
         "bnet": "Lyme#11940",
         "discord": "Lyme#7603",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj09t04g30750hayjb1jk",
         "bnet": "EZlove#11662",
         "discord": "TheEZlove#2847",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj09t04g407508m81ecgx",
@@ -1446,7 +1446,7 @@
         "bnet": "SwordmanDrak#1138",
         "discord": "SwordsmanDrake#5137",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj09t04g60750blszybo9",
@@ -1483,7 +1483,7 @@
         "bnet": "Rage#13548",
         "discord": "Rage#6969",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj47u04ht0750nnxwpslm",
@@ -1511,21 +1511,21 @@
         "bnet": "Mayo#11728",
         "discord": "Mayo#5195",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj47u04hx0750v2qhgqdv",
         "bnet": "GGonak#1476",
         "discord": "JJonak#0345",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj47u04hy07505hk28gw0",
         "bnet": "Vanguard#11564",
         "discord": "Varity #2638",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -3,
@@ -1548,14 +1548,14 @@
         "bnet": "Ice#14961",
         "discord": "Ice#1969",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj9i304jk0750p4p4ls91",
         "bnet": "Honeybadger979#1505",
         "discord": "Honeybadger979#3879",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj9i304jl0750y42lg3ee",
@@ -1576,21 +1576,21 @@
         "bnet": "Snofu#11209",
         "discord": "Nashira#9366",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj9i404jo0750poelhgv8",
         "bnet": "Ross#12698",
         "discord": "OXENRIDER#4607",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj9i404jp07508sydea9m",
         "bnet": "ƐlƁAƁAŶAƓA#1268",
         "discord": "Synthesci#0688",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzj9i404jq0750o4vnmq12",
@@ -1627,28 +1627,28 @@
         "bnet": "Ghoul#12405",
         "discord": "Ghoul#0128",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjihm04n70750zasz4hac",
         "bnet": "Grrrita#11122",
         "discord": "Grrrita#0666",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjihm04n80750tuugb6jj",
         "bnet": "Othyrus#11972",
         "discord": "pizza#6202",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjihr04na0750ph4iw7hk",
         "bnet": "babyJJoNaK#1697",
         "discord": "Owen#2770",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjihr04nb0750yg4ghkyv",
@@ -1662,14 +1662,14 @@
         "bnet": "Enderz#6277",
         "discord": "Enderz#6227",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjihr04nd0750au3uroiu",
         "bnet": "UnknownError#11720",
         "discord": "UnknownError#7866 ",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -4,
@@ -1692,7 +1692,7 @@
         "bnet": "richidoo#1742",
         "discord": "Richard#8125",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjlfx04oo0750aungbj6p",
@@ -1706,7 +1706,7 @@
         "bnet": "Czos#11913",
         "discord": "ColeCzos#4836",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjlfy04oq0750urv774em",
@@ -1757,7 +1757,7 @@
         "bnet": "draugnaV#1638",
         "discord": "Vanguard#5444",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjp1704qh07502fgp9x3b",
@@ -1799,7 +1799,7 @@
         "bnet": "Storm#14149",
         "discord": "Omega#6512",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjp1704qn0750vowu7vzb",
@@ -1829,7 +1829,7 @@
         "bnet": "Gengar#11403",
         "discord": "Croma#3264",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzju4t04sh07504ul0fpdi",
@@ -1843,7 +1843,7 @@
         "bnet": "Raven#17697",
         "discord": "Ravyn#3733",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzju4x04sj0750krvbpn7n",
@@ -1864,21 +1864,21 @@
         "bnet": "Goose785#1253",
         "discord": " Goose785#9715",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzju4y04sm0750b0t5gmff",
         "bnet": "SMH#11524",
         "discord": "The Knotty Gentalman#1723",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzju4y04sn0750q7ul1kp4",
         "bnet": "Creamy#11869",
         "discord": "Creamy#9999",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -3,
@@ -1908,42 +1908,42 @@
         "bnet": "Lackofa#1514",
         "discord": "lackofa #8389",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjzhl04u407509o0c9n3z",
         "bnet": "arietta#1565",
         "discord": "Arietta#7043",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjzhl04u50750wp0deyg0",
         "bnet": "Horseman#11680",
         "discord": "Horseman#2324",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjzhl04u60750r4bhidys",
         "bnet": "Jeff#15866",
         "discord": "Life Hurty#5937",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjzhl04u707506qcd6wob",
         "bnet": "ǶNYX#1522",
         "discord": "nyx#5352",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzjzhl04u80750dzsu1t11",
         "bnet": "mercysrocket#1299",
         "discord": "Dizzydwarf #5716",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 13,
@@ -1966,14 +1966,14 @@
         "bnet": "H2Zer02#1562",
         "discord": "H2Zer02#3337",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk38f04vc0750ofuezt40",
         "bnet": "Andy#19752",
         "discord": "AИDY#0411",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk38f04vd0750268jtm7a",
@@ -1987,21 +1987,21 @@
         "bnet": "Naisu#11892",
         "discord": "kozit#6235",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk38f04vf0750mi5xa2mk",
         "bnet": "AquaBestGirl#1824",
         "discord": "AquaBestGirl#3202",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk38f04vg0750qy0q2kuv",
         "bnet": "Cam#12405",
         "discord": "Cam#3315",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -6,
@@ -2024,28 +2024,28 @@
         "bnet": "PhirePhoenix#11549",
         "discord": "PhirePhoenix#3581",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk60604wm07507z9ry1g8",
         "bnet": "MissBunns#1413",
         "discord": "MissBunns#3093",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk60704wn0750m9c0gv41",
         "bnet": "Gunner#1171",
         "discord": "RonScape#4420",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk60804wo07508c7aagt5",
         "bnet": "BakedSnowman#1749",
         "discord": "bakedsnowman#3612",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk60804wp0750rk8zw7di",
@@ -2059,21 +2059,21 @@
         "bnet": "Coggsworth#1421",
         "discord": "Coggs#8813",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk60a04wr0750ro7mtx9r",
         "bnet": "Sleepy#12703",
         "discord": "졸리는#0222",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk60a04ws07508qfe8lli",
         "bnet": "Arez#1896",
         "discord": "Arez#0955",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -20,
@@ -2096,21 +2096,21 @@
         "bnet": "Poketude#1620",
         "discord": "Poketude #5108",
         "role": "PLAYER",
-        "sr": 2476
+        "sr": null
       },
       {
         "id": "cjzwzk9za04y20750212f4ex8",
         "bnet": "Friskyy#11987",
         "discord": "Friskyy#2492",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk9za04y30750r2wng88f",
         "bnet": "JMinh#1937",
         "discord": "JMinh#0076",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk9za04y407503g5vl4xa",
@@ -2124,7 +2124,7 @@
         "bnet": "Leoxicon#1550",
         "discord": "Leoxicon#5477",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk9za04y60750qed5ilau",
@@ -2138,14 +2138,14 @@
         "bnet": "wolfie#11412",
         "discord": "Puppy#2711",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzk9za04y80750gki5zipv",
         "bnet": "Drakobalt#1791",
         "discord": "Drakobalt#2538",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 10,
@@ -2168,7 +2168,7 @@
         "bnet": "Korebo#1772",
         "discord": "Korebo#2534",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzke3104zm0750ft9xofs0",
@@ -2182,14 +2182,14 @@
         "bnet": "alittlekitty#1857",
         "discord": "alittlekitty#7177",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzke3104zo0750ri9opk4k",
         "bnet": "Thcute#1637",
         "discord": "Cannondale#1903",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzke3204zp075054oro6rl",
@@ -2226,7 +2226,7 @@
         "bnet": "MeepMoop#11229",
         "discord": "MeepMoop#3560",
         "role": "PLAYER",
-        "sr": 2801
+        "sr": null
       },
       {
         "id": "cjzwzkgdl05140750wf1w6fs1",
@@ -2240,7 +2240,7 @@
         "bnet": "Pieisgoode#1687",
         "discord": "Pieisgoode#5122",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkgdl05160750o5rlmzw2",
@@ -2254,14 +2254,14 @@
         "bnet": "stard3str0ye#1277",
         "discord": "VoidStar#2165",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkgdm0518075020khmwyw",
         "bnet": "Splonah#1667",
         "discord": "Splonah#3551",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkgdm05190750y80916jt",
@@ -2298,7 +2298,7 @@
         "bnet": "THICCNUT#1727",
         "discord": "thiccnut#6848",
         "role": "PLAYER",
-        "sr": 3391
+        "sr": 4000
       },
       {
         "id": "cjzwzkk8l05300750tdew95cj",
@@ -2312,14 +2312,14 @@
         "bnet": "Broadway#11579",
         "discord": "Broadway#2401",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkk8m05320750762mbjkc",
         "bnet": "Genetix#11608",
         "discord": "Hazeuss#4573",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkk8n05330750hr0q80u4",
@@ -2340,14 +2340,14 @@
         "bnet": "R3gRet#11222",
         "discord": "R3gret#4061",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkk8p053607509vs8au8p",
         "bnet": "dlion#11832",
         "discord": "Dlion#0505",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 14,
@@ -2384,14 +2384,14 @@
         "bnet": "klz#11471",
         "discord": "kay el zed#3934",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzknyd054t07503ezsdxpz",
         "bnet": "kaifu#11116",
         "discord": "kaifu#7777",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzknyd054u07509l4umjg5",
@@ -2412,14 +2412,14 @@
         "bnet": "Trippin#11383",
         "discord": "Trippinkittinz#2492",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzknyd054x0750jfkpnxn6",
         "bnet": "Juke#11366",
         "discord": "juke#7777",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 21,
@@ -2442,7 +2442,7 @@
         "bnet": "NexusTGK#1440",
         "discord": "NexusTGK#7891",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkvys058d075024gpg5pb",
@@ -2463,7 +2463,7 @@
         "bnet": "jsquad7#1209",
         "discord": "jsquad7#3807",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkvyt058g07502tyk5rzc",
@@ -2477,7 +2477,7 @@
         "bnet": "TSchab#1205",
         "discord": "TSchwab#1202",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzkvyt058i07504x6co9t8",
@@ -2514,7 +2514,7 @@
         "bnet": "Beef#12121",
         "discord": "Beef (Stroganoff)#6377",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl03705aa0750ceyv1ko0",
@@ -2528,7 +2528,7 @@
         "bnet": "MissMack#1798",
         "discord": "Mack#2110",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl03705ac0750kpl582am",
@@ -2586,21 +2586,21 @@
         "bnet": "jammin#11325",
         "discord": "koolaidjammers#1581",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl4c505cb0750z8rqi2g5",
         "bnet": "Botversing#1534",
         "discord": "Conversing#7795",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl4c505cc0750epn4gxdh",
         "bnet": "TheKing#13282",
         "discord": "Arc#1198",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl4c505cd0750e0lf6jvg",
@@ -2614,14 +2614,14 @@
         "bnet": "opyopyopyo#1620",
         "discord": "Opyopyopyo#1882",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl4c505cf0750ulf22tvu",
         "bnet": "harrisonman#1203",
         "discord": "harrisonman#3392",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 19,
@@ -2644,7 +2644,7 @@
         "bnet": "Ender#14442",
         "discord": "Ender#3333",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl82i05dv0750ry6bk7m8",
@@ -2658,7 +2658,7 @@
         "bnet": "LetsGo4Now#1593",
         "discord": "LetsGo4Now#6148",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzl82i05dx07507wdq71ns",
@@ -2709,7 +2709,7 @@
         "bnet": "Galadorin#1396",
         "discord": "Galadorin#1396",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlc0q05fo0750ceweto6z",
@@ -2723,7 +2723,7 @@
         "bnet": "Irie#11863",
         "discord": "Irie#1586",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlc0q05fq0750yvp4lgg3",
@@ -2737,21 +2737,21 @@
         "bnet": "Dark#16707",
         "discord": "Dark#7932",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlc0q05fs07508bepjc0j",
         "bnet": "Kcaz#11988",
         "discord": "Zack#8975",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlc0q05ft07501t63e48u",
         "bnet": "Noah#13589",
         "discord": "Noah#9305",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlc0r05fu0750hfe63dqr",
@@ -2795,14 +2795,14 @@
         "bnet": "Kyejuu#1394",
         "discord": "Kyejuu#9318",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlgon05hc07502yh2x6oz",
         "bnet": "bryce#11197",
         "discord": "bryce#7856",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlgon05hd07500tlutxy5",
@@ -2823,7 +2823,7 @@
         "bnet": "BrokeHearted#1551",
         "discord": "TheBrokenOne#6792",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 21,
@@ -2846,42 +2846,42 @@
         "bnet": "Cleekoh#1458",
         "discord": "Brendo#9550",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzll3k05it0750t57soq8s",
         "bnet": "Sunday#2972",
         "discord": "Sunday#11748",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzll3k05iu0750gmgmn3wm",
         "bnet": "Sergster1#1545",
         "discord": "Sergster1#1864",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzll3k05iv0750m4yxje7j",
         "bnet": "PLACEBØ#1616",
         "discord": "Placebo#4034",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzll3k05iw0750vpd2zyvj",
         "bnet": "psyarie#1387",
         "discord": "psyarie#5145",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzll3k05ix0750wjmf269d",
         "bnet": "Kranberry#1564",
         "discord": "Kranberry#5054",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzll3k05iy0750yn56d5il",
@@ -2911,7 +2911,7 @@
         "bnet": "Kashmir#11695",
         "discord": "Kashmir#3619",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlnyr05k60750ukqobovv",
@@ -2932,7 +2932,7 @@
         "bnet": "SpookySpooky #11360",
         "discord": "Spooky#4965",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlnyr05k90750fay5cpke",
@@ -2946,7 +2946,7 @@
         "bnet": "Hyde#1906",
         "discord": "Pludle#9738",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlnyr05kb07502bajxtf4",
@@ -2983,7 +2983,7 @@
         "bnet": "Regza#11127",
         "discord": "Regza#9361",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlrh605m10750qaffa22z",
@@ -3032,7 +3032,7 @@
         "bnet": "Draft#1550",
         "discord": "Draft#3063",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 2,
@@ -3062,14 +3062,14 @@
         "bnet": "shadowslayer#11303",
         "discord": "ShadowSlayer#6998",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlwdu05ny07507yo26fn4",
         "bnet": "SoulConsumer#11986",
         "discord": "Titanjr31#7817",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlwdu05nz0750f7z75uln",
@@ -3134,14 +3134,14 @@
         "bnet": "SPOOPY#11471",
         "discord": "SPOOPY#0081",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlzcw05pg07501i1knrog",
         "bnet": "Jorgeme#1484",
         "discord": "Jorgeme#2788",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlzcw05ph07505dm02l1b",
@@ -3155,14 +3155,14 @@
         "bnet": "Pluto#11329",
         "discord": "Pluto#9130",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzlzcy05pj0750z3e0trei",
         "bnet": "Grados#11788",
         "discord": "Grados#0750",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -14,
@@ -3185,7 +3185,7 @@
         "bnet": "CorgiBebop#11134",
         "discord": "CorgiBebop#9391",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzm37b05r30750e0i70uc0",
@@ -3199,28 +3199,28 @@
         "bnet": "DunkinDont#1253",
         "discord": "DunkinDont | Ethan#9035",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzm37b05r50750bzzjuedg",
         "bnet": "ExoduzGalaxy#1306",
         "discord": "Galactodus#2161",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzm37b05r60750jw6jmbrc",
         "bnet": "Satori#11505",
         "discord": "Satori#0039",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzm37b05r70750pdxzwt94",
         "bnet": "SpaceDandy#11206",
         "discord": "SpaceDandy#4221",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzm37b05r807502imnwers",
@@ -3278,7 +3278,7 @@
         "bnet": "Solucopa#1835",
         "discord": "apoculos#7792",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzm7lh05ss075031gusej6",
@@ -3336,7 +3336,7 @@
         "bnet": "ZephyR#13425",
         "discord": "ZephyR#5302",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmbjg05um07507kdlh5ii",
@@ -3350,7 +3350,7 @@
         "bnet": "zolter#11265",
         "discord": "zolter#9312",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmbjg05uo0750twz0c4i0",
@@ -3364,7 +3364,7 @@
         "bnet": "Ċinnamon#2422",
         "discord": "Cinnamon#7365",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 20,
@@ -3394,7 +3394,7 @@
         "bnet": "Edicts#1448",
         "discord": "Edicts#1998",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmen105wa07502s0d99dd",
@@ -3422,21 +3422,21 @@
         "bnet": "LazerBlitz#11527",
         "discord": "LazerBlitz#9607",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmen505wf0750ueno3064",
         "bnet": "CommanderHuy#1681",
         "discord": "CommanderHuy#5552",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmen705wg0750ttj9zu71",
         "bnet": "Lulu#13272",
         "discord": "Lulu#6896",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": 10,
@@ -3459,21 +3459,21 @@
         "bnet": "Kasai#11752",
         "discord": "Kasai#4008",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmjmf05y107508uoymyaf",
         "bnet": "Malkery#11463",
         "discord": "Malkery#3278",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmjmf05y2075027k107yk",
         "bnet": "Era#1114",
         "discord": "Era#3987",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmjmf05y30750ulweu24e",
@@ -3487,7 +3487,7 @@
         "bnet": "WRLD#11661",
         "discord": "Jetzro#7811",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmjmf05y50750sdbe61bo",
@@ -3552,7 +3552,7 @@
         "bnet": "Hyperknigt#1988",
         "discord": "DXHyperknight (Jerad)#8950",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmnen05zw0750ws0fvn73",
@@ -3566,7 +3566,7 @@
         "bnet": "Weeaboo#12817",
         "discord": "Slumped#2443",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmneo05zy07500jxqqs8y",
@@ -3617,14 +3617,14 @@
         "bnet": "wizard7913#1923",
         "discord": "wizard7913#9334",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmrb5061v0750m8ytrlar",
         "bnet": "Softin#1361",
         "discord": "Darkpassenger#3781",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmrb6061w0750f4ps0959",
@@ -3638,7 +3638,7 @@
         "bnet": "Horchata#11445",
         "discord": "Tonnnyy#8786",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmrb8061y0750w7h8dprm",
@@ -3675,7 +3675,7 @@
         "bnet": "Flyerfanatic#1105",
         "discord": "Flyerfanatic#6492",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmv8s063l0750ebmgrh6a",
@@ -3696,35 +3696,35 @@
         "bnet": "snipe#11463",
         "discord": "Danyy#3688",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmv8s063o075084av2jw7",
         "bnet": "SparkyMuffin#1736",
         "discord": "Sparkly#4357",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmv8s063p0750bysm19if",
         "bnet": "SwissCheeks#1967",
         "discord": "SwissCheeks #3306",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmv8s063q0750mww6w2jh",
         "bnet": "ComJET#1477",
         "discord": "mungojerrie#0003",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmv8s063r0750hd95ozr5",
         "bnet": "DANYǃ#1148",
         "discord": "Sepha#9091",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -5,
@@ -3761,21 +3761,21 @@
         "bnet": "babyMario#11791",
         "discord": "Rauly#5607",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmyoo0657075098p5lg24",
         "bnet": "Charms#11607",
         "discord": "Charms#0571",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmyoo06580750layxc5ec",
         "bnet": "Gejniman#1330",
         "discord": "ZiptheBip#6346",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzmyoo06590750ti63wn15",
@@ -3796,7 +3796,7 @@
         "bnet": "Space#12456",
         "discord": "Space#8775",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -14,
@@ -3819,7 +3819,7 @@
         "bnet": "Rebalanced#11402",
         "discord": "Rebalanced#5407",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn20q066x0750e6wuacfg",
@@ -3833,7 +3833,7 @@
         "bnet": "Azalea#1714",
         "discord": "Azalea#4039",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn20r066z0750dff2e9be",
@@ -3854,7 +3854,7 @@
         "bnet": "Asophrosyne#1266",
         "discord": "iiiii#0020",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn20t067207501f3ybz7b",
@@ -3868,7 +3868,7 @@
         "bnet": "DMNTD#11233",
         "discord": "dumented#5554",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       }
     ],
     "pointDifference": -1,
@@ -3891,14 +3891,14 @@
         "bnet": "Flacko#11776",
         "discord": "Flacko#7715",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn63e068p0750mczd7d8l",
         "bnet": "DragonBlaze#11538",
         "discord": "DragonBlaze#0252",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn63e068q0750ojkca6h2",
@@ -3912,7 +3912,7 @@
         "bnet": "electrikgoop#1343",
         "discord": "Electrikgoop#5505",
         "role": "PLAYER",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn63e068s0750jkhwjku6",
@@ -3933,7 +3933,7 @@
         "bnet": "Woso#11331",
         "discord": "Duality:x::goat::x:#2083",
         "role": "SUB",
-        "sr": null
+        "sr": 3250
       },
       {
         "id": "cjzwzn63g068v0750hs6r6r2g",
