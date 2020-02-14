@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: go-serverless-lambda-apigw-offline-skeleton
+Resources:
+  parse:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bin/parse
+      Runtime: go1.x
+      Timeout: 900
+      Events:
+        SampleEvent:
+          Type: Api
+          Properties:
+            Path: /api/parse
+            Method: get

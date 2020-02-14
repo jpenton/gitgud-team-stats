@@ -1,0 +1,27 @@
+enum Division {
+  BEGINNER
+  ROOKIE
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+enum Region {
+  EU
+  NA
+}
+
+type Player {
+  bnet: String!
+  discord: String!
+  hash: String! @unique
+  team: Team @relation
+}
+
+type Team {
+  division: Division
+  hash: String! @unique
+  name: String
+  players: [Player!] @relation
+  region: Region
+}

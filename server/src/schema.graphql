@@ -1,7 +1,0 @@
-# import * from '../generated/graphql-schema/schema.graphql'
-
-type Query {
-  player(id: ID!): Player
-  team(id: ID, slug: String): Team
-  teams(division: Division, region: Region): [Team!]
-}
